@@ -1,0 +1,2 @@
+cd image2gcode
+Drawbot_stripped.exe

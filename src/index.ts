@@ -12,13 +12,33 @@
 //imports
 const express = require("express");
 const fs = require("fs");
+import {
+  RemoveBgResult,
+  RemoveBgError,
+  removeBackgroundFromImageBase64,
+} from "remove.bg";
 import { Request, Response } from "express";
 import { Socket } from "socket.io";
+
+var exec = require("child_process").execFile;
 
 var cors = require("cors");
 const app = express();
 app.use(express.json({ limit: "50mb" }));
 app.use(express.urlencoded({ limit: "50mb", extended: true }));
+
+let useBGApi: boolean = false; //used during dev. to limit api calls
+const outputDir = `./bgremoved/`;
+let removedBgBase64: string = "";
+
+type AppStates =
+  | "idle"
+  | "removingBg"
+  | "processingImage"
+  | "rawGcodeReady"
+  | "Drawing";
+
+let appState: AppStates = "idle";
 
 let httpsServer: any;
 
@@ -63,25 +83,123 @@ function checkCertificate() {
 
 app.post("/newPicture", (req: Request, res: Response) => {
   //listen to a /new post request, generate a new gameenviroment and return the new game Id
-  console.log(req.body);
 
-  fs.writeFile(
-    "images/lastImage.jpeg",
-    req.body.img,
-    "base64",
-    function (err: any, data: any) {
-      if (err) {
-        console.log("err", err);
-      }
-      console.log(data, "data");
+  if (appState != "idle") {
+    res.header("Access-Control-Allow-Origin", [req.headers.origin!]);
+    res.json({ err: appState });
+  } else {
+    appState = "removingBg";
+    if (useBGApi) {
+      removeBg(req.body.img);
+    } else {
+      removedBgBase64 = req.body.img;
+      fs.writeFile(
+        outputDir + "bgremoved-current.jpg",
+        req.body.img,
+        "base64",
+        function (err: any, data: any) {
+          if (err) {
+            console.log("err", err);
+          }
+          console.log(data, "data");
+        }
+      );
+
+      convertBase64ToGcode(removedBgBase64);
     }
-  );
 
-  res.header("Access-Control-Allow-Origin", [req.headers.origin!]);
+    fs.writeFile(
+      "rawimages/" + Date.now() + "-image.jpeg",
+      req.body.img,
+      "base64",
+      function (err: any, data: any) {
+        if (err) {
+          console.log("err", err);
+        }
+        console.log(data, "data");
+      }
+    );
 
-  res.json({});
+    res.header("Access-Control-Allow-Origin", [req.headers.origin!]);
+    res.json({});
+  }
+});
+
+app.post("/checkProgress", (req: Request, res: Response) => {
+  if (appState == "rawGcodeReady") {
+    let rawGcode = fs.readFileSync(
+      "./image2gcode/gcode/gcode_image.nc",
+      "utf8"
+    );
+    res.header("Access-Control-Allow-Origin", [req.headers.origin!]);
+    res.json({ appState: appState, rawGcode: rawGcode });
+  } else {
+    res.header("Access-Control-Allow-Origin", [req.headers.origin!]);
+    res.json({ appState: appState });
+  }
 });
 
 httpsServer!.listen(3001, () => {
   console.log("listening on *:3001");
 });
+
+function removeBg(base64img: any) {
+  const outputFile = outputDir + "bgremoved-current.jpg";
+
+  removeBackgroundFromImageBase64({
+    base64img,
+    apiKey: "ZM746RyfN9PG1uzZT1u5Jqaq",
+    size: "preview",
+    type: "person",
+    format: "jpg",
+    scale: "100%",
+    bg_color: "fff",
+    outputFile,
+  })
+    .then((result: RemoveBgResult) => {
+      console.log(`File saved to ${outputFile}`);
+      const rmbgbase64img = result.base64img;
+      removedBgBase64 = rmbgbase64img;
+      fs.writeFile(
+        outputDir + Date.now() + "-bgremoved.jpg",
+        rmbgbase64img,
+        "base64",
+        function (err: any, data: any) {
+          if (err) {
+            console.log("err", err);
+          }
+          console.log(data, "data");
+        }
+      );
+
+      convertBase64ToGcode(removedBgBase64);
+    })
+    .catch((errors: Array<RemoveBgError>) => {
+      console.log(JSON.stringify(errors));
+    });
+}
+
+function convertBase64ToGcode(base64: string) {
+  appState = "processingImage";
+  fs.writeFile(
+    "./image2gcode/data/input/image.jpg",
+    base64,
+    "base64",
+    function (err: any, data: any) {
+      if (err) {
+        console.log("err", err);
+      }
+
+      fs.unlinkSync("./image2gcode/gcode/gcode_image.nc");
+
+      exec("launchimage2gcode.bat", function (err: any, data: any) {
+        console.log(err);
+        console.log(data.toString());
+
+        if (!err) {
+          appState = "rawGcodeReady";
+        }
+      });
+    }
+  );
+}
