@@ -30,6 +30,8 @@ let useBGApi: boolean = false; //used during dev. to limit api calls
 const outputDir = `./bgremoved/`;
 let removedBgBase64: string = "";
 
+let isLinux: boolean = false;
+
 type AppStates =
   | "idle"
   | "removingBg"
@@ -126,8 +128,13 @@ app.post("/newPicture", (req: Request, res: Response) => {
 
 app.post("/checkProgress", (req: Request, res: Response) => {
   if (appState == "rawGcodeReady") {
+    let img2gcodePath: string = "./image2gcode/windows/";
+    if (isLinux) {
+      img2gcodePath = "./image2gcode/linux/";
+    }
+
     let rawGcode = fs.readFileSync(
-      "./image2gcode/gcode/gcode_image.nc",
+      img2gcodePath + "gcode/gcode_image.nc",
       "utf8"
     );
     res.header("Access-Control-Allow-Origin", [req.headers.origin!]);
@@ -180,8 +187,13 @@ function removeBg(base64img: any) {
 
 function convertBase64ToGcode(base64: string) {
   appState = "processingImage";
+  let img2gcodePath: string = "./image2gcode/windows/";
+  if (isLinux) {
+    img2gcodePath = "./image2gcode/linux/";
+  }
+
   fs.writeFile(
-    "./image2gcode/data/input/image.jpg",
+    img2gcodePath + "data/input/image.jpg",
     base64,
     "base64",
     function (err: any, data: any) {
@@ -189,9 +201,14 @@ function convertBase64ToGcode(base64: string) {
         console.log("err", err);
       }
 
-      fs.unlinkSync("./image2gcode/gcode/gcode_image.nc");
+      //fs.unlinkSync(img2gcodePath + "gcode/gcode_image.nc");  //needs try catch
 
-      exec("launchimage2gcode.bat", function (err: any, data: any) {
+      let launchcommand: string = "launchimage2gcode.bat";
+
+      if (isLinux) {
+        launchcommand = "xvfb-run image2gcode/linux/Drawbot_stripped";
+      }
+      exec(launchcommand, function (err: any, data: any) {
         console.log(err);
         console.log(data.toString());
 
