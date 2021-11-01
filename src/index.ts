@@ -18,7 +18,6 @@ import {
   removeBackgroundFromImageBase64,
 } from "remove.bg";
 import { Request, Response } from "express";
-import { Socket } from "socket.io";
 
 var exec = require("child_process").execFile;
 
