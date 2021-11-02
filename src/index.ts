@@ -165,7 +165,7 @@ function drawGcode(gcode: string) {
   fs.writeFile(
     "gcodes/gcode.nc",
     gcode,
-    "text",
+    "utf8",
     function (err: any, data: any) {
       if (err) {
         console.log("err", err);
@@ -173,7 +173,7 @@ function drawGcode(gcode: string) {
 
       if (isLinux) {
         let launchcommand: string =
-          "gcode-cli -b 1 gcodes/gcode.nc /dev/ttyACM0,b115200";
+          "./launchGcodeCli.sh";
         exec(launchcommand, function (err: any, data: any) {
           console.log(err);
           console.log(data.toString());
