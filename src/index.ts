@@ -206,7 +206,7 @@ function convertBase64ToGcode(base64: string) {
       let launchcommand: string = "launchimage2gcode.bat";
 
       if (isLinux) {
-        launchcommand = "xvfb-run ./image2gcode/linux/Drawbot_stripped";
+        launchcommand = "./launchimage2gcode.sh";
       }
       exec(launchcommand, function (err: any, data: any) {
         console.log(err);
