@@ -145,9 +145,49 @@ app.post("/checkProgress", (req: Request, res: Response) => {
   }
 });
 
+app.post("/postGcode", (req: Request, res: Response) => {
+  if (appState == "rawGcodeReady") {
+    let gcode: string = req.body.gcode;
+    drawGcode(gcode);
+    res.header("Access-Control-Allow-Origin", [req.headers.origin!]);
+    res.json({ appState: appState });
+  } else {
+    res.header("Access-Control-Allow-Origin", [req.headers.origin!]);
+    res.json({ appState: appState, err: "not_allowed" });
+  }
+});
+
 httpsServer!.listen(3001, () => {
   console.log("listening on *:3001");
 });
+
+function drawGcode(gcode: string) {
+  fs.writeFile(
+    "gcodes/gcode.nc",
+    gcode,
+    "text",
+    function (err: any, data: any) {
+      if (err) {
+        console.log("err", err);
+      }
+
+      if (isLinux) {
+        let launchcommand: string =
+          "gcode-cli -b 1 gcodes/gcode.nc /dev/ttyACM0,b115200";
+        exec(launchcommand, function (err: any, data: any) {
+          console.log(err);
+          console.log(data.toString());
+
+          if (!err) {
+            appState = "Drawing";
+          }
+        });
+      } else {
+        console.log("Drawing only works on Linux");
+      }
+    }
+  );
+}
 
 function removeBg(base64img: any) {
   const outputFile = outputDir + "bgremoved-current.jpg";
