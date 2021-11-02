@@ -30,7 +30,7 @@ let useBGApi: boolean = false; //used during dev. to limit api calls
 const outputDir = `./bgremoved/`;
 let removedBgBase64: string = "";
 
-let isLinux: boolean = false;
+let isLinux: boolean = true;
 
 type AppStates =
   | "idle"
@@ -206,7 +206,7 @@ function convertBase64ToGcode(base64: string) {
       let launchcommand: string = "launchimage2gcode.bat";
 
       if (isLinux) {
-        launchcommand = "xvfb-run image2gcode/linux/Drawbot_stripped";
+        launchcommand = "xvfb-run ./image2gcode/linux/Drawbot_stripped";
       }
       exec(launchcommand, function (err: any, data: any) {
         console.log(err);
