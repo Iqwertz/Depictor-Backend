@@ -30,14 +30,15 @@ let useBGApi: boolean = false; //used during dev. to limit api calls
 const outputDir = `./bgremoved/`;
 let removedBgBase64: string = "";
 
-let isLinux: boolean = true;
+const isLinux: boolean = process.platform === "linux";
 
 type AppStates =
   | "idle"
   | "removingBg"
   | "processingImage"
   | "rawGcodeReady"
-  | "Drawing";
+  | "drawing"
+  | "error";
 
 let appState: AppStates = "idle";
 
@@ -127,7 +128,7 @@ app.post("/newPicture", (req: Request, res: Response) => {
 });
 
 app.post("/checkProgress", (req: Request, res: Response) => {
-  if (appState == "rawGcodeReady") {
+  if (appState == "rawGcodeReady" || appState == "drawing") {
     let img2gcodePath: string = "./image2gcode/windows/";
     if (isLinux) {
       img2gcodePath = "./image2gcode/linux/";
@@ -172,14 +173,13 @@ function drawGcode(gcode: string) {
       }
 
       if (isLinux) {
-        let launchcommand: string =
-          "./launchGcodeCli.sh";
+        let launchcommand: string = "./launchGcodeCli.sh";
         exec(launchcommand, function (err: any, data: any) {
           console.log(err);
           console.log(data.toString());
 
           if (!err) {
-            appState = "Drawing";
+            appState = "drawing";
           }
         });
       } else {
