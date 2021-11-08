@@ -31,6 +31,7 @@ const outputDir = `./bgremoved/`;
 let removedBgBase64: string = "";
 
 const isLinux: boolean = process.platform === "linux";
+console.log("Detected Linux: ", isLinux);
 
 type AppStates =
   | "idle"
@@ -156,6 +157,10 @@ app.post("/postGcode", (req: Request, res: Response) => {
     res.header("Access-Control-Allow-Origin", [req.headers.origin!]);
     res.json({ appState: appState, err: "not_allowed" });
   }
+});
+
+app.post("/cancle", (req: Request, res: Response) => {
+  appState = "idle";
 });
 
 httpsServer!.listen(3001, () => {
