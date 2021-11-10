@@ -41,6 +41,11 @@ type AppStates =
   | "drawing"
   | "error";
 
+interface StateResponse {
+  state: AppStates;
+  data?: string;
+}
+
 let appState: AppStates = "idle";
 
 let httpsServer: any;
@@ -129,6 +134,9 @@ app.post("/newPicture", (req: Request, res: Response) => {
 });
 
 app.post("/checkProgress", (req: Request, res: Response) => {
+  let response: StateResponse = {
+    state: appState,
+  };
   if (appState == "rawGcodeReady" || appState == "drawing") {
     let img2gcodePath: string = "./image2gcode/windows/";
     if (isLinux) {
@@ -140,10 +148,11 @@ app.post("/checkProgress", (req: Request, res: Response) => {
       "utf8"
     );
     res.header("Access-Control-Allow-Origin", [req.headers.origin!]);
-    res.json({ appState: appState, rawGcode: rawGcode });
+    response.data = rawGcode;
+    res.json(response);
   } else {
     res.header("Access-Control-Allow-Origin", [req.headers.origin!]);
-    res.json({ appState: appState });
+    res.json(response);
   }
 });
 
@@ -160,6 +169,7 @@ app.post("/postGcode", (req: Request, res: Response) => {
 });
 
 app.post("/cancle", (req: Request, res: Response) => {
+  console.log("cancle");
   appState = "idle";
 });
 
