@@ -2,4 +2,5 @@ image2gcode/java/
 image2gcode/gcode/
 rawimages
 bgremoved
+node_modules/
 
