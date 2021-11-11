@@ -53,7 +53,7 @@ let httpsServer: any;
 checkCertificate();
 
 const corsOptions = {
-  origin: "http://localhost:4200",
+  origin: ["http://localhost:4200", "192.168.0.53"],
   credentials: true, //access-control-allow-credentials:true
   optionSuccessStatus: 200,
 };
