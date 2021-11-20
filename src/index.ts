@@ -26,7 +26,7 @@ const app = express();
 app.use(express.json({ limit: "50mb" }));
 app.use(express.urlencoded({ limit: "50mb", extended: true }));
 
-let useBGApi: boolean = false; //used during dev. to limit api calls
+let useBGApi: boolean = true; //used during dev. to limit api calls
 const outputDir = `./bgremoved/`;
 let removedBgBase64: string = "";
 
@@ -53,7 +53,7 @@ let httpsServer: any;
 checkCertificate();
 
 const corsOptions = {
-  origin: ["http://localhost:4200", "192.168.0.53"],
+  origin: "http://localhost:4200",
   credentials: true, //access-control-allow-credentials:true
   optionSuccessStatus: 200,
 };
@@ -61,7 +61,7 @@ app.use(cors(corsOptions));
 
 //the checkCertificate function checks if a ssl certifficate can be found on the server snd starts the https server with the cridentials. If no credentials are found it uses a fallback http server
 function checkCertificate() {
-  try {
+/*  try {
     //certificate paths
     const privateKey = fs.readFileSync(
       "/etc/letsencrypt/live/trixamserver.tk/privkey.pem",
@@ -83,10 +83,10 @@ function checkCertificate() {
     };
     httpsServer = require("https").createServer(credentials, app);
     console.log("Certificate Found - starting https server");
-  } catch {
+  } catch {*/
     httpsServer = require("http").createServer(app);
     console.log("No Certificate - starting fallback http server");
-  }
+ // }
 }
 
 app.post("/newPicture", (req: Request, res: Response) => {
@@ -147,11 +147,11 @@ app.post("/checkProgress", (req: Request, res: Response) => {
       img2gcodePath + "gcode/gcode_image.nc",
       "utf8"
     );
-    res.header("Access-Control-Allow-Origin", [req.headers.origin!]);
+  res.header("Access-Control-Allow-Origin", [req.headers.origin!]);
     response.data = rawGcode;
     res.json(response);
   } else {
-    res.header("Access-Control-Allow-Origin", [req.headers.origin!]);
+   res.header("Access-Control-Allow-Origin", [req.headers.origin!]);
     res.json(response);
   }
 });
@@ -160,10 +160,10 @@ app.post("/postGcode", (req: Request, res: Response) => {
   if (appState == "rawGcodeReady") {
     let gcode: string = req.body.gcode;
     drawGcode(gcode);
-    res.header("Access-Control-Allow-Origin", [req.headers.origin!]);
+  res.header("Access-Control-Allow-Origin", [req.headers.origin!]);
     res.json({ appState: appState });
   } else {
-    res.header("Access-Control-Allow-Origin", [req.headers.origin!]);
+  res.header("Access-Control-Allow-Origin", [req.headers.origin!]);
     res.json({ appState: appState, err: "not_allowed" });
   }
 });
