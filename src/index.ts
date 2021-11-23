@@ -204,8 +204,7 @@ function drawGcode(gcode: string) {
       if (isLinux) {
         let launchcommand: string = "./launchGcodeCli.sh";
 
-        //spawn is not used due to some weird heap error (on rpi)
-        /*  let ls = spawn(launchcommand);
+        let ls = spawn(launchcommand);
 
         ls.stdout.on("data", function (data: any) {
           console.log("stdout: " + data.toString());
@@ -219,7 +218,7 @@ function drawGcode(gcode: string) {
         ls.on("exit", function (code: any) {
           console.log("child process exited with code " + code.toString());
           console.log((appState = "drawing"));
-        }); */
+        });
 
         exec(launchcommand, function (err: any, data: any) {
           console.log(err);
@@ -296,7 +295,8 @@ function convertBase64ToGcode(base64: string) {
         launchcommand = "./launchimage2gcode.sh";
       }
 
-      let ls = spawn(launchcommand);
+      //spawn is not used due to some weird heap error (on rpi)
+      /*      let ls = spawn(launchcommand);
 
       ls.stdout.on("data", function (data: any) {
         console.log("stdout: " + data.toString());
@@ -314,16 +314,16 @@ function convertBase64ToGcode(base64: string) {
       ls.on("exit", function (code: any) {
         console.log("child process exited with code " + code.toString());
         //sadly already exits on bash exec end
-      });
+      }); */
 
-      /*       exec(launchcommand, function (err: any, data: any) {
+      exec(launchcommand, function (err: any, data: any) {
         console.log(err);
         console.log(data.toString());
 
         if (!err) {
           appState = "rawGcodeReady";
         }
-      }); */
+      });
     }
   );
 }
