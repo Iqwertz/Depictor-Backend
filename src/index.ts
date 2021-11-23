@@ -21,6 +21,8 @@ import { Request, Response } from "express";
 
 var exec = require("child_process").execFile;
 
+var spawn = require("child_process").spawn;
+
 var cors = require("cors");
 const app = express();
 app.use(express.json({ limit: "50mb" }));
@@ -137,7 +139,12 @@ app.post("/checkProgress", (req: Request, res: Response) => {
   let response: StateResponse = {
     state: appState,
   };
-  if (appState == "rawGcodeReady" || appState == "drawing") {
+  res.header("Access-Control-Allow-Origin", [req.headers.origin!]);
+  res.json(response);
+});
+
+app.post("/getGcode", (req: Request, res: Response) => {
+  if (appState == "rawGcodeReady") {
     let img2gcodePath: string = "./image2gcode/windows/";
     if (isLinux) {
       img2gcodePath = "./image2gcode/linux/";
@@ -148,11 +155,10 @@ app.post("/checkProgress", (req: Request, res: Response) => {
       "utf8"
     );
     res.header("Access-Control-Allow-Origin", [req.headers.origin!]);
-    response.data = rawGcode;
-    res.json(response);
+    res.json({ data: rawGcode });
   } else {
     res.header("Access-Control-Allow-Origin", [req.headers.origin!]);
-    res.json(response);
+    res.json({ err: "no_gcode_ready" });
   }
 });
 
@@ -189,14 +195,31 @@ function drawGcode(gcode: string) {
 
       if (isLinux) {
         let launchcommand: string = "./launchGcodeCli.sh";
-        exec(launchcommand, function (err: any, data: any) {
+
+        let ls = spawn(launchcommand);
+
+        ls.stdout.on("data", function (data: any) {
+          console.log("stdout: " + data.toString());
+          //to do: log data to frontend
+        });
+
+        ls.stderr.on("data", function (data: any) {
+          console.log("stderr: " + data.toString());
+        });
+
+        ls.on("exit", function (code: any) {
+          console.log("child process exited with code " + code.toString());
+          console.log((appState = "drawing"));
+        });
+
+        /*         exec(launchcommand, function (err: any, data: any) {
           console.log(err);
           console.log(data.toString());
 
           if (!err) {
             appState = "drawing";
           }
-        });
+        }); */
       } else {
         console.log("Drawing only works on Linux");
       }
@@ -263,14 +286,35 @@ function convertBase64ToGcode(base64: string) {
       if (isLinux) {
         launchcommand = "./launchimage2gcode.sh";
       }
-      exec(launchcommand, function (err: any, data: any) {
+
+      let ls = spawn(launchcommand);
+
+      ls.stdout.on("data", function (data: any) {
+        console.log("stdout: " + data.toString());
+
+        if (data.toString().includes("gcode created")) {
+          appState = "rawGcodeReady";
+        }
+        //to do: log data to frontend
+      });
+
+      ls.stderr.on("data", function (data: any) {
+        console.log("stderr: " + data.toString());
+      });
+
+      ls.on("exit", function (code: any) {
+        console.log("child process exited with code " + code.toString());
+        //sadly already exits on bash exec end
+      });
+
+      /*       exec(launchcommand, function (err: any, data: any) {
         console.log(err);
         console.log(data.toString());
 
         if (!err) {
           appState = "rawGcodeReady";
         }
-      });
+      }); */
     }
   );
 }
