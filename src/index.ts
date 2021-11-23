@@ -29,6 +29,7 @@ app.use(express.json({ limit: "50mb" }));
 app.use(express.urlencoded({ limit: "50mb", extended: true }));
 
 let useBGApi: boolean = false; //used during dev. to limit api calls
+let skipGenerateGcode: boolean = true; //use the last gcode - used for faster development
 const outputDir = `./bgremoved/`;
 let removedBgBase64: string = "";
 
@@ -299,35 +300,18 @@ function convertBase64ToGcode(base64: string) {
         launchcommand = "./launchimage2gcode.sh";
       }
 
-      //spawn is not used due to some weird heap error (on rpi)
-      /*      let ls = spawn(launchcommand);
+      if (!skipGenerateGcode) {
+        exec(launchcommand, function (err: any, data: any) {
+          console.log(err);
+          console.log(data.toString());
 
-      ls.stdout.on("data", function (data: any) {
-        console.log("stdout: " + data.toString());
-
-        if (data.toString().includes("gcode created")) {
-          appState = "rawGcodeReady";
-        }
-        //to do: log data to frontend
-      });
-
-      ls.stderr.on("data", function (data: any) {
-        console.log("stderr: " + data.toString());
-      });
-
-      ls.on("exit", function (code: any) {
-        console.log("child process exited with code " + code.toString());
-        //sadly already exits on bash exec end
-      }); */
-
-      exec(launchcommand, function (err: any, data: any) {
-        console.log(err);
-        console.log(data.toString());
-
-        if (!err) {
-          appState = "rawGcodeReady";
-        }
-      });
+          if (!err) {
+            appState = "rawGcodeReady";
+          }
+        });
+      } else {
+        appState = "rawGcodeReady";
+      }
     }
   );
 }
