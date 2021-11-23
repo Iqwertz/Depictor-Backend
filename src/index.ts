@@ -204,7 +204,8 @@ function drawGcode(gcode: string) {
       if (isLinux) {
         let launchcommand: string = "./launchGcodeCli.sh";
 
-        let ls = spawn(launchcommand);
+        //spawn is not used due to some weird heap error (on rpi)
+        /*  let ls = spawn(launchcommand);
 
         ls.stdout.on("data", function (data: any) {
           console.log("stdout: " + data.toString());
@@ -218,16 +219,16 @@ function drawGcode(gcode: string) {
         ls.on("exit", function (code: any) {
           console.log("child process exited with code " + code.toString());
           console.log((appState = "drawing"));
-        });
+        }); */
 
-        /*         exec(launchcommand, function (err: any, data: any) {
+        exec(launchcommand, function (err: any, data: any) {
           console.log(err);
           console.log(data.toString());
 
           if (!err) {
             appState = "drawing";
           }
-        }); */
+        });
       } else {
         console.log("Drawing only works on Linux");
       }
