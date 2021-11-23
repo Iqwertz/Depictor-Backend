@@ -49,6 +49,7 @@ interface StateResponse {
 }
 
 let appState: AppStates = "idle";
+let drawingProgress: number = 0;
 
 let httpsServer: any;
 
@@ -204,10 +205,13 @@ function drawGcode(gcode: string) {
       if (isLinux) {
         let launchcommand: string = "./launchGcodeCli.sh";
 
+        appState = "drawing";
+
         let ls = spawn(launchcommand);
 
         ls.stdout.on("data", function (data: any) {
           console.log("stdout: " + data.toString());
+          drawingProgress++;
           //to do: log data to frontend
         });
 
@@ -217,7 +221,7 @@ function drawGcode(gcode: string) {
 
         ls.on("exit", function (code: any) {
           console.log("child process exited with code " + code.toString());
-          console.log((appState = "drawing"));
+          appState = "idle";
         });
 
         exec(launchcommand, function (err: any, data: any) {
