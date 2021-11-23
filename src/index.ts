@@ -55,7 +55,7 @@ let httpsServer: any;
 checkCertificate();
 
 const corsOptions = {
-  origin: ["http://localhost:4200", "192.168.0.53"],
+  origin: "http://192.168.0.53",
   credentials: true, //access-control-allow-credentials:true
   optionSuccessStatus: 200,
 };
@@ -63,7 +63,7 @@ app.use(cors(corsOptions));
 
 //the checkCertificate function checks if a ssl certifficate can be found on the server snd starts the https server with the cridentials. If no credentials are found it uses a fallback http server
 function checkCertificate() {
-  try {
+  /*  try {
     //certificate paths
     const privateKey = fs.readFileSync(
       "/etc/letsencrypt/live/trixamserver.tk/privkey.pem",
@@ -85,10 +85,10 @@ function checkCertificate() {
     };
     httpsServer = require("https").createServer(credentials, app);
     console.log("Certificate Found - starting https server");
-  } catch {
-    httpsServer = require("http").createServer(app);
-    console.log("No Certificate - starting fallback http server");
-  }
+  } catch {*/
+  httpsServer = require("http").createServer(app);
+  console.log("No Certificate - starting fallback http server");
+  // }
 }
 
 app.post("/newPicture", (req: Request, res: Response) => {
