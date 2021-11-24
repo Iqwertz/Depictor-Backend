@@ -207,22 +207,22 @@ function drawGcode(gcode: string) {
 
         appState = "drawing";
 
+        let tail = new Tail("gcodeCliOutput.txt", "\n", {}, true);
+
+        tail.on("line", function (data: any) {
+          console.log(data);
+        });
+
+        tail.on("error", function (error: any) {
+          console.log("ERROR: ", error);
+        });
+
         exec(launchcommand, function (err: any, data: any) {
           console.log(err);
           console.log(data.toString());
 
           if (!err) {
-            appState = "drawing";
-
-            let tail = new Tail("gcodeCliOutput.txt", "\n", {}, true);
-
-            tail.on("line", function (data: any) {
-              console.log(data);
-            });
-
-            tail.on("error", function (error: any) {
-              console.log("ERROR: ", error);
-            });
+            appState = "idle";
           }
         });
       } else {
