@@ -165,9 +165,23 @@ app.post("/getGcode", (req: Request, res: Response) => {
     );
     res.header("Access-Control-Allow-Origin", [req.headers.origin!]);
     res.json({ data: rawGcode });
+  } else if (appState == "drawing") {
+    let rawGcode = fs.readFileSync(+"gcodes/gcode.nc", "utf8");
+    res.header("Access-Control-Allow-Origin", [req.headers.origin!]);
+    res.json({ data: rawGcode });
   } else {
     res.header("Access-Control-Allow-Origin", [req.headers.origin!]);
     res.json({ err: "no_gcode_ready" });
+  }
+});
+
+app.post("/getDrawingProgress", (req: Request, res: Response) => {
+  if (appState == "drawing") {
+    res.header("Access-Control-Allow-Origin", [req.headers.origin!]);
+    res.json({ data: drawingProgress });
+  } else {
+    res.header("Access-Control-Allow-Origin", [req.headers.origin!]);
+    res.json({ err: "not_drawing" });
   }
 });
 
@@ -210,7 +224,9 @@ function drawGcode(gcode: string) {
         let tail = new Tail("gcodeCliOutput.txt", "\n", {}, true);
 
         tail.on("line", function (data: any) {
-          console.log(data);
+          data = data.trim();
+          drawingProgress = parseInt(data.substring(0, 2));
+          console.log(drawingProgress);
         });
 
         tail.on("error", function (error: any) {
