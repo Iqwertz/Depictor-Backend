@@ -20,8 +20,7 @@ import {
 import { Request, Response } from "express";
 
 var exec = require("child_process").execFile;
-
-var spawn = require("child_process").spawn;
+let Tail = require("tail").Tail;
 
 var cors = require("cors");
 const app = express();
@@ -208,29 +207,22 @@ function drawGcode(gcode: string) {
 
         appState = "drawing";
 
-        let ls = spawn(launchcommand);
-
-        ls.stdout.on("data", function (data: any) {
-          console.log("stdout: " + data.toString());
-          drawingProgress++;
-          //to do: log data to frontend
-        });
-
-        ls.stderr.on("data", function (data: any) {
-          console.log("stderr: " + data.toString());
-        });
-
-        ls.on("exit", function (code: any) {
-          console.log("child process exited with code " + code.toString());
-          appState = "idle";
-        });
-
         exec(launchcommand, function (err: any, data: any) {
           console.log(err);
           console.log(data.toString());
 
           if (!err) {
             appState = "drawing";
+
+            let tail = new Tail("gcodeCliOutput.txt", "\n", {}, true);
+
+            tail.on("line", function (data) {
+              console.log(data);
+            });
+
+            tail.on("error", function (error) {
+              console.log("ERROR: ", error);
+            });
           }
         });
       } else {
