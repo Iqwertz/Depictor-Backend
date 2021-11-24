@@ -19,6 +19,7 @@
   "homepage": "https://github.com/Iqwertz/SelfieDrawer-Backend#readme",
   "dependencies": {
     "@types/express": "^4.17.13",
+    "@types/tail": "^2.2.1",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "nodemon": "^2.0.15",

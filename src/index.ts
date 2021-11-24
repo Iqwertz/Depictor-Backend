@@ -216,11 +216,11 @@ function drawGcode(gcode: string) {
 
             let tail = new Tail("gcodeCliOutput.txt", "\n", {}, true);
 
-            tail.on("line", function (data) {
+            tail.on("line", function (data: any) {
               console.log(data);
             });
 
-            tail.on("error", function (error) {
+            tail.on("error", function (error: any) {
               console.log("ERROR: ", error);
             });
           }
