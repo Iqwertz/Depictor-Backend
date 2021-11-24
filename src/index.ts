@@ -166,7 +166,7 @@ app.post("/getGcode", (req: Request, res: Response) => {
     res.header("Access-Control-Allow-Origin", [req.headers.origin!]);
     res.json({ data: rawGcode });
   } else if (appState == "drawing") {
-    let rawGcode = fs.readFileSync(+"gcodes/gcode.nc", "utf8");
+    let rawGcode = fs.readFileSync("gcodes/gcode.nc", "utf8");
     res.header("Access-Control-Allow-Origin", [req.headers.origin!]);
     res.json({ data: rawGcode });
   } else {
@@ -225,7 +225,7 @@ function drawGcode(gcode: string) {
 
         tail.on("line", function (data: any) {
           data = data.trim();
-          drawingProgress = parseInt(data.substring(0, 2));
+          drawingProgress = parseInt(data.replace(/[^\d].*/, ""));
           console.log(drawingProgress);
         });
 
