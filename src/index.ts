@@ -164,14 +164,14 @@ app.post("/getGcode", (req: Request, res: Response) => {
       "utf8"
     );
     res.header("Access-Control-Allow-Origin", [req.headers.origin!]);
-    res.json({state: appState, data: rawGcode });
+    res.json({ state: appState, data: rawGcode });
   } else if (appState == "drawing") {
     let rawGcode = fs.readFileSync("gcodes/gcode.nc", "utf8");
     res.header("Access-Control-Allow-Origin", [req.headers.origin!]);
-    res.json({state: appState, data: rawGcode });
+    res.json({ state: appState, data: rawGcode });
   } else {
     res.header("Access-Control-Allow-Origin", [req.headers.origin!]);
-    res.json({state: appState, err: "no_gcode_ready" });
+    res.json({ state: appState, err: "no_gcode_ready" });
   }
 });
 
@@ -200,6 +200,7 @@ app.post("/postGcode", (req: Request, res: Response) => {
 app.post("/cancle", (req: Request, res: Response) => {
   console.log("cancle");
   appState = "idle";
+  drawingProgress = 0;
 });
 
 httpsServer!.listen(3001, () => {
@@ -231,8 +232,8 @@ function drawGcode(gcode: string) {
 
         tail.on("error", function (error: any) {
           console.log("ERROR: ", error);
-        appState = "error";
-	});
+          appState = "error";
+        });
 
         exec(launchcommand, function (err: any, data: any) {
           console.log(err);
@@ -240,9 +241,10 @@ function drawGcode(gcode: string) {
 
           if (!err) {
             appState = "idle";
-          }else{
-appState = "error";
-}
+            drawingProgress = 0;
+          } else {
+            appState = "error";
+          }
         });
       } else {
         console.log("Drawing only works on Linux");
