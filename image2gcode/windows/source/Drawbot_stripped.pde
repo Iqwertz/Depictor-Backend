@@ -68,7 +68,7 @@ String  basefile_selected = "";
 int     startTime = 0;
 boolean ctrl_down = false;
 
-boolean drawToScreen = false;
+boolean drawToScreen = true;
 
 Limit   dx, dy;
 PrintWriter OUTPUT;
@@ -82,8 +82,8 @@ void setup() {
     output = createWriter("log.txt"); 
     
     
-    size(10, 10);
-    //frame.setLocation(200, 200);
+    size(500, 500);
+    frame.setLocation(200, 200);
     surface.setResizable(true);
     surface.setTitle("Drawbot_image_to_gcode_v2, version 3.75");
     colorMode(RGB);
@@ -136,7 +136,6 @@ void drawfunctions() {
             if (display_line_count <= 1) {
                 background(255);
             } 
-            background(0,255,0);
             ocl.find_path();
             
             display_line_count = d1.line_count;
@@ -155,9 +154,10 @@ void drawfunctions() {
             break;
         case 5 : 
         if(drawToScreen){
-            render_all();
+           render_all();
     }
             noLoop();
+           save("gcode/render.png");
             create_gcode_files(display_line_count);
             exit();
             break;
@@ -238,7 +238,7 @@ void render_all() {
     
     if(display_mode == "drawing") {
         //<d1.render_all();
-        d1.render_some(display_line_count);
+       d1.render_some(display_line_count);
     }
 }
 

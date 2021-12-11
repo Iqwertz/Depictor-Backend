@@ -67,7 +67,7 @@ void create_gcode_files(int line_count) {
         lines_drawn = 0;
         x = 0;
         y = 0;
-        String gname = "gcode\\gcode_" + basefile_selected + ".nc";
+        String gname = "gcode/gcode_" + basefile_selected + ".nc";
         OUTPUT = createWriter(sketchPath("") + gname);
         gcode_header();
         

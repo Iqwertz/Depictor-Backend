@@ -84,7 +84,7 @@ String  basefile_selected = "";
 int     startTime = 0;
 boolean ctrl_down = false;
 
-boolean drawToScreen = false;
+boolean drawToScreen = true;
 
 Limit   dx, dy;
 PrintWriter OUTPUT;
@@ -99,7 +99,7 @@ public void setup() {
     
     
     
-    //frame.setLocation(200, 200);
+    frame.setLocation(200, 200);
     surface.setResizable(true);
     surface.setTitle("Drawbot_image_to_gcode_v2, version 3.75");
     colorMode(RGB);
@@ -152,7 +152,6 @@ public void drawfunctions() {
             if (display_line_count <= 1) {
                 background(255);
             } 
-            background(0,255,0);
             ocl.find_path();
             
             display_line_count = d1.line_count;
@@ -171,9 +170,10 @@ public void drawfunctions() {
             break;
         case 5 : 
         if(drawToScreen){
-            render_all();
+           render_all();
     }
             noLoop();
+           save("gcode/render.png");
             create_gcode_files(display_line_count);
             exit();
             break;
@@ -254,7 +254,7 @@ public void render_all() {
     
     if(display_mode == "drawing") {
         //<d1.render_all();
-        d1.render_some(display_line_count);
+       d1.render_some(display_line_count);
     }
 }
 
@@ -376,7 +376,7 @@ class botDrawing {
   }
 
   public void render_last () {
-    lines[line_count].render_with_copic();
+    lines[line_count/2].render_with_copic();
   }
   
   public void render_all () {
@@ -386,7 +386,7 @@ class botDrawing {
   }
   
   public void render_some (int line_count) {
-    for (int i=1; i<line_count; i++) {
+    for (int i=1; i<line_count/2; i++) {
       lines[i].render_with_copic();
     }
   }
@@ -1473,7 +1473,7 @@ class PFM_squares implements pfm {
   }
 
 }
-  public void settings() {  size(10, 10); }
+  public void settings() {  size(500, 500); }
   static public void main(String[] passedArgs) {
     String[] appletArgs = new String[] { "Drawbot_stripped" };
     if (passedArgs != null) {

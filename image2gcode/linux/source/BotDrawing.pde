@@ -8,7 +8,7 @@ class botDrawing {
   }
 
   void render_last () {
-    lines[line_count].render_with_copic();
+    lines[line_count/2].render_with_copic();
   }
   
   void render_all () {
@@ -18,7 +18,7 @@ class botDrawing {
   }
   
   void render_some (int line_count) {
-    for (int i=1; i<line_count; i++) {
+    for (int i=1; i<line_count/2; i++) {
       lines[i].render_with_copic();
     }
   }

@@ -28,7 +28,7 @@ app.use(express.json({ limit: "50mb" }));
 app.use(express.urlencoded({ limit: "50mb", extended: true }));
 
 let useBGApi: boolean = false; //used during dev. to limit api calls
-let skipGenerateGcode: boolean = true; //use the last gcode - used for faster development
+let skipGenerateGcode: boolean = false; //use the last gcode - used for faster development
 const outputDir = `./bgremoved/`;
 let removedBgBase64: string = "";
 
@@ -48,6 +48,11 @@ interface StateResponse {
   data?: string;
 }
 
+interface GcodeEntry {
+  image: string;
+  name: string;
+}
+
 let appState: AppStates = "idle";
 let drawingProgress: number = 0;
 
@@ -55,7 +60,7 @@ let httpsServer: any;
 
 checkCertificate();
 
-var whitelist = ["http://192.168.0.53", "http://localhost:4200"];
+var whitelist = ["http://192.168.0.53", "http://localhost:4200", undefined];
 
 const corsOptions = {
   origin: function (origin: any, callback: any) {
@@ -203,6 +208,26 @@ app.post("/cancle", (req: Request, res: Response) => {
   drawingProgress = 0;
 });
 
+app.post("/getGcodeGallery", (req: Request, res: Response) => {
+  let gallery: GcodeEntry[] = [];
+
+  fs.readdirSync("savedGcodes/").forEach((file: any) => {
+    if (file.includes("png")) {
+      let image: string = fs.readFileSync("savedGcodes/" + file, {
+        encoding: "base64",
+      });
+      let entry: GcodeEntry = {
+        image: image,
+        name: file.split(".")[0],
+      };
+      gallery.push(entry);
+    }
+  });
+
+  res.header("Access-Control-Allow-Origin", [req.headers.origin!]);
+  res.json({ data: gallery });
+});
+
 httpsServer!.listen(3001, () => {
   console.log("listening on *:3001");
 });
@@ -319,6 +344,35 @@ function convertBase64ToGcode(base64: string) {
           console.log(data.toString());
 
           if (!err) {
+            let img2gcodePath: string = "./image2gcode/windows/";
+            if (isLinux) {
+              img2gcodePath = "./image2gcode/linux/";
+            }
+
+            let fName = Date.now();
+
+            fs.copyFile(
+              img2gcodePath + "gcode/gcode_image.nc",
+              "savedGcodes/" + fName + ".nc",
+              (err: any) => {
+                if (err) {
+                  console.log("Error Found:", err);
+                } else {
+                }
+              }
+            );
+
+            fs.copyFile(
+              img2gcodePath + "gcode/render.png",
+              "savedGcodes/" + fName + ".png",
+              (err: any) => {
+                if (err) {
+                  console.log("Error Found:", err);
+                } else {
+                }
+              }
+            );
+
             appState = "rawGcodeReady";
           }
         });
