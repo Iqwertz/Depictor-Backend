@@ -228,6 +228,22 @@ app.post("/getGcodeGallery", (req: Request, res: Response) => {
   res.json({ data: gallery });
 });
 
+app.post("/getGcodeById", (req: Request, res: Response) => {
+  fs.readFile(
+    "savedGcodes/" + req.body.id + ".nc",
+    "utf8",
+    (err: any, data: string) => {
+      res.header("Access-Control-Allow-Origin", [req.headers.origin!]);
+      if (err) {
+        console.error(err);
+        res.json({ err: "not_found" });
+        return;
+      }
+      res.json({ data: data });
+    }
+  );
+});
+
 httpsServer!.listen(3001, () => {
   console.log("listening on *:3001");
 });
