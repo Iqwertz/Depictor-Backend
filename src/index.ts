@@ -27,7 +27,7 @@ const app = express();
 app.use(express.json({ limit: "50mb" }));
 app.use(express.urlencoded({ limit: "50mb", extended: true }));
 
-let useBGApi: boolean = false; //used during dev. to limit api calls
+let useBGApi: boolean = true; //used during dev. to limit api calls
 let skipGenerateGcode: boolean = false; //use the last gcode - used for faster development
 const outputDir = `./bgremoved/`;
 let removedBgBase64: string = "";
@@ -113,7 +113,7 @@ app.post("/newPicture", (req: Request, res: Response) => {
     res.json({ err: appState });
   } else {
     appState = "removingBg";
-    if (useBGApi) {
+    if (useBGApi && req.body.removeBg) {
       removeBg(req.body.img);
     } else {
       removedBgBase64 = req.body.img;
