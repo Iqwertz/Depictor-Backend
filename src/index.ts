@@ -191,7 +191,7 @@ app.post("/getDrawingProgress", (req: Request, res: Response) => {
 });
 
 app.post("/postGcode", (req: Request, res: Response) => {
-  if (appState == "rawGcodeReady") {
+  if (appState != "drawing" && appState != "error") {
     let gcode: string = req.body.gcode;
     drawGcode(gcode);
     res.header("Access-Control-Allow-Origin", [req.headers.origin!]);
