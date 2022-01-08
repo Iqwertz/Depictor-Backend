@@ -224,6 +224,8 @@ app.post("/getGcodeGallery", (req: Request, res: Response) => {
     }
   });
 
+  gallery.reverse();
+
   res.header("Access-Control-Allow-Origin", [req.headers.origin!]);
   res.json({ data: gallery });
 });
@@ -259,6 +261,7 @@ function drawGcode(gcode: string) {
       }
 
       if (isLinux) {
+        let startTime = new Date().getTime();
         let launchcommand: string = "./launchGcodeCli.sh";
 
         appState = "drawing";
@@ -281,6 +284,19 @@ function drawGcode(gcode: string) {
           console.log(data.toString());
 
           if (!err) {
+            let timeDiff: number = new Date().getTime() - startTime;
+            let lines: number =
+              gcode.length - gcode.replace(/\n/g, "").length + 1;
+
+            fs.writeFile(
+              "drawingTimesLog.txt",
+              lines + "," + timeDiff + "\n",
+              { flag: "a" },
+              (err: any) => {
+                if (err) console.log(err);
+              }
+            );
+
             appState = "idle";
             drawingProgress = 0;
           } else {
