@@ -60,7 +60,7 @@ let httpsServer: any;
 
 checkCertificate();
 
-var whitelist = ["http://192.168.0.53", "http://localhost:4200", undefined];
+var whitelist = ["http://192.168.0.52", "http://localhost:4200", undefined];
 
 const corsOptions = {
   origin: function (origin: any, callback: any) {
