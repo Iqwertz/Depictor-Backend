@@ -40,11 +40,11 @@ type AppStates =
   | "removingBg"
   | "processingImage"
   | "rawGcodeReady"
-  | "drawing"
   | "error";
 
 interface StateResponse {
   state: AppStates;
+  isDrawing: boolean;
   data?: string;
 }
 
@@ -54,6 +54,7 @@ interface GcodeEntry {
 }
 
 let appState: AppStates = "idle";
+let isDrawing: boolean = false;
 let drawingProgress: number = 0;
 
 let httpsServer: any;
@@ -152,12 +153,13 @@ app.post("/newPicture", (req: Request, res: Response) => {
 app.post("/checkProgress", (req: Request, res: Response) => {
   let response: StateResponse = {
     state: appState,
+    isDrawing: isDrawing,
   };
   res.header("Access-Control-Allow-Origin", [req.headers.origin!]);
   res.json(response);
 });
 
-app.post("/getGcode", (req: Request, res: Response) => {
+app.post("/getGeneratedGcode", (req: Request, res: Response) => {
   if (appState == "rawGcodeReady") {
     let img2gcodePath: string = "./image2gcode/windows/";
     if (isLinux) {
@@ -169,19 +171,26 @@ app.post("/getGcode", (req: Request, res: Response) => {
       "utf8"
     );
     res.header("Access-Control-Allow-Origin", [req.headers.origin!]);
-    res.json({ state: appState, data: rawGcode });
-  } else if (appState == "drawing") {
-    let rawGcode = fs.readFileSync("gcodes/gcode.nc", "utf8");
-    res.header("Access-Control-Allow-Origin", [req.headers.origin!]);
-    res.json({ state: appState, data: rawGcode });
+    res.json({ state: appState, isDrawing: isDrawing, data: rawGcode });
   } else {
     res.header("Access-Control-Allow-Origin", [req.headers.origin!]);
     res.json({ state: appState, err: "no_gcode_ready" });
   }
 });
 
+app.post("/getDrawenGcode", (req: Request, res: Response) => {
+  if (isDrawing) {
+    let rawGcode = fs.readFileSync("gcodes/gcode.nc", "utf8");
+    res.header("Access-Control-Allow-Origin", [req.headers.origin!]);
+    res.json({ state: appState, isDrawing: isDrawing, data: rawGcode });
+  } else {
+    res.header("Access-Control-Allow-Origin", [req.headers.origin!]);
+    res.json({ state: appState, err: "not_drawing" });
+  }
+});
+
 app.post("/getDrawingProgress", (req: Request, res: Response) => {
-  if (appState == "drawing") {
+  if (isDrawing) {
     res.header("Access-Control-Allow-Origin", [req.headers.origin!]);
     res.json({ data: drawingProgress });
   } else {
@@ -191,7 +200,7 @@ app.post("/getDrawingProgress", (req: Request, res: Response) => {
 });
 
 app.post("/postGcode", (req: Request, res: Response) => {
-  if (appState != "drawing" && appState != "error") {
+  if (isDrawing && appState != "error") {
     let gcode: string = req.body.gcode;
     drawGcode(gcode);
     res.header("Access-Control-Allow-Origin", [req.headers.origin!]);
@@ -264,7 +273,7 @@ function drawGcode(gcode: string) {
         let startTime = new Date().getTime();
         let launchcommand: string = "./launchGcodeCli.sh";
 
-        appState = "drawing";
+        isDrawing = true;
 
         let tail = new Tail("gcodeCliOutput.txt", "\n", {}, true);
 
@@ -276,6 +285,7 @@ function drawGcode(gcode: string) {
 
         tail.on("error", function (error: any) {
           console.log("ERROR: ", error);
+          isDrawing = false;
           appState = "error";
         });
 
@@ -283,6 +293,7 @@ function drawGcode(gcode: string) {
           console.log(err);
           console.log(data.toString());
 
+          isDrawing = false;
           if (!err) {
             let timeDiff: number = new Date().getTime() - startTime;
             let lines: number =
