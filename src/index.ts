@@ -217,6 +217,12 @@ app.post("/cancle", (req: Request, res: Response) => {
   drawingProgress = 0;
 });
 
+app.post("/stop", (req: Request, res: Response) => {
+  console.log("stop");
+  appState = "idle";
+  drawingProgress = 0;
+});
+
 app.post("/delete", (req: Request, res: Response) => {
   console.log("delete");
 
