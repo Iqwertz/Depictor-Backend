@@ -19,6 +19,7 @@ import {
 } from "remove.bg";
 import { Request, Response } from "express";
 
+const kill  = require('tree-kill');
 var exec = require("child_process").execFile;
 let Tail = require("tail").Tail;
 
@@ -56,6 +57,8 @@ interface GcodeEntry {
 let appState: AppStates = "idle";
 let isDrawing: boolean = false;
 let drawingProgress: number = 0;
+
+let currentDrawingProcessPID = 0;  //used to stop the process
 
 let httpsServer: any;
 
@@ -221,6 +224,7 @@ app.post("/stop", (req: Request, res: Response) => {
   console.log("stop");
   appState = "idle";
   drawingProgress = 0;
+kill(currentDrawingProcessPID);
 });
 
 app.post("/delete", (req: Request, res: Response) => {
@@ -311,10 +315,9 @@ function drawGcode(gcode: string) {
           log(error);
           console.log("ERROR: ", error);
           isDrawing = false;
-          appState = "error";
         });
 
-        exec(launchcommand, function (err: any, data: any) {
+        const launchProcess = exec(launchcommand, function (err: any, data: any) {
           console.log(err);
           console.log(data.toString());
 
@@ -340,6 +343,8 @@ function drawGcode(gcode: string) {
             appState = "error";
           }
         });
+
+	currentDrawingProcessPID = launchProcess.pid
       } else {
         console.log("Drawing only works on Linux");
       }

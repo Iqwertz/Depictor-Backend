@@ -1,0 +1,8 @@
+2022-01-15T23:54:21.735Z: Error: Command failed: ./launchGcodeCli.sh
+
+Grbl 1.1h ['$' for help]
+[MSG:'$H'|'$X' to unlock]
+
+---- Sending file 'gcodes/gcode.nc' to '/dev/ttyACM0,b115200' -----
+
+ 
