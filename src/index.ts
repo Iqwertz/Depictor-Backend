@@ -217,6 +217,23 @@ app.post("/cancle", (req: Request, res: Response) => {
   drawingProgress = 0;
 });
 
+app.post("/delete", (req: Request, res: Response) => {
+  console.log("delete");
+
+  fs.unlink("savedGcodes/" + req.body.id + ".nc", (err: any) => {
+    if (err) {
+      console.log(err);
+      return;
+    }
+  });
+  fs.unlink("savedGcodes/" + req.body.id + ".png", (err: any) => {
+    if (err) {
+      console.log(err);
+      return;
+    }
+  });
+});
+
 app.post("/getGcodeGallery", (req: Request, res: Response) => {
   let gallery: GcodeEntry[] = [];
 
