@@ -263,7 +263,8 @@ app.post("/getGcodeById", (req: Request, res: Response) => {
     (err: any, data: string) => {
       res.header("Access-Control-Allow-Origin", [req.headers.origin!]);
       if (err) {
-        console.error(err);
+        log(err);
+        console.log(err);
         res.json({ err: "not_found" });
         return;
       }
@@ -301,6 +302,7 @@ function drawGcode(gcode: string) {
         });
 
         tail.on("error", function (error: any) {
+          log(error);
           console.log("ERROR: ", error);
           isDrawing = false;
           appState = "error";
@@ -328,6 +330,7 @@ function drawGcode(gcode: string) {
             appState = "idle";
             drawingProgress = 0;
           } else {
+            log(err);
             appState = "error";
           }
         });
@@ -362,6 +365,7 @@ function removeBg(base64img: any) {
         function (err: any, data: any) {
           if (err) {
             console.log("err", err);
+            log(err);
           }
           console.log(data, "data");
         }
@@ -370,6 +374,7 @@ function removeBg(base64img: any) {
       convertBase64ToGcode(removedBgBase64);
     })
     .catch((errors: Array<RemoveBgError>) => {
+      log(JSON.stringify(errors));
       console.log(JSON.stringify(errors));
     });
 }
@@ -387,6 +392,7 @@ function convertBase64ToGcode(base64: string) {
     "base64",
     function (err: any, data: any) {
       if (err) {
+        log(err);
         console.log("err", err);
       }
 
@@ -416,6 +422,7 @@ function convertBase64ToGcode(base64: string) {
               "savedGcodes/" + fName + ".nc",
               (err: any) => {
                 if (err) {
+                  log(err);
                   console.log("Error Found:", err);
                 } else {
                 }
@@ -439,6 +446,17 @@ function convertBase64ToGcode(base64: string) {
       } else {
         appState = "rawGcodeReady";
       }
+    }
+  );
+}
+
+function log(message: string) {
+  fs.writeFile(
+    "log.txt",
+    new Date().toISOString() + ": " + message + "\n \n",
+    { flag: "a" },
+    (err: any) => {
+      if (err) console.log(err);
     }
   );
 }
