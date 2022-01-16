@@ -225,7 +225,9 @@ app.post("/stop", (req: Request, res: Response) => {
   appState = "idle";
   drawingProgress = 0;
   kill(currentDrawingProcessPID);
-  exec("./home.sh");
+  setTimeout(() => {
+    exec("./home.sh");
+  }, 1000);
 });
 
 app.post("/delete", (req: Request, res: Response) => {
