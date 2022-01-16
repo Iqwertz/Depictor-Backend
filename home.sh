@@ -1,1 +1,1 @@
-gcode-cli -b 1 -s 3000 gcodes/home.nc /dev/ttyACM0,b115200
+gcode-cli -b 1 -s 3000 gcodes/home.gcode /dev/ttyACM0,b115200
