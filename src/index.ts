@@ -343,7 +343,7 @@ function drawGcode(gcode: string) {
               drawingProgress = 0;
             } else {
               log(err);
-              appState = "error";
+              //appState = "error";
             }
           }
         );
