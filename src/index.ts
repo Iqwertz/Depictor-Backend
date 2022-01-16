@@ -19,7 +19,7 @@ import {
 } from "remove.bg";
 import { Request, Response } from "express";
 
-const kill  = require('tree-kill');
+const kill = require("tree-kill");
 var exec = require("child_process").execFile;
 let Tail = require("tail").Tail;
 
@@ -58,7 +58,7 @@ let appState: AppStates = "idle";
 let isDrawing: boolean = false;
 let drawingProgress: number = 0;
 
-let currentDrawingProcessPID = 0;  //used to stop the process
+let currentDrawingProcessPID = 0; //used to stop the process
 
 let httpsServer: any;
 
@@ -224,7 +224,8 @@ app.post("/stop", (req: Request, res: Response) => {
   console.log("stop");
   appState = "idle";
   drawingProgress = 0;
-kill(currentDrawingProcessPID);
+  kill(currentDrawingProcessPID);
+  exec("./home.sh");
 });
 
 app.post("/delete", (req: Request, res: Response) => {
@@ -317,34 +318,37 @@ function drawGcode(gcode: string) {
           isDrawing = false;
         });
 
-        const launchProcess = exec(launchcommand, function (err: any, data: any) {
-          console.log(err);
-          console.log(data.toString());
+        const launchProcess = exec(
+          launchcommand,
+          function (err: any, data: any) {
+            console.log(err);
+            console.log(data.toString());
 
-          isDrawing = false;
-          if (!err) {
-            let timeDiff: number = new Date().getTime() - startTime;
-            let lines: number =
-              gcode.length - gcode.replace(/\n/g, "").length + 1;
+            isDrawing = false;
+            if (!err) {
+              let timeDiff: number = new Date().getTime() - startTime;
+              let lines: number =
+                gcode.length - gcode.replace(/\n/g, "").length + 1;
 
-            fs.writeFile(
-              "drawingTimesLog.txt",
-              lines + "," + timeDiff + "\n",
-              { flag: "a" },
-              (err: any) => {
-                if (err) console.log(err);
-              }
-            );
+              fs.writeFile(
+                "drawingTimesLog.txt",
+                lines + "," + timeDiff + "\n",
+                { flag: "a" },
+                (err: any) => {
+                  if (err) console.log(err);
+                }
+              );
 
-            appState = "idle";
-            drawingProgress = 0;
-          } else {
-            log(err);
-            appState = "error";
+              appState = "idle";
+              drawingProgress = 0;
+            } else {
+              log(err);
+              appState = "error";
+            }
           }
-        });
+        );
 
-	currentDrawingProcessPID = launchProcess.pid
+        currentDrawingProcessPID = launchProcess.pid;
       } else {
         console.log("Drawing only works on Linux");
       }
