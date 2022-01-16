@@ -64,7 +64,7 @@ let httpsServer: any;
 
 checkCertificate();
 
-var whitelist = ["http://192.168.0.52", "http://localhost:4200", undefined];
+var whitelist = ["http://192.168.0.52", "http://localhost:4200", undefined, "**"];
 
 const corsOptions = {
   origin: function (origin: any, callback: any) {
@@ -77,8 +77,7 @@ const corsOptions = {
   credentials: true, //access-control-allow-credentials:true
   optionSuccessStatus: 200,
 };
-app.use(cors(corsOptions));
-
+app.use(cors());
 //the checkCertificate function checks if a ssl certifficate can be found on the server snd starts the https server with the cridentials. If no credentials are found it uses a fallback http server
 function checkCertificate() {
   /*  try {
@@ -226,8 +225,11 @@ app.post("/stop", (req: Request, res: Response) => {
   drawingProgress = 0;
   kill(currentDrawingProcessPID);
   setTimeout(() => {
-    exec("./home.sh");
-  }, 1000);
+    exec("./home.sh",function (err: any, data: any) {
+	console.log(err);
+console.log(data);
+    });
+  }, 2000);
 });
 
 app.post("/delete", (req: Request, res: Response) => {
