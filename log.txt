@@ -6,3 +6,81 @@ Grbl 1.1h ['$' for help]
 ---- Sending file 'gcodes/gcode.nc' to '/dev/ttyACM0,b115200' -----
 
  
+2022-01-16T00:02:34.934Z: Error: Command failed: ./launchGcodeCli.sh
+ok
+
+Grbl 1.1h ['$' for help]
+[MSG:'$H'|'$X' to unlock]
+
+---- Sending file 'gcodes/gcode.nc' to '/dev/ttyACM0,b115200' -----
+
+ 
+2022-01-16T00:07:38.741Z: Error: Command failed: ./launchGcodeCli.sh
+ok
+
+Grbl 1.1h ['$' for help]
+[MSG:'$H'|'$X' to unlock]
+
+---- Sending file 'gcodes/gcode.nc' to '/dev/ttyACM0,b115200' -----
+
+ 
+2022-01-16T00:08:27.337Z: Error: Command failed: ./launchGcodeCli.sh
+ok
+
+Grbl 1.1h ['$' for help]
+[MSG:'$H'|'$X' to unlock]
+
+---- Sending file 'gcodes/gcode.nc' to '/dev/ttyACM0,b115200' -----
+
+ 
+2022-01-16T10:47:16.523Z: Error: Command failed: ./launchGcodeCli.sh
+
+Grbl 1.1h ['$' for help]
+[MSG:'$H'|'$X' to unlock]
+
+---- Sending file 'gcodes/gcode.nc' to '/dev/ttyACM0,b115200' -----
+
+ 
+2022-01-16T10:52:40.553Z: Error: Command failed: ./launchGcodeCli.sh
+ok
+
+Grbl 1.1h ['$' for help]
+[MSG:'$H'|'$X' to unlock]
+
+---- Sending file 'gcodes/gcode.nc' to '/dev/ttyACM0,b115200' -----
+
+ 
+2022-01-16T10:57:33.215Z: Error: Command failed: ./launchGcodeCli.sh
+
+Grbl 1.1h ['$' for help]
+[MSG:'$H'|'$X' to unlock]
+
+---- Sending file 'gcodes/gcode.nc' to '/dev/ttyACM0,b115200' -----
+Terminated
+
+ 
+2022-01-16T11:01:07.880Z: Error: Command failed: ./launchGcodeCli.sh
+ok
+
+Grbl 1.1h ['$' for help]
+[MSG:'$H'|'$X' to unlock]
+
+---- Sending file 'gcodes/gcode.nc' to '/dev/ttyACM0,b115200' -----
+
+ 
+2022-01-16T12:28:36.185Z: Error: Command failed: ./launchGcodeCli.sh
+
+Grbl 1.1h ['$' for help]
+[MSG:'$H'|'$X' to unlock]
+
+---- Sending file 'gcodes/gcode.nc' to '/dev/ttyACM0,b115200' -----
+
+ 
+2022-01-16T13:19:36.157Z: Error: Command failed: ./launchGcodeCli.sh
+
+Grbl 1.1h ['$' for help]
+[MSG:'$H'|'$X' to unlock]
+
+---- Sending file 'gcodes/gcode.nc' to '/dev/ttyACM0,b115200' -----
+
+ 
