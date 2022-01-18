@@ -264,6 +264,9 @@ app.post("/getGcodeGallery", (req: Request, res: Response) => {
   });
 
   gallery.reverse();
+  if (req.body.range) {
+    gallery = gallery.slice(req.body.range[0], req.body.range[1]);
+  }
 
   res.header("Access-Control-Allow-Origin", [req.headers.origin!]);
   res.json({ data: gallery });
