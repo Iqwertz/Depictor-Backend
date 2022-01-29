@@ -7,3 +7,4 @@ node_modules/
 *.nc
 savedGcodes/1640302294305.png
 *.png
+.vscode/symbols.json
