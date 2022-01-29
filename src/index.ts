@@ -41,86 +41,62 @@ type AppStates =
   | "removingBg"
   | "processingImage"
   | "rawGcodeReady"
-  | "error";
+  | "error"; //possible states of the server
 
 interface StateResponse {
   state: AppStates;
   isDrawing: boolean;
-  data?: string;
 }
 
 interface GcodeEntry {
   image: string;
   name: string;
-}
+} //reponse interface when sending a gallery item
 
-let appState: AppStates = "idle";
-let isDrawing: boolean = false;
-let drawingProgress: number = 0;
+let appState: AppStates = "idle"; //var to track the current appstate
+let isDrawing: boolean = false; //var to track if the bot is currently drawing
+let drawingProgress: number = 0; //var to track the progress of the current drawing
 
-let currentDrawingProcessPID = 0; //used to stop the process
+let currentDrawingProcessPID: number = 0; //used to stop the drawing process
 
-let httpsServer: any;
+let httpServer: any;
 
-checkCertificate();
+app.use(cors()); //enable cors
 
-var whitelist = ["http://192.168.0.52", "http://localhost:4200", undefined, "**"];
+httpServer = require("http").createServer(app); //create new http server
 
-const corsOptions = {
-  origin: function (origin: any, callback: any) {
-    if (whitelist.indexOf(origin) !== -1) {
-      callback(null, true);
-    } else {
-      callback(new Error("Not allowed by CORS"));
+/*
+post: /newPicture
+
+description: when the post request is made with an valid request body the picture will be converted to gcode and saved to the library
+
+expected request: 
+  {
+    removeBg: boolean //use removeBg to removeBackground
+    img: string //an base64 encoded picture
+  }
+  
+returns: 
+  unsuccessfull: 
+    {
+      err: string [errMessage]
     }
-  },
-  credentials: true, //access-control-allow-credentials:true
-  optionSuccessStatus: 200,
-};
-app.use(cors());
-//the checkCertificate function checks if a ssl certifficate can be found on the server snd starts the https server with the cridentials. If no credentials are found it uses a fallback http server
-function checkCertificate() {
-  /*  try {
-    //certificate paths
-    const privateKey = fs.readFileSync(
-      "/etc/letsencrypt/live/trixamserver.tk/privkey.pem",
-      "utf8"
-    );
-    const certificate = fs.readFileSync(
-      "/etc/letsencrypt/live/trixamserver.tk/cert.pem",
-      "utf8"
-    );
-    const ca = fs.readFileSync(
-      "/etc/letsencrypt/live/trixamserver.tk/chain.pem",
-      "utf8"
-    );
-
-    const credentials = {
-      key: privateKey,
-      cert: certificate,
-      ca: ca,
-    };
-    httpsServer = require("https").createServer(credentials, app);
-    console.log("Certificate Found - starting https server");
-  } catch {*/
-  httpsServer = require("http").createServer(app);
-  console.log("No Certificate - starting fallback http server");
-  // }
-}
-
+  successfull:
+    {}
+*/
 app.post("/newPicture", (req: Request, res: Response) => {
-  //listen to a /new post request, generate a new gameenviroment and return the new game Id
-
   if (appState != "idle") {
-    res.header("Access-Control-Allow-Origin", [req.headers.origin!]);
-    res.json({ err: appState });
+    //check if maschine is ready
+    res.json({ err: "not_ready: " + appState }); //return error if not
   } else {
-    appState = "removingBg";
+    appState = "removingBg"; //update appState
     if (useBGApi && req.body.removeBg) {
-      removeBg(req.body.img);
+      //check if removeBG API should be used
+      removeBg(req.body.img); //remove background with removebg //this function will call convertBase64ToGcode asynchronous
     } else {
-      removedBgBase64 = req.body.img;
+      removedBgBase64 = req.body.img; //set the removedBgBase64 Image without bgremove
       fs.writeFile(
+        //update the current picture
         outputDir + "bgremoved-current.jpg",
         req.body.img,
         "base64",
@@ -132,10 +108,11 @@ app.post("/newPicture", (req: Request, res: Response) => {
         }
       );
 
-      convertBase64ToGcode(removedBgBase64);
+      convertBase64ToGcode(removedBgBase64); //convert the image to gcode
     }
 
     fs.writeFile(
+      //Log file to rawImages folder
       "rawimages/" + Date.now() + "-image.jpeg",
       req.body.img,
       "base64",
@@ -147,101 +124,230 @@ app.post("/newPicture", (req: Request, res: Response) => {
       }
     );
 
-    res.header("Access-Control-Allow-Origin", [req.headers.origin!]);
-    res.json({});
+    res.json({}); //return emmpty on success
   }
 });
 
+/*
+post: /checkProgress
+
+description: returns the current state of the application
+
+expected request: 
+  {}
+  
+returns: 
+  @StateResponse
+*/
 app.post("/checkProgress", (req: Request, res: Response) => {
   let response: StateResponse = {
     state: appState,
     isDrawing: isDrawing,
   };
-  res.header("Access-Control-Allow-Origin", [req.headers.origin!]);
+
   res.json(response);
 });
 
+/*
+post: /getGeneratedGcode
+
+description: returns the generated gcode when available
+
+expected request: 
+  {}
+  
+returns: 
+  unsuccessfull: 
+    {
+      state: AppStates, 
+      err: string [errMessage]
+    }
+  successfull:
+    {
+      state: AppStates, 
+      isDrawing: boolean, 
+      data: string [requested Gcode]
+    }
+*/
 app.post("/getGeneratedGcode", (req: Request, res: Response) => {
   if (appState == "rawGcodeReady") {
+    //check if gcode is ready
+    /////get the correct path depending on os
     let img2gcodePath: string = "./image2gcode/windows/";
     if (isLinux) {
       img2gcodePath = "./image2gcode/linux/";
     }
 
+    /////read gcode
     let rawGcode = fs.readFileSync(
       img2gcodePath + "gcode/gcode_image.nc",
       "utf8"
     );
-    res.header("Access-Control-Allow-Origin", [req.headers.origin!]);
-    res.json({ state: appState, isDrawing: isDrawing, data: rawGcode });
+
+    res.json({ state: appState, isDrawing: isDrawing, data: rawGcode }); //return gcode and appstate information
   } else {
-    res.header("Access-Control-Allow-Origin", [req.headers.origin!]);
-    res.json({ state: appState, err: "no_gcode_ready" });
+    res.json({ state: appState, err: "no_gcode_ready" }); //return nogcodeready error when nothing is ready
   }
 });
 
+/*
+post: /getDrawenGcode
+
+description: returns the currently drawen gcode when available
+
+expected request: 
+  {}
+  
+returns: 
+  unsuccessfull: 
+    {
+      state: AppStates, 
+      err: string [errMessage]
+    }
+   successfull:
+    {
+      state: AppStates, 
+      isDrawing: boolean, 
+      data: string [requested Gcode]
+    }
+*/
 app.post("/getDrawenGcode", (req: Request, res: Response) => {
   if (isDrawing) {
-    let rawGcode = fs.readFileSync("gcodes/gcode.nc", "utf8");
-    res.header("Access-Control-Allow-Origin", [req.headers.origin!]);
-    res.json({ state: appState, isDrawing: isDrawing, data: rawGcode });
+    //check if maschine is drawing
+    let rawGcode = fs.readFileSync("gcodes/gcode.nc", "utf8"); //read gcode
+
+    res.json({ state: appState, isDrawing: isDrawing, data: rawGcode }); //return gcode and appstate information
   } else {
-    res.header("Access-Control-Allow-Origin", [req.headers.origin!]);
-    res.json({ state: appState, err: "not_drawing" });
+    res.json({ state: appState, err: "not_drawing" }); //return not drawing error
   }
 });
 
+/*
+post: /getDrawingProgress
+
+description: returns the progress of the current drawing as the amount of gcode lines that where executed
+
+expected request: 
+  {}
+  
+returns: 
+  unsuccessfull: 
+    {
+      err: string [errMessage]
+    }
+   successfull:
+    {
+      data: number [amount of gcode lines]
+    }
+*/
 app.post("/getDrawingProgress", (req: Request, res: Response) => {
   if (isDrawing) {
-    res.header("Access-Control-Allow-Origin", [req.headers.origin!]);
-    res.json({ data: drawingProgress });
+    //check if drawing
+    res.json({ data: drawingProgress }); //return progress
   } else {
-    res.header("Access-Control-Allow-Origin", [req.headers.origin!]);
-    res.json({ err: "not_drawing" });
+    res.json({ err: "not_drawing" }); //return notdrawing error
   }
 });
 
+/*
+post: /postGcode
+
+description: when a valid request is made and the maschine is ready to draw the maschine will start to draw the posted gcode
+
+expected request: 
+  {
+    gcode: string
+  }
+  
+returns: 
+  unsuccessfull: 
+    {
+      appState: appState
+      err: string [errMessage]
+    }
+   successfull:
+    {
+      appState: appState
+    }
+*/
 app.post("/postGcode", (req: Request, res: Response) => {
   if (!isDrawing && appState != "error") {
+    //check if maschine is not drawing and maschine is ready
     let gcode: string = req.body.gcode;
-    drawGcode(gcode);
-    res.header("Access-Control-Allow-Origin", [req.headers.origin!]);
+    drawGcode(gcode); //draw gcode
+
     res.json({ appState: appState });
   } else {
-    res.header("Access-Control-Allow-Origin", [req.headers.origin!]);
-    res.json({ appState: appState, err: "not_allowed" });
+    res.json({ appState: appState, err: "not_allowed" }); //return notallowed error
   }
 });
 
+/*
+post: /cancle
+
+description: cancles the generated gcode by updateing appState
+
+expected request: 
+  {}
+returns: 
+  {}
+*/
 app.post("/cancle", (req: Request, res: Response) => {
   console.log("cancle");
   appState = "idle";
   drawingProgress = 0;
 });
 
+/*
+post: /stop
+
+description: stops the current drawing process and homes maschine 
+
+expected request: 
+  {}
+  
+returns: 
+  {}
+*/
 app.post("/stop", (req: Request, res: Response) => {
   console.log("stop");
-  appState = "idle";
-  drawingProgress = 0;
-  kill(currentDrawingProcessPID);
+  appState = "idle"; //reset appState
+  drawingProgress = 0; //reset drwaing progress
+  kill(currentDrawingProcessPID); //kill the drawing process
   setTimeout(() => {
-    exec("./home.sh",function (err: any, data: any) {
-	console.log(err);
-console.log(data);
+    //Home after some timeout because kill() needs some time
+    exec("./home.sh", function (err: any, data: any) {
+      console.log(err);
+      console.log(data);
     });
   }, 2000);
 });
 
+/*
+post: /delete
+
+description: deletes an gallery entry by Id
+
+expected request: 
+  {
+    id: number
+  }
+  
+returns: 
+  {}
+*/
 app.post("/delete", (req: Request, res: Response) => {
   console.log("delete");
 
   fs.unlink("savedGcodes/" + req.body.id + ".nc", (err: any) => {
+    //delete gcode
     if (err) {
       console.log(err);
       return;
     }
   });
   fs.unlink("savedGcodes/" + req.body.id + ".png", (err: any) => {
+    //delete preview image
     if (err) {
       console.log(err);
       return;
@@ -249,90 +355,148 @@ app.post("/delete", (req: Request, res: Response) => {
   });
 });
 
+/*
+post: /getGcodeGallery
+
+description: get entrys from gcode gallery. A range can be specified to enable infinite scroll. If no range is defined all entries will be returned
+
+expected request: 
+  {
+    range?: number[start, end]
+  }
+  
+returns: 
+  unsuccessfull: 
+    undefined
+   successfull:
+    {
+      data: GcodeEntry[]
+    }
+*/
 app.post("/getGcodeGallery", (req: Request, res: Response) => {
   let gallery: GcodeEntry[] = [];
 
   fs.readdirSync("savedGcodes/").forEach((file: any) => {
+    //read all saved gcode files
     if (file.includes("png")) {
       let image: string = fs.readFileSync("savedGcodes/" + file, {
         encoding: "base64",
-      });
+      }); //read preview image as base64 string
       let entry: GcodeEntry = {
+        //create entry
         image: image,
         name: file.split(".")[0],
       };
-      gallery.push(entry);
+      gallery.push(entry); //push entry to gallery array
     }
   });
 
-  gallery.reverse();
+  gallery.reverse(); //reverse gallery to show newest first
   if (req.body.range) {
-    gallery = gallery.slice(req.body.range[0], req.body.range[1]);
+    // check if a range was defined
+    gallery = gallery.slice(req.body.range[0], req.body.range[1]); //remove all elements out of defined range
   }
 
-  res.header("Access-Control-Allow-Origin", [req.headers.origin!]);
-  res.json({ data: gallery });
+  res.json({ data: gallery }); //return gallery
 });
 
+/*
+post: /getGcodeById
+
+description: return the requested gcode file by its name(id)
+
+expected request: 
+  {
+    id: number|string
+  }
+  
+returns: 
+  unsuccessfull: 
+    {
+      err: string [errMessage]
+    }
+   successfull:
+    {
+      data: string
+    }
+*/
 app.post("/getGcodeById", (req: Request, res: Response) => {
   fs.readFile(
+    //try to read gcode file
     "savedGcodes/" + req.body.id + ".nc",
     "utf8",
     (err: any, data: string) => {
-      res.header("Access-Control-Allow-Origin", [req.headers.origin!]);
       if (err) {
+        //check for error
         log(err);
         console.log(err);
-        res.json({ err: "not_found" });
+        res.json({ err: "not_found" }); //return notfound error when no file was found
         return;
       }
-      res.json({ data: data });
+      res.json({ data: data }); //when a gcode file was found return it
     }
   );
 });
 
-httpsServer!.listen(3001, () => {
+httpServer!.listen(3001, () => {
+  //start http server on port 3001
   console.log("listening on *:3001");
 });
 
+/**
+ *drawGcode()
+ * starts a process to draw the given gcode.
+ * only draws when run on linux
+ * the drawing programm is defined in "launchGcodeCli.sh"
+ *
+ * @param {string} gcode the gcode th draw
+ */
 function drawGcode(gcode: string) {
   fs.writeFile(
+    //save the gcode file //this file will be used by the gcodesender
     "gcodes/gcode.nc",
     gcode,
     "utf8",
     function (err: any, data: any) {
       if (err) {
+        //guard clause for errors
         console.log("err", err);
+        return;
       }
 
       if (isLinux) {
-        let startTime = new Date().getTime();
-        let launchcommand: string = "./launchGcodeCli.sh";
+        //check if os is Linux
+        let startTime = new Date().getTime(); //save start time
+        let launchcommand: string = "./launchGcodeCli.sh"; //command to launch the programm
 
-        isDrawing = true;
+        isDrawing = true; //update maschine drawing state
 
-        let tail = new Tail("gcodeCliOutput.txt", "\n", {}, true);
+        let tail = new Tail("gcodeCliOutput.txt", "\n", {}, true); //setup tail to listen to gcode sender output
 
         tail.on("line", function (data: any) {
+          //update progress when a new line is drawen
           data = data.trim();
           drawingProgress = parseInt(data.replace(/[^\d].*/, ""));
-          console.log(drawingProgress);
         });
 
         tail.on("error", function (error: any) {
+          //stop drawing when an error occured
           log(error);
           console.log("ERROR: ", error);
           isDrawing = false;
         });
 
         const launchProcess = exec(
+          //execute launchcommand
           launchcommand,
           function (err: any, data: any) {
-            console.log(err);
+            //after process exits
+            console.log(err); //log errors
             console.log(data.toString());
 
-            isDrawing = false;
+            isDrawing = false; //update drawing state
             if (!err) {
+              //when exited with out errors log the printing time and amount of lines to drawingTimesLog.txt. This file is used to determin an time/line estimation for the fronted
               let timeDiff: number = new Date().getTime() - startTime;
               let lines: number =
                 gcode.length - gcode.replace(/\n/g, "").length + 1;
@@ -346,6 +510,7 @@ function drawGcode(gcode: string) {
                 }
               );
 
+              //reset appstate and drawing progress
               appState = "idle";
               drawingProgress = 0;
             } else {
@@ -355,7 +520,7 @@ function drawGcode(gcode: string) {
           }
         );
 
-        currentDrawingProcessPID = launchProcess.pid;
+        currentDrawingProcessPID = launchProcess.pid; //set the currentProcessId
       } else {
         console.log("Drawing only works on Linux");
       }
@@ -363,10 +528,18 @@ function drawGcode(gcode: string) {
   );
 }
 
-function removeBg(base64img: any) {
-  const outputFile = outputDir + "bgremoved-current.jpg";
+/**
+ *removeBg()
+ * uses the removeBg api (https://www.remove.bg/de/tools-api) to remove the background of a picture and start to convert the picture to gcode when succesfull
+ * todo: handle error when image bg couldnt be converted
+ *
+ * @param {string} base64img
+ */
+function removeBg(base64img: string) {
+  const outputFile = outputDir + "bgremoved-current.jpg"; //define the output file
 
   removeBackgroundFromImageBase64({
+    //send to api with settings
     base64img,
     apiKey: "ZM746RyfN9PG1uzZT1u5Jqaq",
     size: "preview",
@@ -377,10 +550,12 @@ function removeBg(base64img: any) {
     outputFile,
   })
     .then((result: RemoveBgResult) => {
+      //api response
       console.log(`File saved to ${outputFile}`);
       const rmbgbase64img = result.base64img;
       removedBgBase64 = rmbgbase64img;
       fs.writeFile(
+        //save image
         outputDir + Date.now() + "-bgremoved.jpg",
         rmbgbase64img,
         "base64",
@@ -393,22 +568,31 @@ function removeBg(base64img: any) {
         }
       );
 
-      convertBase64ToGcode(removedBgBase64);
+      convertBase64ToGcode(removedBgBase64); //convert image to gcode
     })
     .catch((errors: Array<RemoveBgError>) => {
-      log(JSON.stringify(errors));
+      log(JSON.stringify(errors)); //log errors
       console.log(JSON.stringify(errors));
     });
 }
 
+/**
+ *convertBase64ToGcode()
+ *
+ * converts an base64image to gcode with an java based image to gcode converter. It is based on this project: https://github.com/Scott-Cooper/Drawbot_image_to_gcode_v2.
+ * @param {string} base64
+ */
 function convertBase64ToGcode(base64: string) {
-  appState = "processingImage";
+  appState = "processingImage"; //update appState
+
+  /////set basepath based on os
   let img2gcodePath: string = "./image2gcode/windows/";
   if (isLinux) {
     img2gcodePath = "./image2gcode/linux/";
   }
 
   fs.writeFile(
+    //save file to input folder of the convert
     img2gcodePath + "data/input/image.jpg",
     base64,
     "base64",
@@ -420,26 +604,32 @@ function convertBase64ToGcode(base64: string) {
 
       //fs.unlinkSync(img2gcodePath + "gcode/gcode_image.nc");  //needs try catch
 
+      //set launchcommand based on os
       let launchcommand: string = "launchimage2gcode.bat";
-
       if (isLinux) {
         launchcommand = "./launchimage2gcode.sh";
       }
 
       if (!skipGenerateGcode) {
+        //skip generate process (used during dev to skip long processing time)
         exec(launchcommand, function (err: any, data: any) {
+          //launch converter
           console.log(err);
           console.log(data.toString());
 
           if (!err) {
+            //check for errors
+
+            //set gcode path based on os
             let img2gcodePath: string = "./image2gcode/windows/";
             if (isLinux) {
               img2gcodePath = "./image2gcode/linux/";
             }
 
-            let fName = Date.now();
+            let fName = Date.now(); //genarate a filename by using current time
 
             fs.copyFile(
+              //save the generated gcode to the gcode folder
               img2gcodePath + "gcode/gcode_image.nc",
               "savedGcodes/" + fName + ".nc",
               (err: any) => {
@@ -452,6 +642,7 @@ function convertBase64ToGcode(base64: string) {
             );
 
             fs.copyFile(
+              //save the generated preview image to the gcode folder
               img2gcodePath + "gcode/render.png",
               "savedGcodes/" + fName + ".png",
               (err: any) => {
@@ -462,16 +653,21 @@ function convertBase64ToGcode(base64: string) {
               }
             );
 
-            appState = "rawGcodeReady";
+            appState = "rawGcodeReady"; //update appState
           }
         });
       } else {
-        appState = "rawGcodeReady";
+        appState = "rawGcodeReady"; //update appState
       }
     }
   );
 }
 
+/**
+ *log a messag to log.txt
+ *
+ * @param {string} message
+ */
 function log(message: string) {
   fs.writeFile(
     "log.txt",
