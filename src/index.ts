@@ -31,7 +31,7 @@ app.use(express.urlencoded({ limit: "50mb", extended: true }));
 
 let useBGApi: boolean = enviroment.removeBGSettings.enableApi; //used during dev. to limit api calls
 let skipGenerateGcode: boolean = enviroment.skipGenerateGcode; //use the last gcode - used for faster development
-const outputDir = `./bgremoved/`;
+const outputDir = `./data/bgremoved/`;
 let removedBgBase64: string = "";
 
 const isLinux: boolean = process.platform === "linux";
@@ -114,7 +114,7 @@ app.post("/newPicture", (req: Request, res: Response) => {
 
     fs.writeFile(
       //Log file to rawImages folder
-      "rawimages/" + Date.now() + "-image.jpeg",
+      "data/rawimages/" + Date.now() + "-image.jpeg",
       req.body.img,
       "base64",
       function (err: any, data: any) {
@@ -174,9 +174,9 @@ app.post("/getGeneratedGcode", (req: Request, res: Response) => {
   if (appState == "rawGcodeReady") {
     //check if gcode is ready
     /////get the correct path depending on os
-    let img2gcodePath: string = "./image2gcode/windows/";
+    let img2gcodePath: string = "./data/image2gcode/windows/";
     if (isLinux) {
-      img2gcodePath = "./image2gcode/linux/";
+      img2gcodePath = "./data/image2gcode/linux/";
     }
 
     /////read gcode
@@ -215,7 +215,7 @@ returns:
 app.post("/getDrawenGcode", (req: Request, res: Response) => {
   if (isDrawing) {
     //check if maschine is drawing
-    let rawGcode = fs.readFileSync("gcodes/gcode.nc", "utf8"); //read gcode
+    let rawGcode = fs.readFileSync("data/gcodes/gcode.nc", "utf8"); //read gcode
 
     res.json({ state: appState, isDrawing: isDrawing, data: rawGcode }); //return gcode and appstate information
   } else {
@@ -317,7 +317,7 @@ app.post("/stop", (req: Request, res: Response) => {
   kill(currentDrawingProcessPID); //kill the drawing process
   setTimeout(() => {
     //Home after some timeout because kill() needs some time
-    exec("./home.sh", function (err: any, data: any) {
+    exec("./scripts/home.sh", function (err: any, data: any) {
       console.log(err);
       console.log(data);
     });
@@ -340,14 +340,14 @@ returns:
 app.post("/delete", (req: Request, res: Response) => {
   console.log("delete");
 
-  fs.unlink("savedGcodes/" + req.body.id + ".nc", (err: any) => {
+  fs.unlink("data/savedGcodes/" + req.body.id + ".nc", (err: any) => {
     //delete gcode
     if (err) {
       console.log(err);
       return;
     }
   });
-  fs.unlink("savedGcodes/" + req.body.id + ".png", (err: any) => {
+  fs.unlink("data/savedGcodes/" + req.body.id + ".png", (err: any) => {
     //delete preview image
     if (err) {
       console.log(err);
@@ -377,10 +377,10 @@ returns:
 app.post("/getGcodeGallery", (req: Request, res: Response) => {
   let gallery: GcodeEntry[] = [];
 
-  fs.readdirSync("savedGcodes/").forEach((file: any) => {
+  fs.readdirSync("data/savedGcodes/").forEach((file: any) => {
     //read all saved gcode files
     if (file.includes("png")) {
-      let image: string = fs.readFileSync("savedGcodes/" + file, {
+      let image: string = fs.readFileSync("data/savedGcodes/" + file, {
         encoding: "base64",
       }); //read preview image as base64 string
       let entry: GcodeEntry = {
@@ -424,7 +424,7 @@ returns:
 app.post("/getGcodeById", (req: Request, res: Response) => {
   fs.readFile(
     //try to read gcode file
-    "savedGcodes/" + req.body.id + ".nc",
+    "data/savedGcodes/" + req.body.id + ".nc",
     "utf8",
     (err: any, data: string) => {
       if (err) {
@@ -455,7 +455,7 @@ httpServer!.listen(enviroment.port, () => {
 function drawGcode(gcode: string) {
   fs.writeFile(
     //save the gcode file //this file will be used by the gcodesender
-    "gcodes/gcode.nc",
+    "data/gcodes/gcode.nc",
     gcode,
     "utf8",
     function (err: any, data: any) {
@@ -468,11 +468,11 @@ function drawGcode(gcode: string) {
       if (isLinux) {
         //check if os is Linux
         let startTime = new Date().getTime(); //save start time
-        let launchcommand: string = "./launchGcodeCli.sh"; //command to launch the programm
+        let launchcommand: string = "./scripts/launchGcodeCli.sh"; //command to launch the programm
 
         isDrawing = true; //update maschine drawing state
 
-        let tail = new Tail("gcodeCliOutput.txt", "\n", {}, true); //setup tail to listen to gcode sender output
+        let tail = new Tail("data/logs/gcodeCliOutput.txt", "\n", {}, true); //setup tail to listen to gcode sender output
 
         tail.on("line", function (data: any) {
           //update progress when a new line is drawen
@@ -503,7 +503,7 @@ function drawGcode(gcode: string) {
                 gcode.length - gcode.replace(/\n/g, "").length + 1;
 
               fs.writeFile(
-                "drawingTimesLog.txt",
+                "data/logs/drawingTimesLog.txt",
                 lines + "," + timeDiff + "\n",
                 { flag: "a" },
                 (err: any) => {
@@ -587,9 +587,9 @@ function convertBase64ToGcode(base64: string) {
   appState = "processingImage"; //update appState
 
   /////set basepath based on os
-  let img2gcodePath: string = "./image2gcode/windows/";
+  let img2gcodePath: string = "./data/image2gcode/windows/";
   if (isLinux) {
-    img2gcodePath = "./image2gcode/linux/";
+    img2gcodePath = "./data/image2gcode/linux/";
   }
 
   fs.writeFile(
@@ -606,57 +606,55 @@ function convertBase64ToGcode(base64: string) {
       //fs.unlinkSync(img2gcodePath + "gcode/gcode_image.nc");  //needs try catch
 
       //set launchcommand based on os
-      let launchcommand: string = "launchimage2gcode.bat";
+      let launchcommand: string = "scripts\\launchimage2gcode.bat";
       if (isLinux) {
-        launchcommand = "./launchimage2gcode.sh";
+        launchcommand = "./scripts/launchimage2gcode.sh";
       }
 
       if (!skipGenerateGcode) {
         //skip generate process (used during dev to skip long processing time)
-        exec(launchcommand, function (err: any, data: any) {
-          //launch converter
-          console.log(err);
-          console.log(data.toString());
+        exec(
+          launchcommand,
 
-          if (!err) {
-            //check for errors
+          function (err: any, data: any) {
+            //launch converter
+            console.log(err);
+            console.log(data.toString());
 
-            //set gcode path based on os
-            let img2gcodePath: string = "./image2gcode/windows/";
-            if (isLinux) {
-              img2gcodePath = "./image2gcode/linux/";
+            if (!err) {
+              //check for errors
+
+              let fName = Date.now(); //genarate a filename by using current time
+
+              fs.copyFile(
+                //save the generated gcode to the gcode folder
+                img2gcodePath + "gcode/gcode_image.nc",
+                "data/savedGcodes/" + fName + ".nc",
+                (err: any) => {
+                  if (err) {
+                    log(err);
+                    console.log("Error Found:", err);
+                  } else {
+                  }
+                }
+              );
+
+              fs.copyFile(
+                //save the generated preview image to the gcode folder
+                img2gcodePath + "gcode/render.png",
+                "data/savedGcodes/" + fName + ".png",
+                (err: any) => {
+                  if (err) {
+                    console.log("Error Found:", err);
+                  } else {
+                  }
+                }
+              );
+
+              appState = "rawGcodeReady"; //update appState
             }
-
-            let fName = Date.now(); //genarate a filename by using current time
-
-            fs.copyFile(
-              //save the generated gcode to the gcode folder
-              img2gcodePath + "gcode/gcode_image.nc",
-              "savedGcodes/" + fName + ".nc",
-              (err: any) => {
-                if (err) {
-                  log(err);
-                  console.log("Error Found:", err);
-                } else {
-                }
-              }
-            );
-
-            fs.copyFile(
-              //save the generated preview image to the gcode folder
-              img2gcodePath + "gcode/render.png",
-              "savedGcodes/" + fName + ".png",
-              (err: any) => {
-                if (err) {
-                  console.log("Error Found:", err);
-                } else {
-                }
-              }
-            );
-
-            appState = "rawGcodeReady"; //update appState
           }
-        });
+        );
       } else {
         appState = "rawGcodeReady"; //update appState
       }
@@ -671,7 +669,7 @@ function convertBase64ToGcode(base64: string) {
  */
 function log(message: string) {
   fs.writeFile(
-    "log.txt",
+    "data/logs/log.txt",
     new Date().toISOString() + ": " + message + "\n \n",
     { flag: "a" },
     (err: any) => {
