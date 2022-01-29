@@ -18,6 +18,7 @@ import {
   removeBackgroundFromImageBase64,
 } from "remove.bg";
 import { Request, Response } from "express";
+import { enviroment } from "./enviroment";
 
 const kill = require("tree-kill");
 var exec = require("child_process").execFile;
@@ -28,8 +29,8 @@ const app = express();
 app.use(express.json({ limit: "50mb" }));
 app.use(express.urlencoded({ limit: "50mb", extended: true }));
 
-let useBGApi: boolean = true; //used during dev. to limit api calls
-let skipGenerateGcode: boolean = false; //use the last gcode - used for faster development
+let useBGApi: boolean = enviroment.removeBGSettings.enableApi; //used during dev. to limit api calls
+let skipGenerateGcode: boolean = enviroment.skipGenerateGcode; //use the last gcode - used for faster development
 const outputDir = `./bgremoved/`;
 let removedBgBase64: string = "";
 
@@ -312,7 +313,7 @@ returns:
 app.post("/stop", (req: Request, res: Response) => {
   console.log("stop");
   appState = "idle"; //reset appState
-  drawingProgress = 0; //reset drwaing progress
+  drawingProgress = 0; //reset drawing progress
   kill(currentDrawingProcessPID); //kill the drawing process
   setTimeout(() => {
     //Home after some timeout because kill() needs some time
@@ -438,9 +439,9 @@ app.post("/getGcodeById", (req: Request, res: Response) => {
   );
 });
 
-httpServer!.listen(3001, () => {
-  //start http server on port 3001
-  console.log("listening on *:3001");
+httpServer!.listen(enviroment.port, () => {
+  //start http server
+  console.log("listening on *:" + enviroment.port);
 });
 
 /**
@@ -541,11 +542,11 @@ function removeBg(base64img: string) {
   removeBackgroundFromImageBase64({
     //send to api with settings
     base64img,
-    apiKey: "ZM746RyfN9PG1uzZT1u5Jqaq",
+    apiKey: enviroment.removeBGSettings.apiKey,
     size: "preview",
-    type: "person",
+    type: enviroment.removeBGSettings.type,
     format: "jpg",
-    scale: "100%",
+    scale: enviroment.removeBGSettings.scale,
     bg_color: "fff",
     outputFile,
   })
