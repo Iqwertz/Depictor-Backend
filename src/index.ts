@@ -12,6 +12,7 @@
 //imports
 const express = require("express");
 const fs = require("fs");
+const fse = require("fs-extra");
 import {
   RemoveBgResult,
   RemoveBgError,
@@ -98,7 +99,7 @@ app.post("/newPicture", (req: Request, res: Response) => {
       removeBg(req.body.img); //remove background with removebg //this function will call convertBase64ToGcode asynchronous
     } else {
       removedBgBase64 = req.body.img; //set the removedBgBase64 Image without bgremove
-      fs.writeFile(
+      fse.outputFile(
         //update the current picture
         outputDir + "bgremoved-current.jpg",
         req.body.img,
@@ -114,7 +115,7 @@ app.post("/newPicture", (req: Request, res: Response) => {
       convertBase64ToGcode(removedBgBase64); //convert the image to gcode
     }
 
-    fs.writeFile(
+    fse.outputFile(
       //Log file to rawImages folder
       "data/rawimages/" + Date.now() + "-image.jpeg",
       req.body.img,
@@ -458,8 +459,7 @@ returns:
   {}
 */
 app.post("/setBGRemoveAPIKey", (req: Request, res: Response) => {
-  console.log(req.body.key);
-  fs.writeFile(
+  fse.outputFile(
     "removeBGAPIKey.txt",
     req.body.key,
     "utf8",
@@ -488,7 +488,7 @@ httpServer!.listen(enviroment.port, () => {
  * @param {string} gcode the gcode th draw
  */
 function drawGcode(gcode: string) {
-  fs.writeFile(
+  fse.outputFile(
     //save the gcode file //this file will be used by the gcodesender
     "data/gcodes/gcode.nc",
     gcode,
@@ -537,7 +537,7 @@ function drawGcode(gcode: string) {
               let lines: number =
                 gcode.length - gcode.replace(/\n/g, "").length + 1;
 
-              fs.writeFile(
+              fse.outputFile(
                 "data/logs/drawingTimesLog.txt",
                 lines + "," + timeDiff + "\n",
                 { flag: "a" },
@@ -596,7 +596,7 @@ function removeBg(base64img: string) {
       console.log(`File saved to ${outputFile}`);
       const rmbgbase64img = result.base64img;
       removedBgBase64 = rmbgbase64img;
-      fs.writeFile(
+      fse.outputFile(
         //save image
         outputDir + Date.now() + "-bgremoved.jpg",
         rmbgbase64img,
@@ -633,7 +633,7 @@ function convertBase64ToGcode(base64: string) {
     img2gcodePath = "./data/image2gcode/linux/";
   }
 
-  fs.writeFile(
+  fse.outputFile(
     //save file to input folder of the convert
     img2gcodePath + "data/input/image.jpg",
     base64,
@@ -717,7 +717,7 @@ function checkBGremoveAPIkey() {
  * @param {string} message
  */
 function log(message: string) {
-  fs.writeFile(
+  fse.outputFile(
     "data/logs/log.txt",
     new Date().toISOString() + ": " + message + "\n \n",
     { flag: "a" },

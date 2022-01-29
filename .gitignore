@@ -1,11 +1,12 @@
-image2gcode/java/
-image2gcode/gcode/
+data/image2gcode/java/
+data/image2gcode/gcode/
 rawimages
 bgremoved
+savedGcodes
+data/logs
 node_modules/
 
 *.nc
-savedGcodes/1640302294305.png
 *.png
 .vscode/symbols.json
 removeBGAPIKey.txt
