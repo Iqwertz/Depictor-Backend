@@ -30,6 +30,7 @@ app.use(express.json({ limit: "50mb" }));
 app.use(express.urlencoded({ limit: "50mb", extended: true }));
 
 let useBGApi: boolean = enviroment.removeBGSettings.enableApi; //used during dev. to limit api calls
+let isBGRemoveAPIKey: boolean = false;
 let skipGenerateGcode: boolean = enviroment.skipGenerateGcode; //use the last gcode - used for faster development
 const outputDir = `./data/bgremoved/`;
 let removedBgBase64: string = "";
@@ -47,6 +48,7 @@ type AppStates =
 interface StateResponse {
   state: AppStates;
   isDrawing: boolean;
+  removeBG: boolean;
 }
 
 interface GcodeEntry {
@@ -141,9 +143,12 @@ returns:
   @StateResponse
 */
 app.post("/checkProgress", (req: Request, res: Response) => {
+  checkBGremoveAPIkey();
+
   let response: StateResponse = {
     state: appState,
     isDrawing: isDrawing,
+    removeBG: isBGRemoveAPIKey && useBGApi,
   };
 
   res.json(response);
@@ -439,6 +444,36 @@ app.post("/getGcodeById", (req: Request, res: Response) => {
   );
 });
 
+/*
+post: /setBGRemoveAPIKey
+
+description: sets the removeBG Api key by writing it to removeBGAPIKey.txt
+
+expected request: 
+  {
+    key: string
+  }
+  
+returns: 
+  {}
+*/
+app.post("/setBGRemoveAPIKey", (req: Request, res: Response) => {
+  console.log(req.body.key);
+  fs.writeFile(
+    "removeBGAPIKey.txt",
+    req.body.key,
+    "utf8",
+    function (err: any, data: any) {
+      if (err) {
+        console.log("err", err);
+        log(err);
+      }
+    }
+  );
+
+  res.json({});
+});
+
 httpServer!.listen(enviroment.port, () => {
   //start http server
   console.log("listening on *:" + enviroment.port);
@@ -539,10 +574,16 @@ function drawGcode(gcode: string) {
 function removeBg(base64img: string) {
   const outputFile = outputDir + "bgremoved-current.jpg"; //define the output file
 
+  checkBGremoveAPIkey();
+  if (!isBGRemoveAPIKey) {
+    return;
+  }
+  const apiKey = fs.readFileSync("removeBGAPIKey.txt", "utf8");
+
   removeBackgroundFromImageBase64({
     //send to api with settings
     base64img,
-    apiKey: enviroment.removeBGSettings.apiKey,
+    apiKey: apiKey,
     size: "preview",
     type: enviroment.removeBGSettings.type,
     format: "jpg",
@@ -660,6 +701,14 @@ function convertBase64ToGcode(base64: string) {
       }
     }
   );
+}
+
+function checkBGremoveAPIkey() {
+  if (!fs.existsSync("removeBGAPIKey.txt")) {
+    isBGRemoveAPIKey = false;
+  } else {
+    isBGRemoveAPIKey = true;
+  }
 }
 
 /**
