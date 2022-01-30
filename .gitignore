@@ -7,6 +7,5 @@ data/logs
 node_modules/
 
 *.nc
-*.png
 .vscode/symbols.json
 removeBGAPIKey.txt
