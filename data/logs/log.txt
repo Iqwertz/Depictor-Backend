@@ -84,3 +84,5 @@ Grbl 1.1h ['$' for help]
 ---- Sending file 'gcodes/gcode.nc' to '/dev/ttyACM0,b115200' -----
 
  
+2022-01-29T23:05:11.263Z: Error: ENOENT: no such file or directory, open './data/image2gcode/linux/data/input/image.jpg'
+ 

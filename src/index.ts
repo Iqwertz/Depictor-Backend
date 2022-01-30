@@ -625,12 +625,13 @@ function removeBg(base64img: string) {
  * @param {string} base64
  */
 function convertBase64ToGcode(base64: string) {
+  console.log("start convert");
   appState = "processingImage"; //update appState
 
   /////set basepath based on os
   let img2gcodePath: string = "./data/image2gcode/windows/";
   if (isLinux) {
-    img2gcodePath = "./data/image2gcode/linux/";
+    img2gcodePath = "data/image2gcode/linux/";
   }
 
   console.log(img2gcodePath);
@@ -656,6 +657,7 @@ function convertBase64ToGcode(base64: string) {
 
       if (!skipGenerateGcode) {
         //skip generate process (used during dev to skip long processing time)
+        console.log("lauching i2g");
         exec(
           launchcommand,
 
