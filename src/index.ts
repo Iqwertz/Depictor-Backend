@@ -672,7 +672,7 @@ function convertBase64ToGcode(base64: string) {
 
               let fName = Date.now(); //genarate a filename by using current time
 
-              fs.copyFile(
+              fse.copy(
                 //save the generated gcode to the gcode folder
                 img2gcodePath + "gcode/gcode_image.nc",
                 "data/savedGcodes/" + fName + ".nc",
@@ -685,7 +685,7 @@ function convertBase64ToGcode(base64: string) {
                 }
               );
 
-              fs.copyFile(
+              fse.copy(
                 //save the generated preview image to the gcode folder
                 img2gcodePath + "gcode/render.png",
                 "data/savedGcodes/" + fName + ".png",
