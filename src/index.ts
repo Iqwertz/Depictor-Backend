@@ -633,6 +633,7 @@ function convertBase64ToGcode(base64: string) {
     img2gcodePath = "./data/image2gcode/linux/";
   }
 
+  console.log(img2gcodePath);
   fse.outputFile(
     //save file to input folder of the convert
     img2gcodePath + "data/input/image.jpg",
@@ -651,6 +652,7 @@ function convertBase64ToGcode(base64: string) {
       if (isLinux) {
         launchcommand = "./scripts/launchimage2gcode.sh";
       }
+      console.log(launchcommand);
 
       if (!skipGenerateGcode) {
         //skip generate process (used during dev to skip long processing time)
@@ -659,6 +661,7 @@ function convertBase64ToGcode(base64: string) {
 
           function (err: any, data: any) {
             //launch converter
+            log(err);
             console.log(err);
             console.log(data.toString());
 
@@ -686,6 +689,7 @@ function convertBase64ToGcode(base64: string) {
                 "data/savedGcodes/" + fName + ".png",
                 (err: any) => {
                   if (err) {
+                    log(err);
                     console.log("Error Found:", err);
                   } else {
                   }
