@@ -89,6 +89,7 @@ returns:
     {}
 */
 app.post("/newPicture", (req: Request, res: Response) => {
+  log("post: newPicture");
   if (appState != "idle") {
     //check if maschine is ready
     res.json({ err: "not_ready: " + appState }); //return error if not
@@ -144,6 +145,8 @@ returns:
   @StateResponse
 */
 app.post("/checkProgress", (req: Request, res: Response) => {
+  log("post: checkProgress");
+
   checkBGremoveAPIkey();
 
   let response: StateResponse = {
@@ -177,6 +180,7 @@ returns:
     }
 */
 app.post("/getGeneratedGcode", (req: Request, res: Response) => {
+  log("post: getGeneratedGcode");
   if (appState == "rawGcodeReady") {
     //check if gcode is ready
     /////get the correct path depending on os
@@ -219,6 +223,7 @@ returns:
     }
 */
 app.post("/getDrawenGcode", (req: Request, res: Response) => {
+  log("post: getDrawenGcode");
   if (isDrawing) {
     //check if maschine is drawing
     let rawGcode = fs.readFileSync("data/gcodes/gcode.nc", "utf8"); //read gcode
@@ -248,6 +253,7 @@ returns:
     }
 */
 app.post("/getDrawingProgress", (req: Request, res: Response) => {
+  log("post: getDrawingProgress");
   if (isDrawing) {
     //check if drawing
     res.json({ data: drawingProgress }); //return progress
@@ -278,6 +284,7 @@ returns:
     }
 */
 app.post("/postGcode", (req: Request, res: Response) => {
+  log("post: postGcode");
   if (!isDrawing && appState != "error") {
     //check if maschine is not drawing and maschine is ready
     let gcode: string = req.body.gcode;
@@ -300,7 +307,7 @@ returns:
   {}
 */
 app.post("/cancle", (req: Request, res: Response) => {
-  console.log("cancle");
+  log("post: cancle");
   appState = "idle";
   drawingProgress = 0;
 });
@@ -317,7 +324,7 @@ returns:
   {}
 */
 app.post("/stop", (req: Request, res: Response) => {
-  console.log("stop");
+  log("post: stop");
   appState = "idle"; //reset appState
   drawingProgress = 0; //reset drawing progress
   kill(currentDrawingProcessPID); //kill the drawing process
@@ -344,7 +351,7 @@ returns:
   {}
 */
 app.post("/delete", (req: Request, res: Response) => {
-  console.log("delete");
+  log("post: delete");
 
   fs.unlink("data/savedGcodes/" + req.body.id + ".nc", (err: any) => {
     //delete gcode
@@ -381,6 +388,7 @@ returns:
     }
 */
 app.post("/getGcodeGallery", (req: Request, res: Response) => {
+  log("post: getGcodeGallery");
   let gallery: GcodeEntry[] = [];
 
   fs.readdirSync("data/savedGcodes/").forEach((file: any) => {
@@ -428,6 +436,7 @@ returns:
     }
 */
 app.post("/getGcodeById", (req: Request, res: Response) => {
+  log("getGcodeById");
   fs.readFile(
     //try to read gcode file
     "data/savedGcodes/" + req.body.id + ".nc",
@@ -459,6 +468,7 @@ returns:
   {}
 */
 app.post("/setBGRemoveAPIKey", (req: Request, res: Response) => {
+  log("setBGRemoveAPIKey");
   fse.outputFile(
     "removeBGAPIKey.txt",
     req.body.key,
@@ -476,7 +486,8 @@ app.post("/setBGRemoveAPIKey", (req: Request, res: Response) => {
 
 httpServer!.listen(enviroment.port, () => {
   //start http server
-  console.log("listening on *:" + enviroment.port);
+  log("started Server");
+  log("listening on *:" + enviroment.port);
 });
 
 /**
@@ -723,6 +734,7 @@ function checkBGremoveAPIkey() {
  * @param {string} message
  */
 function log(message: string) {
+  console.log(message);
   fse.outputFile(
     "data/logs/log.txt",
     new Date().toISOString() + ": " + message + "\n \n",
