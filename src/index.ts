@@ -92,13 +92,16 @@ app.post("/newPicture", (req: Request, res: Response) => {
   log("post: newPicture");
   if (appState != "idle") {
     //check if maschine is ready
+    log("req denied: not in idle");
     res.json({ err: "not_ready: " + appState }); //return error if not
   } else {
     appState = "removingBg"; //update appState
     if (useBGApi && req.body.removeBg) {
       //check if removeBG API should be used
+      log("removing bg");
       removeBg(req.body.img); //remove background with removebg //this function will call convertBase64ToGcode asynchronous
     } else {
+      log("removebg skipped");
       removedBgBase64 = req.body.img; //set the removedBgBase64 Image without bgremove
       fse.outputFile(
         //update the current picture
@@ -107,9 +110,8 @@ app.post("/newPicture", (req: Request, res: Response) => {
         "base64",
         function (err: any, data: any) {
           if (err) {
-            console.log("err", err);
+            log("Error: " + err);
           }
-          console.log(data, "data");
         }
       );
 
@@ -123,9 +125,8 @@ app.post("/newPicture", (req: Request, res: Response) => {
       "base64",
       function (err: any, data: any) {
         if (err) {
-          console.log("err", err);
+          log("Error: " + err);
         }
-        console.log(data, "data");
       }
     );
 
@@ -331,7 +332,7 @@ app.post("/stop", (req: Request, res: Response) => {
   setTimeout(() => {
     //Home after some timeout because kill() needs some time
     exec("./scripts/home.sh", function (err: any, data: any) {
-      console.log(err);
+      log(err);
       console.log(data);
     });
   }, 2000);
@@ -356,14 +357,14 @@ app.post("/delete", (req: Request, res: Response) => {
   fs.unlink("data/savedGcodes/" + req.body.id + ".nc", (err: any) => {
     //delete gcode
     if (err) {
-      console.log(err);
+      log("Error " + err);
       return;
     }
   });
   fs.unlink("data/savedGcodes/" + req.body.id + ".png", (err: any) => {
     //delete preview image
     if (err) {
-      console.log(err);
+      log("Error " + err);
       return;
     }
   });
@@ -436,7 +437,7 @@ returns:
     }
 */
 app.post("/getGcodeById", (req: Request, res: Response) => {
-  log("getGcodeById");
+  log("post: getGcodeById");
   fs.readFile(
     //try to read gcode file
     "data/savedGcodes/" + req.body.id + ".nc",
@@ -444,8 +445,7 @@ app.post("/getGcodeById", (req: Request, res: Response) => {
     (err: any, data: string) => {
       if (err) {
         //check for error
-        log(err);
-        console.log(err);
+        log("Error " + err);
         res.json({ err: "not_found" }); //return notfound error when no file was found
         return;
       }
@@ -468,15 +468,14 @@ returns:
   {}
 */
 app.post("/setBGRemoveAPIKey", (req: Request, res: Response) => {
-  log("setBGRemoveAPIKey");
+  log("post: setBGRemoveAPIKey");
   fse.outputFile(
     "removeBGAPIKey.txt",
     req.body.key,
     "utf8",
     function (err: any, data: any) {
       if (err) {
-        console.log("err", err);
-        log(err);
+        log("Error " + err);
       }
     }
   );
@@ -499,6 +498,7 @@ httpServer!.listen(enviroment.port, () => {
  * @param {string} gcode the gcode th draw
  */
 function drawGcode(gcode: string) {
+  log("start drawing");
   fse.outputFile(
     //save the gcode file //this file will be used by the gcodesender
     "data/gcodes/gcode.nc",
@@ -507,7 +507,7 @@ function drawGcode(gcode: string) {
     function (err: any, data: any) {
       if (err) {
         //guard clause for errors
-        console.log("err", err);
+        log("Error " + err);
         return;
       }
 
@@ -528,8 +528,8 @@ function drawGcode(gcode: string) {
 
         tail.on("error", function (error: any) {
           //stop drawing when an error occured
+          log("Error during drawing: ");
           log(error);
-          console.log("ERROR: ", error);
           isDrawing = false;
         });
 
@@ -538,8 +538,7 @@ function drawGcode(gcode: string) {
           launchcommand,
           function (err: any, data: any) {
             //after process exits
-            console.log(err); //log errors
-            console.log(data.toString());
+            log(data.toString());
 
             isDrawing = false; //update drawing state
             if (!err) {
@@ -553,7 +552,7 @@ function drawGcode(gcode: string) {
                 lines + "," + timeDiff + "\n",
                 { flag: "a" },
                 (err: any) => {
-                  if (err) console.log(err);
+                  if (err) log(err);
                 }
               );
 
@@ -561,7 +560,7 @@ function drawGcode(gcode: string) {
               appState = "idle";
               drawingProgress = 0;
             } else {
-              log(err);
+              log("Error " + err);
               //appState = "error";
             }
           }
@@ -569,7 +568,7 @@ function drawGcode(gcode: string) {
 
         currentDrawingProcessPID = launchProcess.pid; //set the currentProcessId
       } else {
-        console.log("Drawing only works on Linux");
+        log("drawing cancled - os not Linux");
       }
     }
   );
@@ -587,10 +586,12 @@ function removeBg(base64img: string) {
 
   checkBGremoveAPIkey();
   if (!isBGRemoveAPIKey) {
+    log("cant remove bg - no apiKey");
     return;
   }
   const apiKey = fs.readFileSync("removeBGAPIKey.txt", "utf8");
 
+  log("sending picture to removeBG API");
   removeBackgroundFromImageBase64({
     //send to api with settings
     base64img,
@@ -604,7 +605,6 @@ function removeBg(base64img: string) {
   })
     .then((result: RemoveBgResult) => {
       //api response
-      console.log(`File saved to ${outputFile}`);
       const rmbgbase64img = result.base64img;
       removedBgBase64 = rmbgbase64img;
       fse.outputFile(
@@ -614,10 +614,8 @@ function removeBg(base64img: string) {
         "base64",
         function (err: any, data: any) {
           if (err) {
-            console.log("err", err);
-            log(err);
+            log("Error " + err);
           }
-          console.log(data, "data");
         }
       );
 
@@ -625,7 +623,6 @@ function removeBg(base64img: string) {
     })
     .catch((errors: Array<RemoveBgError>) => {
       log(JSON.stringify(errors)); //log errors
-      console.log(JSON.stringify(errors));
     });
 }
 
@@ -636,7 +633,7 @@ function removeBg(base64img: string) {
  * @param {string} base64
  */
 function convertBase64ToGcode(base64: string) {
-  console.log("start convert");
+  log("start converting image to gcode");
   appState = "processingImage"; //update appState
 
   /////set basepath based on os
@@ -645,7 +642,6 @@ function convertBase64ToGcode(base64: string) {
     img2gcodePath = "data/image2gcode/linux/";
   }
 
-  console.log(img2gcodePath);
   fse.outputFile(
     //save file to input folder of the convert
     img2gcodePath + "data/input/image.jpg",
@@ -653,8 +649,7 @@ function convertBase64ToGcode(base64: string) {
     "base64",
     function (err: any, data: any) {
       if (err) {
-        log(err);
-        console.log("err", err);
+        log("Error " + err);
       }
 
       //fs.unlinkSync(img2gcodePath + "gcode/gcode_image.nc");  //needs try catch
@@ -664,19 +659,19 @@ function convertBase64ToGcode(base64: string) {
       if (isLinux) {
         launchcommand = "./scripts/launchimage2gcode.sh";
       }
-      console.log(launchcommand);
 
       if (!skipGenerateGcode) {
         //skip generate process (used during dev to skip long processing time)
-        console.log("lauching i2g");
+        log("lauching i2g");
         exec(
           launchcommand,
 
           function (err: any, data: any) {
             //launch converter
-            log(err);
-            console.log(err);
-            console.log(data.toString());
+            if (err) {
+              log("Error " + err);
+            }
+            log(data.toString());
 
             if (!err) {
               //check for errors
@@ -689,9 +684,7 @@ function convertBase64ToGcode(base64: string) {
                 "data/savedGcodes/" + fName + ".nc",
                 (err: any) => {
                   if (err) {
-                    log(err);
-                    console.log("Error Found:", err);
-                  } else {
+                    log("Error " + err);
                   }
                 }
               );
@@ -704,7 +697,6 @@ function convertBase64ToGcode(base64: string) {
                   if (err) {
                     log(err);
                     console.log("Error Found:", err);
-                  } else {
                   }
                 }
               );
@@ -714,6 +706,7 @@ function convertBase64ToGcode(base64: string) {
           }
         );
       } else {
+        log("skipping gcode generation");
         appState = "rawGcodeReady"; //update appState
       }
     }
@@ -734,6 +727,9 @@ function checkBGremoveAPIkey() {
  * @param {string} message
  */
 function log(message: string) {
+  if (!message) {
+    return;
+  }
   console.log(message);
   fse.outputFile(
     "data/logs/log.txt",

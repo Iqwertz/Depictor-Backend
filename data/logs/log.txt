@@ -86,3 +86,5 @@ Grbl 1.1h ['$' for help]
  
 2022-01-29T23:05:11.263Z: Error: ENOENT: no such file or directory, open './data/image2gcode/linux/data/input/image.jpg'
  
+2022-01-30T11:57:04.384Z: null
+ 
