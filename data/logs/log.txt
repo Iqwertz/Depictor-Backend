@@ -46070,3 +46070,7 @@ Grbl 1.1h ['$' for help]
  
 2022-02-03T21:56:30.181Z: post: getDrawingProgress
  
+2022-02-07T16:40:56.501Z: listening on *:3001
+ 
+2022-02-07T16:40:56.498Z: started Server
+ 
