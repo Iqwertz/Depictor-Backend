@@ -11,7 +11,7 @@ sudo apt-get install apache2 -y
 echo downloading latest Depictor Frontend Build
 sudo rm /var/www/html/index.html
 sudo wget "https://github.com/Iqwertz/Depictor/releases/latest/download/Depictor-Build.zip" -O "/var/www/html/latest.zip"
-sudo unzip /var/www/html/latest.zip
+sudo unzip /var/www/html/latest.zip -d /var/www/html/
 sudo rm /var/www/html/latest.zip
 
 echo installing XVFB
