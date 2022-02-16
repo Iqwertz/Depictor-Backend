@@ -62,6 +62,6 @@ echo -e "\x1B[96m starting node server \x1B[0m"
 pm2 start "sudo npm run start"
 pm2 save
 
-shred -u
+shred -u install.sh
 
 echo -e "\x1B[96m finished install \x1B[0m"

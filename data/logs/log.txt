@@ -46074,3 +46074,4219 @@ Grbl 1.1h ['$' for help]
  
 2022-02-07T16:40:56.498Z: started Server
  
+2022-02-16T19:32:32.626Z: listening on *:3001
+ 
+2022-02-16T19:32:32.625Z: started Server
+ 
+2022-02-16T19:33:02.959Z: post: checkProgress
+ 
+2022-02-16T19:33:02.984Z: post: checkProgress
+ 
+2022-02-16T19:33:06.948Z: post: checkProgress
+ 
+2022-02-16T19:33:10.946Z: post: checkProgress
+ 
+2022-02-16T19:33:14.938Z: post: checkProgress
+ 
+2022-02-16T19:33:18.941Z: post: checkProgress
+ 
+2022-02-16T19:33:22.946Z: post: checkProgress
+ 
+2022-02-16T19:33:26.950Z: post: checkProgress
+ 
+2022-02-16T19:33:30.941Z: post: checkProgress
+ 
+2022-02-16T19:33:34.960Z: post: checkProgress
+ 
+2022-02-16T19:33:38.952Z: post: checkProgress
+ 
+2022-02-16T19:33:42.956Z: post: checkProgress
+ 
+2022-02-16T19:33:46.966Z: post: checkProgress
+ 
+2022-02-16T19:33:50.956Z: post: checkProgress
+ 
+2022-02-16T19:33:51.506Z: post: checkProgress
+ 
+2022-02-16T19:33:51.519Z: post: checkProgress
+ 
+2022-02-16T19:33:51.805Z: post: checkProgress
+ 
+2022-02-16T19:33:51.826Z: post: checkProgress
+ 
+2022-02-16T19:33:55.510Z: post: checkProgress
+ 
+2022-02-16T19:33:55.978Z: post: checkProgress
+ 
+2022-02-16T19:33:59.509Z: post: checkProgress
+ 
+2022-02-16T19:33:59.979Z: post: checkProgress
+ 
+2022-02-16T19:34:02.593Z: post: checkProgress
+ 
+2022-02-16T19:34:02.610Z: post: checkProgress
+ 
+2022-02-16T19:34:02.615Z: post: checkProgress
+ 
+2022-02-16T19:34:02.635Z: post: checkProgress
+ 
+2022-02-16T19:34:06.600Z: post: checkProgress
+ 
+2022-02-16T19:34:06.974Z: post: checkProgress
+ 
+2022-02-16T19:34:10.598Z: post: checkProgress
+ 
+2022-02-16T19:34:10.975Z: post: checkProgress
+ 
+2022-02-16T19:34:14.595Z: post: checkProgress
+ 
+2022-02-16T19:34:14.973Z: post: checkProgress
+ 
+2022-02-16T19:34:16.373Z: post: checkProgress
+ 
+2022-02-16T19:34:16.388Z: post: checkProgress
+ 
+2022-02-16T19:34:16.444Z: post: checkProgress
+ 
+2022-02-16T19:34:16.461Z: post: checkProgress
+ 
+2022-02-16T19:34:20.386Z: post: checkProgress
+ 
+2022-02-16T19:34:20.978Z: post: checkProgress
+ 
+2022-02-16T19:34:24.384Z: post: checkProgress
+ 
+2022-02-16T19:34:24.977Z: post: checkProgress
+ 
+2022-02-16T19:34:28.374Z: post: checkProgress
+ 
+2022-02-16T19:34:28.966Z: post: checkProgress
+ 
+2022-02-16T19:34:32.383Z: post: checkProgress
+ 
+2022-02-16T19:34:32.972Z: post: checkProgress
+ 
+2022-02-16T19:34:36.391Z: post: checkProgress
+ 
+2022-02-16T19:34:40.393Z: post: checkProgress
+ 
+2022-02-16T19:34:44.385Z: post: checkProgress
+ 
+2022-02-16T19:34:48.384Z: post: checkProgress
+ 
+2022-02-16T19:34:52.382Z: post: checkProgress
+ 
+2022-02-16T19:34:54.898Z: post: checkProgress
+ 
+2022-02-16T19:34:54.914Z: post: checkProgress
+ 
+2022-02-16T19:34:54.963Z: post: checkProgress
+ 
+2022-02-16T19:34:54.989Z: post: checkProgress
+ 
+2022-02-16T19:34:58.902Z: post: checkProgress
+ 
+2022-02-16T19:34:58.980Z: post: checkProgress
+ 
+2022-02-16T19:34:59.769Z: post: checkProgress
+ 
+2022-02-16T19:34:59.779Z: post: checkProgress
+ 
+2022-02-16T19:35:00.003Z: post: checkProgress
+ 
+2022-02-16T19:35:00.023Z: post: checkProgress
+ 
+2022-02-16T19:35:03.773Z: post: checkProgress
+ 
+2022-02-16T19:35:04.977Z: post: checkProgress
+ 
+2022-02-16T19:35:05.483Z: post: checkProgress
+ 
+2022-02-16T19:35:05.485Z: post: checkProgress
+ 
+2022-02-16T19:35:05.685Z: post: checkProgress
+ 
+2022-02-16T19:35:05.704Z: post: checkProgress
+ 
+2022-02-16T19:35:09.476Z: post: checkProgress
+ 
+2022-02-16T19:35:09.991Z: post: checkProgress
+ 
+2022-02-16T19:35:13.488Z: post: checkProgress
+ 
+2022-02-16T19:35:13.985Z: post: checkProgress
+ 
+2022-02-16T19:35:17.482Z: post: checkProgress
+ 
+2022-02-16T19:35:17.978Z: post: checkProgress
+ 
+2022-02-16T19:35:21.477Z: post: checkProgress
+ 
+2022-02-16T19:35:21.989Z: post: checkProgress
+ 
+2022-02-16T19:35:25.479Z: post: checkProgress
+ 
+2022-02-16T19:35:29.486Z: post: checkProgress
+ 
+2022-02-16T19:35:32.591Z: post: checkProgress
+ 
+2022-02-16T19:35:32.609Z: post: checkProgress
+ 
+2022-02-16T19:35:32.640Z: post: checkProgress
+ 
+2022-02-16T19:35:32.668Z: post: checkProgress
+ 
+2022-02-16T19:35:36.606Z: post: checkProgress
+ 
+2022-02-16T19:35:36.995Z: post: checkProgress
+ 
+2022-02-16T19:35:37.504Z: post: checkProgress
+ 
+2022-02-16T19:35:37.516Z: post: checkProgress
+ 
+2022-02-16T19:35:37.577Z: post: checkProgress
+ 
+2022-02-16T19:35:37.590Z: post: checkProgress
+ 
+2022-02-16T19:35:41.519Z: post: checkProgress
+ 
+2022-02-16T19:35:42.004Z: post: checkProgress
+ 
+2022-02-16T19:35:45.518Z: post: checkProgress
+ 
+2022-02-16T19:35:45.988Z: post: checkProgress
+ 
+2022-02-16T19:35:47.675Z: post: checkProgress
+ 
+2022-02-16T19:35:47.692Z: post: checkProgress
+ 
+2022-02-16T19:35:47.740Z: post: checkProgress
+ 
+2022-02-16T19:35:47.768Z: post: checkProgress
+ 
+2022-02-16T19:35:51.681Z: post: checkProgress
+ 
+2022-02-16T19:35:51.992Z: post: checkProgress
+ 
+2022-02-16T19:35:55.677Z: post: checkProgress
+ 
+2022-02-16T19:35:55.999Z: post: checkProgress
+ 
+2022-02-16T19:35:59.675Z: post: checkProgress
+ 
+2022-02-16T19:35:59.987Z: post: checkProgress
+ 
+2022-02-16T19:36:03.691Z: post: checkProgress
+ 
+2022-02-16T19:36:03.988Z: post: checkProgress
+ 
+2022-02-16T19:36:07.685Z: post: checkProgress
+ 
+2022-02-16T19:36:10.698Z: post: checkProgress
+ 
+2022-02-16T19:36:10.713Z: post: checkProgress
+ 
+2022-02-16T19:36:10.717Z: post: checkProgress
+ 
+2022-02-16T19:36:10.764Z: post: checkProgress
+ 
+2022-02-16T19:36:14.699Z: post: checkProgress
+ 
+2022-02-16T19:36:14.993Z: post: checkProgress
+ 
+2022-02-16T19:36:18.700Z: post: checkProgress
+ 
+2022-02-16T19:36:18.989Z: post: checkProgress
+ 
+2022-02-16T19:36:22.706Z: post: checkProgress
+ 
+2022-02-16T19:36:23.001Z: post: checkProgress
+ 
+2022-02-16T19:36:26.704Z: post: checkProgress
+ 
+2022-02-16T19:36:27.000Z: post: checkProgress
+ 
+2022-02-16T19:36:30.710Z: post: checkProgress
+ 
+2022-02-16T19:36:34.706Z: post: checkProgress
+ 
+2022-02-16T19:36:38.711Z: post: checkProgress
+ 
+2022-02-16T19:36:42.714Z: post: checkProgress
+ 
+2022-02-16T19:36:46.717Z: post: checkProgress
+ 
+2022-02-16T19:36:50.718Z: post: checkProgress
+ 
+2022-02-16T19:36:54.722Z: post: checkProgress
+ 
+2022-02-16T19:36:58.715Z: post: checkProgress
+ 
+2022-02-16T19:37:02.721Z: post: checkProgress
+ 
+2022-02-16T19:37:06.716Z: post: checkProgress
+ 
+2022-02-16T19:37:10.721Z: post: checkProgress
+ 
+2022-02-16T19:37:14.720Z: post: checkProgress
+ 
+2022-02-16T19:37:18.716Z: post: checkProgress
+ 
+2022-02-16T19:37:20.013Z: post: checkProgress
+ 
+2022-02-16T19:37:22.715Z: post: checkProgress
+ 
+2022-02-16T19:37:26.710Z: post: checkProgress
+ 
+2022-02-16T19:37:30.722Z: post: checkProgress
+ 
+2022-02-16T19:37:34.724Z: post: checkProgress
+ 
+2022-02-16T19:37:38.730Z: post: checkProgress
+ 
+2022-02-16T19:37:42.911Z: post: checkProgress
+ 
+2022-02-16T19:37:42.928Z: post: checkProgress
+ 
+2022-02-16T19:37:43.033Z: post: checkProgress
+ 
+2022-02-16T19:37:43.051Z: post: checkProgress
+ 
+2022-02-16T19:37:46.911Z: post: checkProgress
+ 
+2022-02-16T19:37:48.017Z: post: checkProgress
+ 
+2022-02-16T19:37:50.922Z: post: checkProgress
+ 
+2022-02-16T19:37:52.013Z: post: checkProgress
+ 
+2022-02-16T19:37:54.913Z: post: checkProgress
+ 
+2022-02-16T19:37:56.014Z: post: checkProgress
+ 
+2022-02-16T19:37:58.924Z: post: checkProgress
+ 
+2022-02-16T19:38:00.015Z: post: checkProgress
+ 
+2022-02-16T19:38:02.918Z: post: checkProgress
+ 
+2022-02-16T19:38:06.914Z: post: checkProgress
+ 
+2022-02-16T19:38:10.913Z: post: checkProgress
+ 
+2022-02-16T19:38:14.919Z: post: checkProgress
+ 
+2022-02-16T19:38:18.911Z: post: checkProgress
+ 
+2022-02-16T19:38:20.016Z: post: checkProgress
+ 
+2022-02-16T19:38:22.915Z: post: checkProgress
+ 
+2022-02-16T19:38:26.925Z: post: checkProgress
+ 
+2022-02-16T19:38:28.291Z: post: checkProgress
+ 
+2022-02-16T19:38:28.308Z: post: checkProgress
+ 
+2022-02-16T19:38:28.328Z: post: checkProgress
+ 
+2022-02-16T19:38:28.359Z: post: checkProgress
+ 
+2022-02-16T19:38:32.294Z: post: checkProgress
+ 
+2022-02-16T19:38:32.708Z: post: checkProgress
+ 
+2022-02-16T19:38:32.716Z: post: checkProgress
+ 
+2022-02-16T19:38:32.767Z: post: checkProgress
+ 
+2022-02-16T19:38:32.769Z: post: checkProgress
+ 
+2022-02-16T19:38:36.717Z: post: checkProgress
+ 
+2022-02-16T19:38:37.014Z: post: checkProgress
+ 
+2022-02-16T19:38:38.358Z: post: checkProgress
+ 
+2022-02-16T19:38:38.359Z: post: checkProgress
+ 
+2022-02-16T19:38:38.401Z: post: checkProgress
+ 
+2022-02-16T19:38:38.429Z: post: checkProgress
+ 
+2022-02-16T19:38:42.375Z: post: checkProgress
+ 
+2022-02-16T19:38:43.026Z: post: checkProgress
+ 
+2022-02-16T19:38:46.363Z: post: checkProgress
+ 
+2022-02-16T19:38:46.998Z: post: checkProgress
+ 
+2022-02-16T19:38:47.008Z: post: checkProgress
+ 
+2022-02-16T19:38:47.070Z: post: checkProgress
+ 
+2022-02-16T19:38:47.087Z: post: checkProgress
+ 
+2022-02-16T19:38:51.008Z: post: checkProgress
+ 
+2022-02-16T19:38:51.574Z: post: checkProgress
+ 
+2022-02-16T19:38:51.575Z: post: checkProgress
+ 
+2022-02-16T19:38:51.655Z: post: checkProgress
+ 
+2022-02-16T19:38:51.668Z: post: checkProgress
+ 
+2022-02-16T19:38:55.567Z: post: checkProgress
+ 
+2022-02-16T19:38:56.033Z: post: checkProgress
+ 
+2022-02-16T19:38:59.569Z: post: checkProgress
+ 
+2022-02-16T19:39:00.033Z: post: checkProgress
+ 
+2022-02-16T19:39:03.570Z: post: checkProgress
+ 
+2022-02-16T19:39:04.024Z: post: checkProgress
+ 
+2022-02-16T19:39:07.568Z: post: checkProgress
+ 
+2022-02-16T19:39:08.154Z: post: checkProgress
+ 
+2022-02-16T19:39:08.171Z: post: checkProgress
+ 
+2022-02-16T19:39:08.223Z: post: checkProgress
+ 
+2022-02-16T19:39:08.251Z: post: checkProgress
+ 
+2022-02-16T19:39:12.163Z: post: checkProgress
+ 
+2022-02-16T19:39:13.029Z: post: checkProgress
+ 
+2022-02-16T19:39:16.154Z: post: checkProgress
+ 
+2022-02-16T19:39:17.026Z: post: checkProgress
+ 
+2022-02-16T19:39:20.158Z: post: checkProgress
+ 
+2022-02-16T19:39:21.021Z: post: checkProgress
+ 
+2022-02-16T19:39:24.168Z: post: checkProgress
+ 
+2022-02-16T19:39:25.027Z: post: checkProgress
+ 
+2022-02-16T19:39:28.161Z: post: checkProgress
+ 
+2022-02-16T19:39:32.162Z: post: checkProgress
+ 
+2022-02-16T19:39:36.167Z: post: checkProgress
+ 
+2022-02-16T19:39:40.158Z: post: checkProgress
+ 
+2022-02-16T19:39:44.183Z: post: checkProgress
+ 
+2022-02-16T19:39:48.172Z: post: checkProgress
+ 
+2022-02-16T19:39:52.173Z: post: checkProgress
+ 
+2022-02-16T19:39:55.320Z: post: checkProgress
+ 
+2022-02-16T19:39:55.339Z: post: checkProgress
+ 
+2022-02-16T19:39:55.388Z: post: checkProgress
+ 
+2022-02-16T19:39:55.433Z: post: checkProgress
+ 
+2022-02-16T19:39:59.327Z: post: checkProgress
+ 
+2022-02-16T19:40:00.044Z: post: checkProgress
+ 
+2022-02-16T19:40:03.327Z: post: checkProgress
+ 
+2022-02-16T19:40:04.043Z: post: checkProgress
+ 
+2022-02-16T19:40:05.462Z: post: checkProgress
+ 
+2022-02-16T19:40:05.480Z: post: checkProgress
+ 
+2022-02-16T19:40:05.544Z: post: checkProgress
+ 
+2022-02-16T19:40:05.584Z: post: checkProgress
+ 
+2022-02-16T19:40:09.467Z: post: checkProgress
+ 
+2022-02-16T19:40:10.043Z: post: checkProgress
+ 
+2022-02-16T19:40:13.466Z: post: checkProgress
+ 
+2022-02-16T19:40:14.041Z: post: checkProgress
+ 
+2022-02-16T19:40:17.466Z: post: checkProgress
+ 
+2022-02-16T19:40:18.040Z: post: checkProgress
+ 
+2022-02-16T19:40:20.070Z: post: checkProgress
+ 
+2022-02-16T19:40:20.087Z: post: checkProgress
+ 
+2022-02-16T19:40:20.144Z: post: checkProgress
+ 
+2022-02-16T19:40:20.158Z: post: checkProgress
+ 
+2022-02-16T19:40:24.077Z: post: checkProgress
+ 
+2022-02-16T19:40:24.792Z: post: checkProgress
+ 
+2022-02-16T19:40:24.801Z: post: checkProgress
+ 
+2022-02-16T19:40:24.869Z: post: checkProgress
+ 
+2022-02-16T19:40:24.880Z: post: checkProgress
+ 
+2022-02-16T19:40:28.809Z: post: checkProgress
+ 
+2022-02-16T19:40:29.041Z: post: checkProgress
+ 
+2022-02-16T19:40:31.092Z: post: checkProgress
+ 
+2022-02-16T19:40:31.102Z: post: checkProgress
+ 
+2022-02-16T19:40:31.185Z: post: checkProgress
+ 
+2022-02-16T19:40:31.187Z: post: checkProgress
+ 
+2022-02-16T19:40:35.099Z: post: checkProgress
+ 
+2022-02-16T19:40:36.047Z: post: checkProgress
+ 
+2022-02-16T19:40:39.105Z: post: checkProgress
+ 
+2022-02-16T19:40:40.038Z: post: checkProgress
+ 
+2022-02-16T19:40:43.101Z: post: checkProgress
+ 
+2022-02-16T19:40:43.954Z: post: checkProgress
+ 
+2022-02-16T19:40:43.971Z: post: checkProgress
+ 
+2022-02-16T19:40:43.972Z: post: checkProgress
+ 
+2022-02-16T19:40:43.985Z: post: checkProgress
+ 
+2022-02-16T19:40:47.982Z: post: checkProgress
+ 
+2022-02-16T19:40:48.059Z: post: checkProgress
+ 
+2022-02-16T19:40:50.442Z: post: checkProgress
+ 
+2022-02-16T19:40:50.458Z: post: checkProgress
+ 
+2022-02-16T19:40:50.503Z: post: checkProgress
+ 
+2022-02-16T19:40:50.521Z: post: checkProgress
+ 
+2022-02-16T19:40:54.455Z: post: checkProgress
+ 
+2022-02-16T19:40:55.049Z: post: checkProgress
+ 
+2022-02-16T19:40:58.456Z: post: checkProgress
+ 
+2022-02-16T19:40:59.049Z: post: checkProgress
+ 
+2022-02-16T19:41:02.448Z: post: checkProgress
+ 
+2022-02-16T19:41:03.055Z: post: checkProgress
+ 
+2022-02-16T19:41:06.456Z: post: checkProgress
+ 
+2022-02-16T19:41:07.058Z: post: checkProgress
+ 
+2022-02-16T19:41:10.441Z: post: checkProgress
+ 
+2022-02-16T19:41:11.616Z: post: checkProgress
+ 
+2022-02-16T19:41:11.635Z: post: checkProgress
+ 
+2022-02-16T19:41:11.664Z: post: checkProgress
+ 
+2022-02-16T19:41:11.686Z: post: checkProgress
+ 
+2022-02-16T19:41:15.619Z: post: checkProgress
+ 
+2022-02-16T19:41:16.054Z: post: checkProgress
+ 
+2022-02-16T19:41:19.617Z: post: checkProgress
+ 
+2022-02-16T19:41:20.054Z: post: checkProgress
+ 
+2022-02-16T19:41:22.502Z: post: checkProgress
+ 
+2022-02-16T19:41:22.518Z: post: checkProgress
+ 
+2022-02-16T19:41:22.595Z: post: checkProgress
+ 
+2022-02-16T19:41:22.618Z: post: checkProgress
+ 
+2022-02-16T19:41:26.517Z: post: checkProgress
+ 
+2022-02-16T19:41:27.048Z: post: checkProgress
+ 
+2022-02-16T19:41:30.517Z: post: checkProgress
+ 
+2022-02-16T19:41:31.045Z: post: checkProgress
+ 
+2022-02-16T19:41:32.731Z: post: checkProgress
+ 
+2022-02-16T19:41:32.752Z: post: checkProgress
+ 
+2022-02-16T19:41:32.788Z: post: checkProgress
+ 
+2022-02-16T19:41:32.825Z: post: checkProgress
+ 
+2022-02-16T19:41:36.746Z: post: checkProgress
+ 
+2022-02-16T19:41:37.056Z: post: checkProgress
+ 
+2022-02-16T19:41:40.747Z: post: checkProgress
+ 
+2022-02-16T19:41:41.058Z: post: checkProgress
+ 
+2022-02-16T19:41:44.739Z: post: checkProgress
+ 
+2022-02-16T19:41:45.049Z: post: checkProgress
+ 
+2022-02-16T19:41:48.751Z: post: checkProgress
+ 
+2022-02-16T19:41:49.060Z: post: checkProgress
+ 
+2022-02-16T19:41:52.756Z: post: checkProgress
+ 
+2022-02-16T19:41:56.755Z: post: checkProgress
+ 
+2022-02-16T19:42:00.746Z: post: checkProgress
+ 
+2022-02-16T19:42:03.484Z: post: checkProgress
+ 
+2022-02-16T19:42:03.498Z: post: checkProgress
+ 
+2022-02-16T19:42:03.551Z: post: checkProgress
+ 
+2022-02-16T19:42:03.584Z: post: checkProgress
+ 
+2022-02-16T19:42:07.490Z: post: checkProgress
+ 
+2022-02-16T19:42:08.067Z: post: checkProgress
+ 
+2022-02-16T19:42:10.291Z: post: checkProgress
+ 
+2022-02-16T19:42:10.292Z: post: checkProgress
+ 
+2022-02-16T19:42:10.350Z: post: checkProgress
+ 
+2022-02-16T19:42:10.358Z: post: checkProgress
+ 
+2022-02-16T19:42:14.297Z: post: checkProgress
+ 
+2022-02-16T19:42:15.062Z: post: checkProgress
+ 
+2022-02-16T19:42:18.294Z: post: checkProgress
+ 
+2022-02-16T19:42:19.071Z: post: checkProgress
+ 
+2022-02-16T19:42:22.286Z: post: checkProgress
+ 
+2022-02-16T19:42:23.059Z: post: checkProgress
+ 
+2022-02-16T19:42:26.287Z: post: checkProgress
+ 
+2022-02-16T19:42:27.061Z: post: checkProgress
+ 
+2022-02-16T19:42:29.430Z: post: checkProgress
+ 
+2022-02-16T19:42:29.449Z: post: checkProgress
+ 
+2022-02-16T19:42:29.503Z: post: checkProgress
+ 
+2022-02-16T19:42:29.532Z: post: checkProgress
+ 
+2022-02-16T19:42:33.446Z: post: checkProgress
+ 
+2022-02-16T19:42:34.065Z: post: checkProgress
+ 
+2022-02-16T19:42:37.438Z: post: checkProgress
+ 
+2022-02-16T19:42:38.060Z: post: checkProgress
+ 
+2022-02-16T19:42:41.448Z: post: checkProgress
+ 
+2022-02-16T19:42:42.064Z: post: checkProgress
+ 
+2022-02-16T19:42:45.442Z: post: checkProgress
+ 
+2022-02-16T19:42:46.064Z: post: checkProgress
+ 
+2022-02-16T19:42:49.456Z: post: checkProgress
+ 
+2022-02-16T19:42:53.455Z: post: checkProgress
+ 
+2022-02-16T19:42:57.444Z: post: checkProgress
+ 
+2022-02-16T19:43:01.452Z: post: checkProgress
+ 
+2022-02-16T19:43:05.456Z: post: checkProgress
+ 
+2022-02-16T19:43:09.447Z: post: checkProgress
+ 
+2022-02-16T19:43:13.455Z: post: checkProgress
+ 
+2022-02-16T19:43:17.453Z: post: checkProgress
+ 
+2022-02-16T19:43:20.078Z: post: checkProgress
+ 
+2022-02-16T19:43:21.440Z: post: checkProgress
+ 
+2022-02-16T19:43:26.074Z: post: checkProgress
+ 
+2022-02-16T19:43:30.065Z: post: checkProgress
+ 
+2022-02-16T19:43:34.072Z: post: checkProgress
+ 
+2022-02-16T19:43:38.069Z: post: checkProgress
+ 
+2022-02-16T19:43:42.068Z: post: checkProgress
+ 
+2022-02-16T19:43:46.080Z: post: checkProgress
+ 
+2022-02-16T19:43:50.089Z: post: checkProgress
+ 
+2022-02-16T19:43:54.088Z: post: checkProgress
+ 
+2022-02-16T19:43:58.090Z: post: checkProgress
+ 
+2022-02-16T19:44:02.084Z: post: checkProgress
+ 
+2022-02-16T19:44:06.083Z: post: checkProgress
+ 
+2022-02-16T19:44:10.077Z: post: checkProgress
+ 
+2022-02-16T19:44:14.080Z: post: checkProgress
+ 
+2022-02-16T19:44:18.086Z: post: checkProgress
+ 
+2022-02-16T19:44:20.077Z: post: checkProgress
+ 
+2022-02-16T19:44:22.084Z: post: checkProgress
+ 
+2022-02-16T19:44:26.085Z: post: checkProgress
+ 
+2022-02-16T19:44:30.073Z: post: checkProgress
+ 
+2022-02-16T19:44:34.089Z: post: checkProgress
+ 
+2022-02-16T19:44:38.087Z: post: checkProgress
+ 
+2022-02-16T19:44:42.080Z: post: checkProgress
+ 
+2022-02-16T19:44:46.087Z: post: checkProgress
+ 
+2022-02-16T19:44:50.084Z: post: checkProgress
+ 
+2022-02-16T19:44:54.083Z: post: checkProgress
+ 
+2022-02-16T19:44:58.097Z: post: checkProgress
+ 
+2022-02-16T19:45:02.091Z: post: checkProgress
+ 
+2022-02-16T19:45:06.098Z: post: checkProgress
+ 
+2022-02-16T19:45:10.093Z: post: checkProgress
+ 
+2022-02-16T19:45:14.092Z: post: checkProgress
+ 
+2022-02-16T19:45:18.090Z: post: checkProgress
+ 
+2022-02-16T19:45:20.101Z: post: checkProgress
+ 
+2022-02-16T19:45:22.084Z: post: checkProgress
+ 
+2022-02-16T19:45:26.089Z: post: checkProgress
+ 
+2022-02-16T19:45:30.083Z: post: checkProgress
+ 
+2022-02-16T19:45:34.094Z: post: checkProgress
+ 
+2022-02-16T19:45:38.086Z: post: checkProgress
+ 
+2022-02-16T19:45:42.095Z: post: checkProgress
+ 
+2022-02-16T19:45:46.084Z: post: checkProgress
+ 
+2022-02-16T19:45:50.020Z: post: checkProgress
+ 
+2022-02-16T19:45:50.046Z: post: checkProgress
+ 
+2022-02-16T19:45:50.097Z: post: checkProgress
+ 
+2022-02-16T19:45:50.115Z: post: checkProgress
+ 
+2022-02-16T19:45:54.095Z: post: checkProgress
+ 
+2022-02-16T19:45:55.107Z: post: checkProgress
+ 
+2022-02-16T19:45:58.103Z: post: checkProgress
+ 
+2022-02-16T19:45:59.103Z: post: checkProgress
+ 
+2022-02-16T19:46:02.100Z: post: checkProgress
+ 
+2022-02-16T19:46:03.103Z: post: checkProgress
+ 
+2022-02-16T19:46:06.090Z: post: checkProgress
+ 
+2022-02-16T19:46:07.093Z: post: checkProgress
+ 
+2022-02-16T19:46:11.092Z: post: checkProgress
+ 
+2022-02-16T19:46:15.103Z: post: checkProgress
+ 
+2022-02-16T19:46:18.127Z: post: checkProgress
+ 
+2022-02-16T19:46:18.130Z: post: checkProgress
+ 
+2022-02-16T19:46:18.153Z: post: checkProgress
+ 
+2022-02-16T19:46:18.154Z: post: checkProgress
+ 
+2022-02-16T19:46:22.131Z: post: checkProgress
+ 
+2022-02-16T19:46:23.098Z: post: checkProgress
+ 
+2022-02-16T19:46:26.132Z: post: checkProgress
+ 
+2022-02-16T19:46:27.094Z: post: checkProgress
+ 
+2022-02-16T19:46:30.137Z: post: checkProgress
+ 
+2022-02-16T19:46:31.097Z: post: checkProgress
+ 
+2022-02-16T19:46:34.136Z: post: checkProgress
+ 
+2022-02-16T19:46:35.102Z: post: checkProgress
+ 
+2022-02-16T19:46:38.131Z: post: checkProgress
+ 
+2022-02-16T19:46:39.098Z: post: checkProgress
+ 
+2022-02-16T19:46:40.147Z: post: checkProgress
+ 
+2022-02-16T19:46:40.164Z: post: checkProgress
+ 
+2022-02-16T19:46:40.212Z: post: checkProgress
+ 
+2022-02-16T19:46:40.240Z: post: checkProgress
+ 
+2022-02-16T19:46:44.154Z: post: checkProgress
+ 
+2022-02-16T19:46:44.858Z: post: checkProgress
+ 
+2022-02-16T19:46:44.867Z: post: checkProgress
+ 
+2022-02-16T19:46:44.927Z: post: checkProgress
+ 
+2022-02-16T19:46:44.934Z: post: checkProgress
+ 
+2022-02-16T19:46:48.866Z: post: checkProgress
+ 
+2022-02-16T19:46:49.095Z: post: checkProgress
+ 
+2022-02-16T19:46:52.859Z: post: checkProgress
+ 
+2022-02-16T19:46:53.102Z: post: checkProgress
+ 
+2022-02-16T19:46:56.880Z: post: checkProgress
+ 
+2022-02-16T19:46:57.112Z: post: checkProgress
+ 
+2022-02-16T19:47:00.886Z: post: checkProgress
+ 
+2022-02-16T19:47:01.106Z: post: checkProgress
+ 
+2022-02-16T19:47:04.889Z: post: checkProgress
+ 
+2022-02-16T19:47:05.107Z: post: checkProgress
+ 
+2022-02-16T19:47:08.893Z: post: checkProgress
+ 
+2022-02-16T19:47:09.112Z: post: checkProgress
+ 
+2022-02-16T19:47:12.885Z: post: checkProgress
+ 
+2022-02-16T19:47:13.105Z: post: checkProgress
+ 
+2022-02-16T19:47:16.893Z: post: checkProgress
+ 
+2022-02-16T19:47:17.098Z: post: checkProgress
+ 
+2022-02-16T19:47:20.886Z: post: checkProgress
+ 
+2022-02-16T19:47:21.108Z: post: checkProgress
+ 
+2022-02-16T19:47:24.887Z: post: checkProgress
+ 
+2022-02-16T19:47:25.112Z: post: checkProgress
+ 
+2022-02-16T19:47:28.875Z: post: checkProgress
+ 
+2022-02-16T19:47:29.108Z: post: checkProgress
+ 
+2022-02-16T19:47:32.869Z: post: checkProgress
+ 
+2022-02-16T19:47:33.098Z: post: checkProgress
+ 
+2022-02-16T19:47:36.878Z: post: checkProgress
+ 
+2022-02-16T19:47:37.107Z: post: checkProgress
+ 
+2022-02-16T19:47:41.107Z: post: checkProgress
+ 
+2022-02-16T19:47:41.108Z: post: checkProgress
+ 
+2022-02-16T19:47:45.106Z: post: checkProgress
+ 
+2022-02-16T19:47:45.107Z: post: checkProgress
+ 
+2022-02-16T19:47:49.104Z: post: checkProgress
+ 
+2022-02-16T19:47:49.105Z: post: checkProgress
+ 
+2022-02-16T19:47:53.113Z: post: checkProgress
+ 
+2022-02-16T19:47:53.114Z: post: checkProgress
+ 
+2022-02-16T19:47:55.123Z: post: checkProgress
+ 
+2022-02-16T19:47:55.125Z: post: checkProgress
+ 
+2022-02-16T19:47:55.127Z: post: checkProgress
+ 
+2022-02-16T19:47:55.143Z: post: checkProgress
+ 
+2022-02-16T19:47:59.117Z: post: checkProgress
+ 
+2022-02-16T19:47:59.130Z: post: checkProgress
+ 
+2022-02-16T19:48:03.109Z: post: checkProgress
+ 
+2022-02-16T19:48:03.141Z: post: checkProgress
+ 
+2022-02-16T19:48:07.109Z: post: checkProgress
+ 
+2022-02-16T19:48:07.138Z: post: checkProgress
+ 
+2022-02-16T19:48:11.112Z: post: checkProgress
+ 
+2022-02-16T19:48:11.143Z: post: checkProgress
+ 
+2022-02-16T19:48:13.626Z: post: checkProgress
+ 
+2022-02-16T19:48:13.642Z: post: checkProgress
+ 
+2022-02-16T19:48:13.643Z: post: checkProgress
+ 
+2022-02-16T19:48:13.661Z: post: checkProgress
+ 
+2022-02-16T19:48:17.627Z: post: checkProgress
+ 
+2022-02-16T19:48:18.108Z: post: checkProgress
+ 
+2022-02-16T19:48:19.220Z: post: checkProgress
+ 
+2022-02-16T19:48:19.221Z: post: checkProgress
+ 
+2022-02-16T19:48:19.468Z: post: checkProgress
+ 
+2022-02-16T19:48:19.485Z: post: checkProgress
+ 
+2022-02-16T19:48:23.214Z: post: checkProgress
+ 
+2022-02-16T19:48:24.115Z: post: checkProgress
+ 
+2022-02-16T19:48:27.223Z: post: checkProgress
+ 
+2022-02-16T19:48:28.108Z: post: checkProgress
+ 
+2022-02-16T19:48:30.188Z: post: checkProgress
+ 
+2022-02-16T19:48:30.206Z: post: checkProgress
+ 
+2022-02-16T19:48:30.239Z: post: checkProgress
+ 
+2022-02-16T19:48:30.262Z: post: checkProgress
+ 
+2022-02-16T19:48:34.202Z: post: checkProgress
+ 
+2022-02-16T19:48:35.122Z: post: checkProgress
+ 
+2022-02-16T19:48:36.386Z: post: checkProgress
+ 
+2022-02-16T19:48:36.397Z: post: checkProgress
+ 
+2022-02-16T19:48:36.563Z: post: checkProgress
+ 
+2022-02-16T19:48:36.582Z: post: checkProgress
+ 
+2022-02-16T19:48:40.401Z: post: checkProgress
+ 
+2022-02-16T19:48:41.106Z: post: checkProgress
+ 
+2022-02-16T19:48:43.772Z: post: checkProgress
+ 
+2022-02-16T19:48:43.781Z: post: checkProgress
+ 
+2022-02-16T19:48:43.927Z: post: checkProgress
+ 
+2022-02-16T19:48:43.945Z: post: checkProgress
+ 
+2022-02-16T19:48:47.778Z: post: checkProgress
+ 
+2022-02-16T19:48:48.116Z: post: checkProgress
+ 
+2022-02-16T19:48:49.185Z: post: checkProgress
+ 
+2022-02-16T19:48:49.197Z: post: checkProgress
+ 
+2022-02-16T19:48:49.384Z: post: checkProgress
+ 
+2022-02-16T19:48:49.401Z: post: checkProgress
+ 
+2022-02-16T19:48:53.189Z: post: checkProgress
+ 
+2022-02-16T19:48:54.107Z: post: checkProgress
+ 
+2022-02-16T19:48:57.191Z: post: checkProgress
+ 
+2022-02-16T19:48:58.110Z: post: checkProgress
+ 
+2022-02-16T19:49:01.205Z: post: checkProgress
+ 
+2022-02-16T19:49:02.117Z: post: checkProgress
+ 
+2022-02-16T19:49:05.201Z: post: checkProgress
+ 
+2022-02-16T19:49:06.126Z: post: checkProgress
+ 
+2022-02-16T19:49:09.203Z: post: checkProgress
+ 
+2022-02-16T19:49:10.120Z: post: checkProgress
+ 
+2022-02-16T19:49:13.198Z: post: checkProgress
+ 
+2022-02-16T19:49:14.122Z: post: checkProgress
+ 
+2022-02-16T19:49:17.204Z: post: checkProgress
+ 
+2022-02-16T19:49:18.363Z: post: checkProgress
+ 
+2022-02-16T19:49:18.379Z: post: checkProgress
+ 
+2022-02-16T19:49:18.401Z: post: checkProgress
+ 
+2022-02-16T19:49:18.429Z: post: checkProgress
+ 
+2022-02-16T19:49:22.379Z: post: checkProgress
+ 
+2022-02-16T19:49:23.123Z: post: checkProgress
+ 
+2022-02-16T19:49:25.221Z: post: checkProgress
+ 
+2022-02-16T19:49:25.231Z: post: checkProgress
+ 
+2022-02-16T19:49:25.319Z: post: checkProgress
+ 
+2022-02-16T19:49:25.332Z: post: checkProgress
+ 
+2022-02-16T19:49:29.224Z: post: checkProgress
+ 
+2022-02-16T19:49:29.403Z: post: checkProgress
+ 
+2022-02-16T19:49:29.413Z: post: checkProgress
+ 
+2022-02-16T19:49:29.475Z: post: checkProgress
+ 
+2022-02-16T19:49:29.482Z: post: checkProgress
+ 
+2022-02-16T19:49:32.518Z: post: checkProgress
+ 
+2022-02-16T19:49:32.529Z: post: checkProgress
+ 
+2022-02-16T19:49:32.594Z: post: checkProgress
+ 
+2022-02-16T19:49:32.605Z: post: checkProgress
+ 
+2022-02-16T19:49:36.534Z: post: checkProgress
+ 
+2022-02-16T19:49:37.001Z: post: checkProgress
+ 
+2022-02-16T19:49:37.013Z: post: checkProgress
+ 
+2022-02-16T19:49:37.053Z: post: checkProgress
+ 
+2022-02-16T19:49:37.054Z: post: checkProgress
+ 
+2022-02-16T19:49:41.008Z: post: checkProgress
+ 
+2022-02-16T19:49:41.119Z: post: checkProgress
+ 
+2022-02-16T19:49:45.016Z: post: checkProgress
+ 
+2022-02-16T19:49:45.122Z: post: checkProgress
+ 
+2022-02-16T19:49:49.013Z: post: checkProgress
+ 
+2022-02-16T19:49:49.123Z: post: checkProgress
+ 
+2022-02-16T19:49:53.013Z: post: checkProgress
+ 
+2022-02-16T19:49:53.120Z: post: checkProgress
+ 
+2022-02-16T19:49:57.013Z: post: checkProgress
+ 
+2022-02-16T19:49:57.121Z: post: checkProgress
+ 
+2022-02-16T19:50:01.016Z: post: checkProgress
+ 
+2022-02-16T19:50:01.123Z: post: checkProgress
+ 
+2022-02-16T19:50:05.017Z: post: checkProgress
+ 
+2022-02-16T19:50:05.125Z: post: checkProgress
+ 
+2022-02-16T19:50:09.023Z: post: checkProgress
+ 
+2022-02-16T19:50:09.131Z: post: checkProgress
+ 
+2022-02-16T19:50:13.015Z: post: checkProgress
+ 
+2022-02-16T19:50:13.139Z: post: checkProgress
+ 
+2022-02-16T19:50:17.140Z: post: checkProgress
+ 
+2022-02-16T19:50:17.141Z: post: checkProgress
+ 
+2022-02-16T19:50:21.128Z: post: checkProgress
+ 
+2022-02-16T19:50:21.127Z: post: checkProgress
+ 
+2022-02-16T19:50:25.128Z: post: checkProgress
+ 
+2022-02-16T19:50:25.129Z: post: checkProgress
+ 
+2022-02-16T19:50:29.130Z: post: checkProgress
+ 
+2022-02-16T19:50:29.131Z: post: checkProgress
+ 
+2022-02-16T19:50:33.132Z: post: checkProgress
+ 
+2022-02-16T19:50:33.131Z: post: checkProgress
+ 
+2022-02-16T19:50:37.135Z: post: checkProgress
+ 
+2022-02-16T19:50:37.136Z: post: checkProgress
+ 
+2022-02-16T19:50:41.133Z: post: checkProgress
+ 
+2022-02-16T19:50:41.134Z: post: checkProgress
+ 
+2022-02-16T19:50:45.123Z: post: checkProgress
+ 
+2022-02-16T19:50:45.138Z: post: checkProgress
+ 
+2022-02-16T19:50:49.140Z: post: checkProgress
+ 
+2022-02-16T19:50:49.141Z: post: checkProgress
+ 
+2022-02-16T19:50:53.017Z: post: checkProgress
+ 
+2022-02-16T19:50:53.127Z: post: checkProgress
+ 
+2022-02-16T19:50:57.025Z: post: checkProgress
+ 
+2022-02-16T19:50:57.133Z: post: checkProgress
+ 
+2022-02-16T19:51:01.021Z: post: checkProgress
+ 
+2022-02-16T19:51:01.130Z: post: checkProgress
+ 
+2022-02-16T19:51:05.013Z: post: checkProgress
+ 
+2022-02-16T19:51:05.146Z: post: checkProgress
+ 
+2022-02-16T19:51:09.020Z: post: checkProgress
+ 
+2022-02-16T19:51:09.146Z: post: checkProgress
+ 
+2022-02-16T19:51:13.025Z: post: checkProgress
+ 
+2022-02-16T19:51:13.132Z: post: checkProgress
+ 
+2022-02-16T19:51:17.028Z: post: checkProgress
+ 
+2022-02-16T19:51:17.135Z: post: checkProgress
+ 
+2022-02-16T19:51:21.025Z: post: checkProgress
+ 
+2022-02-16T19:51:21.132Z: post: checkProgress
+ 
+2022-02-16T19:51:25.023Z: post: checkProgress
+ 
+2022-02-16T19:51:25.132Z: post: checkProgress
+ 
+2022-02-16T19:51:29.022Z: post: checkProgress
+ 
+2022-02-16T19:51:29.146Z: post: checkProgress
+ 
+2022-02-16T19:51:33.029Z: post: checkProgress
+ 
+2022-02-16T19:51:33.138Z: post: checkProgress
+ 
+2022-02-16T19:51:37.021Z: post: checkProgress
+ 
+2022-02-16T19:51:37.144Z: post: checkProgress
+ 
+2022-02-16T19:51:41.029Z: post: checkProgress
+ 
+2022-02-16T19:51:41.138Z: post: checkProgress
+ 
+2022-02-16T19:51:45.031Z: post: checkProgress
+ 
+2022-02-16T19:51:45.139Z: post: checkProgress
+ 
+2022-02-16T19:51:49.025Z: post: checkProgress
+ 
+2022-02-16T19:51:49.134Z: post: checkProgress
+ 
+2022-02-16T19:51:53.021Z: post: checkProgress
+ 
+2022-02-16T19:51:53.145Z: post: checkProgress
+ 
+2022-02-16T19:51:57.022Z: post: checkProgress
+ 
+2022-02-16T19:51:57.146Z: post: checkProgress
+ 
+2022-02-16T19:52:00.610Z: post: checkProgress
+ 
+2022-02-16T19:52:00.628Z: post: checkProgress
+ 
+2022-02-16T19:52:00.745Z: post: checkProgress
+ 
+2022-02-16T19:52:00.765Z: post: checkProgress
+ 
+2022-02-16T19:52:04.617Z: post: checkProgress
+ 
+2022-02-16T19:52:05.132Z: post: checkProgress
+ 
+2022-02-16T19:52:06.421Z: post: checkProgress
+ 
+2022-02-16T19:52:06.422Z: post: checkProgress
+ 
+2022-02-16T19:52:06.646Z: post: checkProgress
+ 
+2022-02-16T19:52:06.664Z: post: checkProgress
+ 
+2022-02-16T19:52:10.413Z: post: checkProgress
+ 
+2022-02-16T19:52:11.146Z: post: checkProgress
+ 
+2022-02-16T19:52:14.413Z: post: checkProgress
+ 
+2022-02-16T19:52:15.153Z: post: checkProgress
+ 
+2022-02-16T19:52:18.419Z: post: checkProgress
+ 
+2022-02-16T19:52:19.154Z: post: checkProgress
+ 
+2022-02-16T19:52:22.416Z: post: checkProgress
+ 
+2022-02-16T19:52:23.142Z: post: checkProgress
+ 
+2022-02-16T19:52:26.420Z: post: checkProgress
+ 
+2022-02-16T19:52:27.153Z: post: checkProgress
+ 
+2022-02-16T19:52:30.419Z: post: checkProgress
+ 
+2022-02-16T19:52:31.147Z: post: checkProgress
+ 
+2022-02-16T19:52:34.415Z: post: checkProgress
+ 
+2022-02-16T19:52:35.146Z: post: checkProgress
+ 
+2022-02-16T19:52:38.412Z: post: checkProgress
+ 
+2022-02-16T19:52:42.419Z: post: checkProgress
+ 
+2022-02-16T19:52:46.415Z: post: checkProgress
+ 
+2022-02-16T19:52:50.422Z: post: checkProgress
+ 
+2022-02-16T19:52:54.414Z: post: checkProgress
+ 
+2022-02-16T19:52:58.419Z: post: checkProgress
+ 
+2022-02-16T19:52:58.890Z: post: checkProgress
+ 
+2022-02-16T19:52:58.902Z: post: checkProgress
+ 
+2022-02-16T19:52:59.087Z: post: checkProgress
+ 
+2022-02-16T19:52:59.105Z: post: checkProgress
+ 
+2022-02-16T19:53:02.893Z: post: checkProgress
+ 
+2022-02-16T19:53:03.150Z: post: checkProgress
+ 
+2022-02-16T19:53:06.907Z: post: checkProgress
+ 
+2022-02-16T19:53:07.156Z: post: checkProgress
+ 
+2022-02-16T19:53:10.909Z: post: checkProgress
+ 
+2022-02-16T19:53:11.160Z: post: checkProgress
+ 
+2022-02-16T19:53:14.908Z: post: checkProgress
+ 
+2022-02-16T19:53:15.161Z: post: checkProgress
+ 
+2022-02-16T19:53:18.915Z: post: checkProgress
+ 
+2022-02-16T19:53:20.157Z: post: checkProgress
+ 
+2022-02-16T19:53:22.906Z: post: checkProgress
+ 
+2022-02-16T19:53:26.905Z: post: checkProgress
+ 
+2022-02-16T19:53:30.676Z: post: checkProgress
+ 
+2022-02-16T19:53:30.690Z: post: checkProgress
+ 
+2022-02-16T19:53:30.900Z: post: checkProgress
+ 
+2022-02-16T19:53:30.920Z: post: checkProgress
+ 
+2022-02-16T19:53:34.684Z: post: checkProgress
+ 
+2022-02-16T19:53:35.148Z: post: checkProgress
+ 
+2022-02-16T19:53:38.678Z: post: checkProgress
+ 
+2022-02-16T19:53:39.150Z: post: checkProgress
+ 
+2022-02-16T19:53:42.681Z: post: checkProgress
+ 
+2022-02-16T19:53:43.162Z: post: checkProgress
+ 
+2022-02-16T19:53:46.679Z: post: checkProgress
+ 
+2022-02-16T19:53:47.161Z: post: checkProgress
+ 
+2022-02-16T19:53:50.681Z: post: checkProgress
+ 
+2022-02-16T19:53:51.440Z: post: checkProgress
+ 
+2022-02-16T19:53:51.451Z: post: checkProgress
+ 
+2022-02-16T19:53:51.650Z: post: checkProgress
+ 
+2022-02-16T19:53:51.668Z: post: checkProgress
+ 
+2022-02-16T19:53:55.446Z: post: checkProgress
+ 
+2022-02-16T19:53:56.159Z: post: checkProgress
+ 
+2022-02-16T19:53:59.452Z: post: checkProgress
+ 
+2022-02-16T19:54:00.163Z: post: checkProgress
+ 
+2022-02-16T19:54:03.451Z: post: checkProgress
+ 
+2022-02-16T19:54:04.152Z: post: checkProgress
+ 
+2022-02-16T19:54:07.452Z: post: checkProgress
+ 
+2022-02-16T19:54:08.164Z: post: checkProgress
+ 
+2022-02-16T19:54:11.463Z: post: checkProgress
+ 
+2022-02-16T19:54:15.453Z: post: checkProgress
+ 
+2022-02-16T19:54:19.449Z: post: checkProgress
+ 
+2022-02-16T19:54:20.160Z: post: checkProgress
+ 
+2022-02-16T19:54:23.455Z: post: checkProgress
+ 
+2022-02-16T19:54:27.189Z: post: checkProgress
+ 
+2022-02-16T19:54:27.190Z: post: checkProgress
+ 
+2022-02-16T19:54:27.377Z: post: checkProgress
+ 
+2022-02-16T19:54:27.395Z: post: checkProgress
+ 
+2022-02-16T19:54:29.923Z: post: checkProgress
+ 
+2022-02-16T19:54:29.933Z: post: checkProgress
+ 
+2022-02-16T19:54:30.173Z: post: checkProgress
+ 
+2022-02-16T19:54:30.193Z: post: checkProgress
+ 
+2022-02-16T19:54:33.938Z: post: checkProgress
+ 
+2022-02-16T19:54:35.164Z: post: checkProgress
+ 
+2022-02-16T19:54:37.922Z: post: checkProgress
+ 
+2022-02-16T19:54:39.167Z: post: checkProgress
+ 
+2022-02-16T19:54:41.924Z: post: checkProgress
+ 
+2022-02-16T19:54:43.166Z: post: checkProgress
+ 
+2022-02-16T19:54:45.935Z: post: checkProgress
+ 
+2022-02-16T19:54:47.161Z: post: checkProgress
+ 
+2022-02-16T19:54:49.927Z: post: checkProgress
+ 
+2022-02-16T19:54:52.701Z: post: checkProgress
+ 
+2022-02-16T19:54:52.705Z: post: checkProgress
+ 
+2022-02-16T19:54:52.916Z: post: checkProgress
+ 
+2022-02-16T19:54:52.934Z: post: checkProgress
+ 
+2022-02-16T19:54:56.701Z: post: checkProgress
+ 
+2022-02-16T19:54:57.167Z: post: checkProgress
+ 
+2022-02-16T19:55:01.164Z: post: checkProgress
+ 
+2022-02-16T19:55:01.165Z: post: checkProgress
+ 
+2022-02-16T19:55:05.166Z: post: checkProgress
+ 
+2022-02-16T19:55:05.165Z: post: checkProgress
+ 
+2022-02-16T19:55:09.175Z: post: checkProgress
+ 
+2022-02-16T19:55:09.175Z: post: checkProgress
+ 
+2022-02-16T19:55:13.174Z: post: checkProgress
+ 
+2022-02-16T19:55:13.174Z: post: checkProgress
+ 
+2022-02-16T19:55:17.166Z: post: checkProgress
+ 
+2022-02-16T19:55:17.167Z: post: checkProgress
+ 
+2022-02-16T19:55:17.891Z: post: checkProgress
+ 
+2022-02-16T19:55:17.904Z: post: checkProgress
+ 
+2022-02-16T19:55:17.913Z: post: checkProgress
+ 
+2022-02-16T19:55:17.919Z: post: checkProgress
+ 
+2022-02-16T19:55:22.178Z: post: checkProgress
+ 
+2022-02-16T19:55:22.179Z: post: checkProgress
+ 
+2022-02-16T19:55:26.176Z: post: checkProgress
+ 
+2022-02-16T19:55:26.177Z: post: checkProgress
+ 
+2022-02-16T19:55:30.176Z: post: checkProgress
+ 
+2022-02-16T19:55:30.177Z: post: checkProgress
+ 
+2022-02-16T19:55:34.166Z: post: checkProgress
+ 
+2022-02-16T19:55:34.167Z: post: checkProgress
+ 
+2022-02-16T19:55:38.174Z: post: checkProgress
+ 
+2022-02-16T19:55:38.176Z: post: checkProgress
+ 
+2022-02-16T19:55:42.177Z: post: checkProgress
+ 
+2022-02-16T19:55:42.178Z: post: checkProgress
+ 
+2022-02-16T19:55:46.171Z: post: checkProgress
+ 
+2022-02-16T19:55:46.172Z: post: checkProgress
+ 
+2022-02-16T19:55:50.177Z: post: checkProgress
+ 
+2022-02-16T19:55:50.178Z: post: checkProgress
+ 
+2022-02-16T19:55:54.168Z: post: checkProgress
+ 
+2022-02-16T19:55:54.167Z: post: checkProgress
+ 
+2022-02-16T19:55:58.174Z: post: checkProgress
+ 
+2022-02-16T19:55:58.173Z: post: checkProgress
+ 
+2022-02-16T19:56:02.167Z: post: checkProgress
+ 
+2022-02-16T19:56:02.168Z: post: checkProgress
+ 
+2022-02-16T19:56:06.178Z: post: checkProgress
+ 
+2022-02-16T19:56:06.179Z: post: checkProgress
+ 
+2022-02-16T19:56:10.188Z: post: checkProgress
+ 
+2022-02-16T19:56:10.188Z: post: checkProgress
+ 
+2022-02-16T19:56:14.175Z: post: checkProgress
+ 
+2022-02-16T19:56:14.176Z: post: checkProgress
+ 
+2022-02-16T19:56:18.188Z: post: checkProgress
+ 
+2022-02-16T19:56:18.189Z: post: checkProgress
+ 
+2022-02-16T19:56:22.181Z: post: checkProgress
+ 
+2022-02-16T19:56:22.181Z: post: checkProgress
+ 
+2022-02-16T19:56:26.186Z: post: checkProgress
+ 
+2022-02-16T19:56:26.186Z: post: checkProgress
+ 
+2022-02-16T19:56:30.185Z: post: checkProgress
+ 
+2022-02-16T19:56:30.184Z: post: checkProgress
+ 
+2022-02-16T19:56:34.183Z: post: checkProgress
+ 
+2022-02-16T19:56:34.184Z: post: checkProgress
+ 
+2022-02-16T19:56:38.188Z: post: checkProgress
+ 
+2022-02-16T19:56:38.187Z: post: checkProgress
+ 
+2022-02-16T19:56:42.187Z: post: checkProgress
+ 
+2022-02-16T19:56:42.188Z: post: checkProgress
+ 
+2022-02-16T19:56:46.175Z: post: checkProgress
+ 
+2022-02-16T19:56:46.174Z: post: checkProgress
+ 
+2022-02-16T19:56:50.188Z: post: checkProgress
+ 
+2022-02-16T19:56:50.187Z: post: checkProgress
+ 
+2022-02-16T19:56:54.174Z: post: checkProgress
+ 
+2022-02-16T19:56:54.175Z: post: checkProgress
+ 
+2022-02-16T19:56:58.182Z: post: checkProgress
+ 
+2022-02-16T19:56:58.182Z: post: checkProgress
+ 
+2022-02-16T19:57:02.176Z: post: checkProgress
+ 
+2022-02-16T19:57:02.177Z: post: checkProgress
+ 
+2022-02-16T19:57:06.184Z: post: checkProgress
+ 
+2022-02-16T19:57:06.185Z: post: checkProgress
+ 
+2022-02-16T19:57:10.185Z: post: checkProgress
+ 
+2022-02-16T19:57:10.184Z: post: checkProgress
+ 
+2022-02-16T19:57:14.199Z: post: checkProgress
+ 
+2022-02-16T19:57:14.199Z: post: checkProgress
+ 
+2022-02-16T19:57:18.193Z: post: checkProgress
+ 
+2022-02-16T19:57:18.194Z: post: checkProgress
+ 
+2022-02-16T19:57:22.186Z: post: checkProgress
+ 
+2022-02-16T19:57:22.186Z: post: checkProgress
+ 
+2022-02-16T19:57:26.187Z: post: checkProgress
+ 
+2022-02-16T19:57:26.188Z: post: checkProgress
+ 
+2022-02-16T19:57:30.190Z: post: checkProgress
+ 
+2022-02-16T19:57:30.190Z: post: checkProgress
+ 
+2022-02-16T19:57:34.185Z: post: checkProgress
+ 
+2022-02-16T19:57:34.185Z: post: checkProgress
+ 
+2022-02-16T19:57:38.188Z: post: checkProgress
+ 
+2022-02-16T19:57:38.189Z: post: checkProgress
+ 
+2022-02-16T19:57:42.192Z: post: checkProgress
+ 
+2022-02-16T19:57:42.193Z: post: checkProgress
+ 
+2022-02-16T19:57:46.195Z: post: checkProgress
+ 
+2022-02-16T19:57:46.195Z: post: checkProgress
+ 
+2022-02-16T19:57:50.191Z: post: checkProgress
+ 
+2022-02-16T19:57:50.189Z: post: checkProgress
+ 
+2022-02-16T19:57:54.200Z: post: checkProgress
+ 
+2022-02-16T19:57:54.201Z: post: checkProgress
+ 
+2022-02-16T19:57:58.191Z: post: checkProgress
+ 
+2022-02-16T19:57:58.190Z: post: checkProgress
+ 
+2022-02-16T19:58:02.198Z: post: checkProgress
+ 
+2022-02-16T19:58:02.199Z: post: checkProgress
+ 
+2022-02-16T19:58:06.184Z: post: checkProgress
+ 
+2022-02-16T19:58:06.185Z: post: checkProgress
+ 
+2022-02-16T19:58:10.193Z: post: checkProgress
+ 
+2022-02-16T19:58:10.192Z: post: checkProgress
+ 
+2022-02-16T19:58:14.192Z: post: checkProgress
+ 
+2022-02-16T19:58:14.192Z: post: checkProgress
+ 
+2022-02-16T19:58:18.206Z: post: checkProgress
+ 
+2022-02-16T19:58:18.207Z: post: checkProgress
+ 
+2022-02-16T19:58:22.196Z: post: checkProgress
+ 
+2022-02-16T19:58:22.197Z: post: checkProgress
+ 
+2022-02-16T19:58:26.204Z: post: checkProgress
+ 
+2022-02-16T19:58:26.205Z: post: checkProgress
+ 
+2022-02-16T19:58:30.200Z: post: checkProgress
+ 
+2022-02-16T19:58:30.201Z: post: checkProgress
+ 
+2022-02-16T19:58:34.193Z: post: checkProgress
+ 
+2022-02-16T19:58:34.193Z: post: checkProgress
+ 
+2022-02-16T19:58:38.204Z: post: checkProgress
+ 
+2022-02-16T19:58:38.205Z: post: checkProgress
+ 
+2022-02-16T19:58:42.199Z: post: checkProgress
+ 
+2022-02-16T19:58:42.200Z: post: checkProgress
+ 
+2022-02-16T19:58:46.203Z: post: checkProgress
+ 
+2022-02-16T19:58:46.202Z: post: checkProgress
+ 
+2022-02-16T19:58:50.195Z: post: checkProgress
+ 
+2022-02-16T19:58:50.194Z: post: checkProgress
+ 
+2022-02-16T19:58:54.197Z: post: checkProgress
+ 
+2022-02-16T19:58:54.198Z: post: checkProgress
+ 
+2022-02-16T19:58:58.203Z: post: checkProgress
+ 
+2022-02-16T19:58:58.221Z: post: checkProgress
+ 
+2022-02-16T19:59:02.193Z: post: checkProgress
+ 
+2022-02-16T19:59:02.194Z: post: checkProgress
+ 
+2022-02-16T19:59:06.201Z: post: checkProgress
+ 
+2022-02-16T19:59:06.202Z: post: checkProgress
+ 
+2022-02-16T19:59:10.202Z: post: checkProgress
+ 
+2022-02-16T19:59:10.201Z: post: checkProgress
+ 
+2022-02-16T19:59:14.215Z: post: checkProgress
+ 
+2022-02-16T19:59:14.216Z: post: checkProgress
+ 
+2022-02-16T19:59:18.205Z: post: checkProgress
+ 
+2022-02-16T19:59:18.205Z: post: checkProgress
+ 
+2022-02-16T19:59:22.203Z: post: checkProgress
+ 
+2022-02-16T19:59:22.204Z: post: checkProgress
+ 
+2022-02-16T19:59:26.199Z: post: checkProgress
+ 
+2022-02-16T19:59:26.200Z: post: checkProgress
+ 
+2022-02-16T19:59:30.215Z: post: checkProgress
+ 
+2022-02-16T19:59:30.217Z: post: checkProgress
+ 
+2022-02-16T19:59:34.208Z: post: checkProgress
+ 
+2022-02-16T19:59:34.209Z: post: checkProgress
+ 
+2022-02-16T19:59:38.205Z: post: checkProgress
+ 
+2022-02-16T19:59:38.204Z: post: checkProgress
+ 
+2022-02-16T19:59:42.212Z: post: checkProgress
+ 
+2022-02-16T19:59:42.213Z: post: checkProgress
+ 
+2022-02-16T19:59:46.203Z: post: checkProgress
+ 
+2022-02-16T19:59:46.204Z: post: checkProgress
+ 
+2022-02-16T19:59:50.206Z: post: checkProgress
+ 
+2022-02-16T19:59:50.205Z: post: checkProgress
+ 
+2022-02-16T19:59:54.208Z: post: checkProgress
+ 
+2022-02-16T19:59:54.207Z: post: checkProgress
+ 
+2022-02-16T19:59:58.212Z: post: checkProgress
+ 
+2022-02-16T19:59:58.213Z: post: checkProgress
+ 
+2022-02-16T20:00:20.218Z: post: checkProgress
+ 
+2022-02-16T20:00:20.219Z: post: checkProgress
+ 
+2022-02-16T20:01:20.225Z: post: checkProgress
+ 
+2022-02-16T20:01:20.226Z: post: checkProgress
+ 
+2022-02-16T20:02:20.216Z: post: checkProgress
+ 
+2022-02-16T20:02:20.215Z: post: checkProgress
+ 
+2022-02-16T20:03:20.237Z: post: checkProgress
+ 
+2022-02-16T20:03:20.238Z: post: checkProgress
+ 
+2022-02-16T20:04:20.232Z: post: checkProgress
+ 
+2022-02-16T20:04:20.231Z: post: checkProgress
+ 
+2022-02-16T20:05:20.238Z: post: checkProgress
+ 
+2022-02-16T20:05:20.239Z: post: checkProgress
+ 
+2022-02-16T20:06:20.258Z: post: checkProgress
+ 
+2022-02-16T20:06:20.259Z: post: checkProgress
+ 
+2022-02-16T20:07:20.251Z: post: checkProgress
+ 
+2022-02-16T20:07:20.251Z: post: checkProgress
+ 
+2022-02-16T20:08:20.263Z: post: checkProgress
+ 
+2022-02-16T20:08:20.262Z: post: checkProgress
+ 
+2022-02-16T20:09:20.270Z: post: checkProgress
+ 
+2022-02-16T20:09:20.271Z: post: checkProgress
+ 
+2022-02-16T20:10:20.263Z: post: checkProgress
+ 
+2022-02-16T20:10:20.262Z: post: checkProgress
+ 
+2022-02-16T20:11:20.281Z: post: checkProgress
+ 
+2022-02-16T20:11:20.282Z: post: checkProgress
+ 
+2022-02-16T20:12:20.289Z: post: checkProgress
+ 
+2022-02-16T20:12:20.290Z: post: checkProgress
+ 
+2022-02-16T20:13:20.299Z: post: checkProgress
+ 
+2022-02-16T20:13:20.300Z: post: checkProgress
+ 
+2022-02-16T20:14:20.305Z: post: checkProgress
+ 
+2022-02-16T20:14:20.306Z: post: checkProgress
+ 
+2022-02-16T20:15:20.300Z: post: checkProgress
+ 
+2022-02-16T20:15:20.299Z: post: checkProgress
+ 
+2022-02-16T20:16:20.314Z: post: checkProgress
+ 
+2022-02-16T20:16:20.315Z: post: checkProgress
+ 
+2022-02-16T20:17:20.308Z: post: checkProgress
+ 
+2022-02-16T20:17:20.307Z: post: checkProgress
+ 
+2022-02-16T20:18:20.326Z: post: checkProgress
+ 
+2022-02-16T20:18:20.327Z: post: checkProgress
+ 
+2022-02-16T20:19:20.331Z: post: checkProgress
+ 
+2022-02-16T20:19:20.331Z: post: checkProgress
+ 
+2022-02-16T20:20:20.320Z: post: checkProgress
+ 
+2022-02-16T20:20:20.321Z: post: checkProgress
+ 
+2022-02-16T20:21:20.334Z: post: checkProgress
+ 
+2022-02-16T20:21:20.333Z: post: checkProgress
+ 
+2022-02-16T20:22:20.328Z: post: checkProgress
+ 
+2022-02-16T20:22:20.329Z: post: checkProgress
+ 
+2022-02-16T20:23:20.353Z: post: checkProgress
+ 
+2022-02-16T20:23:20.352Z: post: checkProgress
+ 
+2022-02-16T20:24:20.345Z: post: checkProgress
+ 
+2022-02-16T20:24:20.347Z: post: checkProgress
+ 
+2022-02-16T20:25:20.356Z: post: checkProgress
+ 
+2022-02-16T20:25:20.356Z: post: checkProgress
+ 
+2022-02-16T20:26:20.365Z: post: checkProgress
+ 
+2022-02-16T20:26:20.367Z: post: checkProgress
+ 
+2022-02-16T20:27:20.376Z: post: checkProgress
+ 
+2022-02-16T20:27:20.375Z: post: checkProgress
+ 
+2022-02-16T20:28:20.380Z: post: checkProgress
+ 
+2022-02-16T20:28:20.381Z: post: checkProgress
+ 
+2022-02-16T20:29:20.374Z: post: checkProgress
+ 
+2022-02-16T20:29:20.374Z: post: checkProgress
+ 
+2022-02-16T20:30:20.390Z: post: checkProgress
+ 
+2022-02-16T20:30:20.391Z: post: checkProgress
+ 
+2022-02-16T20:31:20.386Z: post: checkProgress
+ 
+2022-02-16T20:31:20.387Z: post: checkProgress
+ 
+2022-02-16T20:32:20.406Z: post: checkProgress
+ 
+2022-02-16T20:32:20.407Z: post: checkProgress
+ 
+2022-02-16T20:33:20.400Z: post: checkProgress
+ 
+2022-02-16T20:33:20.401Z: post: checkProgress
+ 
+2022-02-16T20:34:20.406Z: post: checkProgress
+ 
+2022-02-16T20:34:20.406Z: post: checkProgress
+ 
+2022-02-16T20:35:20.413Z: post: checkProgress
+ 
+2022-02-16T20:35:20.412Z: post: checkProgress
+ 
+2022-02-16T20:36:20.420Z: post: checkProgress
+ 
+2022-02-16T20:36:20.420Z: post: checkProgress
+ 
+2022-02-16T20:37:20.404Z: post: checkProgress
+ 
+2022-02-16T20:37:20.421Z: post: checkProgress
+ 
+2022-02-16T20:38:20.418Z: post: checkProgress
+ 
+2022-02-16T20:38:20.419Z: post: checkProgress
+ 
+2022-02-16T20:39:20.427Z: post: checkProgress
+ 
+2022-02-16T20:39:20.426Z: post: checkProgress
+ 
+2022-02-16T20:40:20.416Z: post: checkProgress
+ 
+2022-02-16T20:40:20.417Z: post: checkProgress
+ 
+2022-02-16T20:41:20.434Z: post: checkProgress
+ 
+2022-02-16T20:41:20.434Z: post: checkProgress
+ 
+2022-02-16T20:42:20.428Z: post: checkProgress
+ 
+2022-02-16T20:42:20.429Z: post: checkProgress
+ 
+2022-02-16T20:43:20.432Z: post: checkProgress
+ 
+2022-02-16T20:43:20.433Z: post: checkProgress
+ 
+2022-02-16T20:44:20.442Z: post: checkProgress
+ 
+2022-02-16T20:44:20.443Z: post: checkProgress
+ 
+2022-02-16T20:45:20.434Z: post: checkProgress
+ 
+2022-02-16T20:45:20.434Z: post: checkProgress
+ 
+2022-02-16T20:46:20.438Z: post: checkProgress
+ 
+2022-02-16T20:46:20.438Z: post: checkProgress
+ 
+2022-02-16T20:47:20.446Z: post: checkProgress
+ 
+2022-02-16T20:47:20.447Z: post: checkProgress
+ 
+2022-02-16T20:48:20.442Z: post: checkProgress
+ 
+2022-02-16T20:48:20.443Z: post: checkProgress
+ 
+2022-02-16T20:49:20.443Z: post: checkProgress
+ 
+2022-02-16T20:49:20.442Z: post: checkProgress
+ 
+2022-02-16T20:50:20.450Z: post: checkProgress
+ 
+2022-02-16T20:50:20.451Z: post: checkProgress
+ 
+2022-02-16T20:51:20.445Z: post: checkProgress
+ 
+2022-02-16T20:51:20.445Z: post: checkProgress
+ 
+2022-02-16T20:52:20.454Z: post: checkProgress
+ 
+2022-02-16T20:52:20.453Z: post: checkProgress
+ 
+2022-02-16T20:53:20.460Z: post: checkProgress
+ 
+2022-02-16T20:53:20.461Z: post: checkProgress
+ 
+2022-02-16T20:54:20.448Z: post: checkProgress
+ 
+2022-02-16T20:54:20.463Z: post: checkProgress
+ 
+2022-02-16T20:55:20.468Z: post: checkProgress
+ 
+2022-02-16T20:55:20.468Z: post: checkProgress
+ 
+2022-02-16T20:56:20.472Z: post: checkProgress
+ 
+2022-02-16T20:56:20.472Z: post: checkProgress
+ 
+2022-02-16T20:57:20.458Z: post: checkProgress
+ 
+2022-02-16T20:57:20.459Z: post: checkProgress
+ 
+2022-02-16T20:58:20.475Z: post: checkProgress
+ 
+2022-02-16T20:58:20.476Z: post: checkProgress
+ 
+2022-02-16T20:59:20.470Z: post: checkProgress
+ 
+2022-02-16T20:59:20.470Z: post: checkProgress
+ 
+2022-02-16T21:00:20.479Z: post: checkProgress
+ 
+2022-02-16T21:00:20.479Z: post: checkProgress
+ 
+2022-02-16T21:01:20.483Z: post: checkProgress
+ 
+2022-02-16T21:01:20.484Z: post: checkProgress
+ 
+2022-02-16T21:02:20.477Z: post: checkProgress
+ 
+2022-02-16T21:02:20.478Z: post: checkProgress
+ 
+2022-02-16T21:03:20.476Z: post: checkProgress
+ 
+2022-02-16T21:03:20.476Z: post: checkProgress
+ 
+2022-02-16T21:04:20.483Z: post: checkProgress
+ 
+2022-02-16T21:04:20.484Z: post: checkProgress
+ 
+2022-02-16T21:05:20.485Z: post: checkProgress
+ 
+2022-02-16T21:05:20.486Z: post: checkProgress
+ 
+2022-02-16T21:06:20.488Z: post: checkProgress
+ 
+2022-02-16T21:06:20.487Z: post: checkProgress
+ 
+2022-02-16T21:07:20.486Z: post: checkProgress
+ 
+2022-02-16T21:07:20.486Z: post: checkProgress
+ 
+2022-02-16T21:08:20.487Z: post: checkProgress
+ 
+2022-02-16T21:08:20.488Z: post: checkProgress
+ 
+2022-02-16T21:09:20.495Z: post: checkProgress
+ 
+2022-02-16T21:09:20.496Z: post: checkProgress
+ 
+2022-02-16T21:10:20.501Z: post: checkProgress
+ 
+2022-02-16T21:10:20.500Z: post: checkProgress
+ 
+2022-02-16T21:11:20.491Z: post: checkProgress
+ 
+2022-02-16T21:11:20.490Z: post: checkProgress
+ 
+2022-02-16T21:12:20.499Z: post: checkProgress
+ 
+2022-02-16T21:12:20.498Z: post: checkProgress
+ 
+2022-02-16T21:12:29.828Z: post: checkProgress
+ 
+2022-02-16T21:12:30.218Z: post: checkProgress
+ 
+2022-02-16T21:12:34.213Z: post: checkProgress
+ 
+2022-02-16T21:12:38.224Z: post: checkProgress
+ 
+2022-02-16T21:12:42.220Z: post: checkProgress
+ 
+2022-02-16T21:12:46.227Z: post: checkProgress
+ 
+2022-02-16T21:12:50.214Z: post: checkProgress
+ 
+2022-02-16T21:12:54.216Z: post: checkProgress
+ 
+2022-02-16T21:12:58.225Z: post: checkProgress
+ 
+2022-02-16T21:13:02.215Z: post: checkProgress
+ 
+2022-02-16T21:13:03.847Z: post: checkProgress
+ 
+2022-02-16T21:13:03.869Z: post: checkProgress
+ 
+2022-02-16T21:13:03.979Z: post: checkProgress
+ 
+2022-02-16T21:13:04.003Z: post: checkProgress
+ 
+2022-02-16T21:13:07.850Z: post: checkProgress
+ 
+2022-02-16T21:13:08.486Z: post: checkProgress
+ 
+2022-02-16T21:13:11.859Z: post: checkProgress
+ 
+2022-02-16T21:13:12.497Z: post: checkProgress
+ 
+2022-02-16T21:13:15.851Z: post: checkProgress
+ 
+2022-02-16T21:13:16.500Z: post: checkProgress
+ 
+2022-02-16T21:13:19.850Z: post: checkProgress
+ 
+2022-02-16T21:13:20.490Z: post: checkProgress
+ 
+2022-02-16T21:13:23.859Z: post: checkProgress
+ 
+2022-02-16T21:13:27.862Z: post: checkProgress
+ 
+2022-02-16T21:13:31.864Z: post: checkProgress
+ 
+2022-02-16T21:13:35.862Z: post: checkProgress
+ 
+2022-02-16T21:13:39.857Z: post: checkProgress
+ 
+2022-02-16T21:13:43.050Z: post: checkProgress
+ 
+2022-02-16T21:13:43.068Z: post: checkProgress
+ 
+2022-02-16T21:13:43.094Z: post: checkProgress
+ 
+2022-02-16T21:13:43.117Z: post: checkProgress
+ 
+2022-02-16T21:13:46.148Z: post: checkProgress
+ 
+2022-02-16T21:13:46.150Z: post: checkProgress
+ 
+2022-02-16T21:13:46.166Z: post: checkProgress
+ 
+2022-02-16T21:13:46.182Z: post: checkProgress
+ 
+2022-02-16T21:13:50.139Z: post: checkProgress
+ 
+2022-02-16T21:13:50.493Z: post: checkProgress
+ 
+2022-02-16T21:13:54.138Z: post: checkProgress
+ 
+2022-02-16T21:13:54.502Z: post: checkProgress
+ 
+2022-02-16T21:13:58.137Z: post: checkProgress
+ 
+2022-02-16T21:13:58.494Z: post: checkProgress
+ 
+2022-02-16T21:14:02.148Z: post: checkProgress
+ 
+2022-02-16T21:14:02.490Z: post: checkProgress
+ 
+2022-02-16T21:14:06.139Z: post: checkProgress
+ 
+2022-02-16T21:14:10.146Z: post: checkProgress
+ 
+2022-02-16T21:14:14.139Z: post: checkProgress
+ 
+2022-02-16T21:14:18.143Z: post: checkProgress
+ 
+2022-02-16T21:14:20.497Z: post: checkProgress
+ 
+2022-02-16T21:14:22.138Z: post: checkProgress
+ 
+2022-02-16T21:14:26.145Z: post: checkProgress
+ 
+2022-02-16T21:14:30.489Z: post: checkProgress
+ 
+2022-02-16T21:14:34.500Z: post: checkProgress
+ 
+2022-02-16T21:14:38.497Z: post: checkProgress
+ 
+2022-02-16T21:14:42.496Z: post: checkProgress
+ 
+2022-02-16T21:14:46.501Z: post: checkProgress
+ 
+2022-02-16T21:14:50.501Z: post: checkProgress
+ 
+2022-02-16T21:14:54.489Z: post: checkProgress
+ 
+2022-02-16T21:14:58.495Z: post: checkProgress
+ 
+2022-02-16T21:15:02.491Z: post: checkProgress
+ 
+2022-02-16T21:15:06.496Z: post: checkProgress
+ 
+2022-02-16T21:15:10.488Z: post: checkProgress
+ 
+2022-02-16T21:15:14.490Z: post: checkProgress
+ 
+2022-02-16T21:15:18.499Z: post: checkProgress
+ 
+2022-02-16T21:15:20.504Z: post: checkProgress
+ 
+2022-02-16T21:15:22.491Z: post: checkProgress
+ 
+2022-02-16T21:15:26.501Z: post: checkProgress
+ 
+2022-02-16T21:15:30.500Z: post: checkProgress
+ 
+2022-02-16T21:15:34.499Z: post: checkProgress
+ 
+2022-02-16T21:15:38.497Z: post: checkProgress
+ 
+2022-02-16T21:15:42.491Z: post: checkProgress
+ 
+2022-02-16T21:15:46.498Z: post: checkProgress
+ 
+2022-02-16T21:15:50.501Z: post: checkProgress
+ 
+2022-02-16T21:15:54.503Z: post: checkProgress
+ 
+2022-02-16T21:15:58.504Z: post: checkProgress
+ 
+2022-02-16T21:16:02.498Z: post: checkProgress
+ 
+2022-02-16T21:16:06.497Z: post: checkProgress
+ 
+2022-02-16T21:16:10.499Z: post: checkProgress
+ 
+2022-02-16T21:16:14.495Z: post: checkProgress
+ 
+2022-02-16T21:16:18.496Z: post: checkProgress
+ 
+2022-02-16T21:16:20.508Z: post: checkProgress
+ 
+2022-02-16T21:16:22.493Z: post: checkProgress
+ 
+2022-02-16T21:16:26.497Z: post: checkProgress
+ 
+2022-02-16T21:16:30.501Z: post: checkProgress
+ 
+2022-02-16T21:16:34.504Z: post: checkProgress
+ 
+2022-02-16T21:16:38.492Z: post: checkProgress
+ 
+2022-02-16T21:16:42.506Z: post: checkProgress
+ 
+2022-02-16T21:16:46.496Z: post: checkProgress
+ 
+2022-02-16T21:16:50.492Z: post: checkProgress
+ 
+2022-02-16T21:16:54.500Z: post: checkProgress
+ 
+2022-02-16T21:16:55.883Z: post: checkProgress
+ 
+2022-02-16T21:16:58.171Z: post: checkProgress
+ 
+2022-02-16T21:16:58.495Z: post: checkProgress
+ 
+2022-02-16T21:17:02.176Z: post: checkProgress
+ 
+2022-02-16T21:17:02.500Z: post: checkProgress
+ 
+2022-02-16T21:17:06.172Z: post: checkProgress
+ 
+2022-02-16T21:17:06.500Z: post: checkProgress
+ 
+2022-02-16T21:17:10.174Z: post: checkProgress
+ 
+2022-02-16T21:17:10.500Z: post: checkProgress
+ 
+2022-02-16T21:17:14.179Z: post: checkProgress
+ 
+2022-02-16T21:17:14.491Z: post: checkProgress
+ 
+2022-02-16T21:17:18.180Z: post: checkProgress
+ 
+2022-02-16T21:17:18.504Z: post: checkProgress
+ 
+2022-02-16T21:17:22.179Z: post: checkProgress
+ 
+2022-02-16T21:17:22.492Z: post: checkProgress
+ 
+2022-02-16T21:17:26.184Z: post: checkProgress
+ 
+2022-02-16T21:17:26.495Z: post: checkProgress
+ 
+2022-02-16T21:17:30.175Z: post: checkProgress
+ 
+2022-02-16T21:17:30.501Z: post: checkProgress
+ 
+2022-02-16T21:17:34.174Z: post: checkProgress
+ 
+2022-02-16T21:17:34.499Z: post: checkProgress
+ 
+2022-02-16T21:17:38.180Z: post: checkProgress
+ 
+2022-02-16T21:17:38.492Z: post: checkProgress
+ 
+2022-02-16T21:17:42.185Z: post: checkProgress
+ 
+2022-02-16T21:17:42.505Z: post: checkProgress
+ 
+2022-02-16T21:17:46.183Z: post: checkProgress
+ 
+2022-02-16T21:17:46.493Z: post: checkProgress
+ 
+2022-02-16T21:17:49.273Z: post: checkProgress
+ 
+2022-02-16T21:17:49.285Z: post: checkProgress
+ 
+2022-02-16T21:17:49.293Z: post: checkProgress
+ 
+2022-02-16T21:17:49.304Z: post: checkProgress
+ 
+2022-02-16T21:17:53.276Z: post: checkProgress
+ 
+2022-02-16T21:17:53.506Z: post: checkProgress
+ 
+2022-02-16T21:17:57.280Z: post: checkProgress
+ 
+2022-02-16T21:17:57.495Z: post: checkProgress
+ 
+2022-02-16T21:18:01.280Z: post: checkProgress
+ 
+2022-02-16T21:18:01.495Z: post: checkProgress
+ 
+2022-02-16T21:18:05.278Z: post: checkProgress
+ 
+2022-02-16T21:18:05.495Z: post: checkProgress
+ 
+2022-02-16T21:18:08.968Z: post: checkProgress
+ 
+2022-02-16T21:18:08.990Z: post: checkProgress
+ 
+2022-02-16T21:18:09.001Z: post: checkProgress
+ 
+2022-02-16T21:18:09.044Z: post: checkProgress
+ 
+2022-02-16T21:18:12.973Z: post: checkProgress
+ 
+2022-02-16T21:18:13.501Z: post: checkProgress
+ 
+2022-02-16T21:18:16.679Z: post: checkProgress
+ 
+2022-02-16T21:18:16.694Z: post: checkProgress
+ 
+2022-02-16T21:18:16.770Z: post: checkProgress
+ 
+2022-02-16T21:18:16.777Z: post: checkProgress
+ 
+2022-02-16T21:18:20.677Z: post: checkProgress
+ 
+2022-02-16T21:18:21.495Z: post: checkProgress
+ 
+2022-02-16T21:18:24.677Z: post: checkProgress
+ 
+2022-02-16T21:18:25.498Z: post: checkProgress
+ 
+2022-02-16T21:18:28.683Z: post: checkProgress
+ 
+2022-02-16T21:18:29.501Z: post: checkProgress
+ 
+2022-02-16T21:18:32.692Z: post: checkProgress
+ 
+2022-02-16T21:18:33.501Z: post: checkProgress
+ 
+2022-02-16T21:18:36.686Z: post: checkProgress
+ 
+2022-02-16T21:18:37.505Z: post: checkProgress
+ 
+2022-02-16T21:18:40.683Z: post: checkProgress
+ 
+2022-02-16T21:18:41.492Z: post: checkProgress
+ 
+2022-02-16T21:18:44.691Z: post: checkProgress
+ 
+2022-02-16T21:18:45.500Z: post: checkProgress
+ 
+2022-02-16T21:18:48.687Z: post: checkProgress
+ 
+2022-02-16T21:18:49.507Z: post: checkProgress
+ 
+2022-02-16T21:18:52.690Z: post: checkProgress
+ 
+2022-02-16T21:18:53.428Z: post: checkProgress
+ 
+2022-02-16T21:18:53.445Z: post: checkProgress
+ 
+2022-02-16T21:18:53.504Z: post: checkProgress
+ 
+2022-02-16T21:18:53.547Z: post: checkProgress
+ 
+2022-02-16T21:18:57.443Z: post: checkProgress
+ 
+2022-02-16T21:18:57.508Z: post: checkProgress
+ 
+2022-02-16T21:19:01.445Z: post: checkProgress
+ 
+2022-02-16T21:19:02.500Z: post: checkProgress
+ 
+2022-02-16T21:19:05.434Z: post: checkProgress
+ 
+2022-02-16T21:19:06.494Z: post: checkProgress
+ 
+2022-02-16T21:19:07.772Z: post: checkProgress
+ 
+2022-02-16T21:19:07.789Z: post: checkProgress
+ 
+2022-02-16T21:19:07.874Z: post: checkProgress
+ 
+2022-02-16T21:19:07.895Z: post: checkProgress
+ 
+2022-02-16T21:19:11.783Z: post: checkProgress
+ 
+2022-02-16T21:19:12.495Z: post: checkProgress
+ 
+2022-02-16T21:19:14.748Z: post: checkProgress
+ 
+2022-02-16T21:19:14.765Z: post: checkProgress
+ 
+2022-02-16T21:19:14.826Z: post: checkProgress
+ 
+2022-02-16T21:19:14.842Z: post: checkProgress
+ 
+2022-02-16T21:19:18.751Z: post: checkProgress
+ 
+2022-02-16T21:19:19.494Z: post: checkProgress
+ 
+2022-02-16T21:19:22.750Z: post: checkProgress
+ 
+2022-02-16T21:19:23.500Z: post: checkProgress
+ 
+2022-02-16T21:19:26.750Z: post: checkProgress
+ 
+2022-02-16T21:19:27.506Z: post: checkProgress
+ 
+2022-02-16T21:19:30.749Z: post: checkProgress
+ 
+2022-02-16T21:19:31.499Z: post: checkProgress
+ 
+2022-02-16T21:19:34.751Z: post: checkProgress
+ 
+2022-02-16T21:19:38.750Z: post: checkProgress
+ 
+2022-02-16T21:19:42.751Z: post: checkProgress
+ 
+2022-02-16T21:19:46.750Z: post: checkProgress
+ 
+2022-02-16T21:19:50.760Z: post: checkProgress
+ 
+2022-02-16T21:19:54.750Z: post: checkProgress
+ 
+2022-02-16T21:19:58.752Z: post: checkProgress
+ 
+2022-02-16T21:20:02.751Z: post: checkProgress
+ 
+2022-02-16T21:20:06.752Z: post: checkProgress
+ 
+2022-02-16T21:20:10.757Z: post: checkProgress
+ 
+2022-02-16T21:20:14.760Z: post: checkProgress
+ 
+2022-02-16T21:20:18.759Z: post: checkProgress
+ 
+2022-02-16T21:20:20.505Z: post: checkProgress
+ 
+2022-02-16T21:20:22.754Z: post: checkProgress
+ 
+2022-02-16T21:20:26.758Z: post: checkProgress
+ 
+2022-02-16T21:20:30.750Z: post: checkProgress
+ 
+2022-02-16T21:20:34.758Z: post: checkProgress
+ 
+2022-02-16T21:20:38.756Z: post: checkProgress
+ 
+2022-02-16T21:20:42.757Z: post: checkProgress
+ 
+2022-02-16T21:20:46.765Z: post: checkProgress
+ 
+2022-02-16T21:20:50.763Z: post: checkProgress
+ 
+2022-02-16T21:20:54.754Z: post: checkProgress
+ 
+2022-02-16T21:20:58.761Z: post: checkProgress
+ 
+2022-02-16T21:21:02.763Z: post: checkProgress
+ 
+2022-02-16T21:21:06.763Z: post: checkProgress
+ 
+2022-02-16T21:21:10.758Z: post: checkProgress
+ 
+2022-02-16T21:21:14.759Z: post: checkProgress
+ 
+2022-02-16T21:21:18.762Z: post: checkProgress
+ 
+2022-02-16T21:21:20.497Z: post: checkProgress
+ 
+2022-02-16T21:21:22.761Z: post: checkProgress
+ 
+2022-02-16T21:21:26.765Z: post: checkProgress
+ 
+2022-02-16T21:21:30.765Z: post: checkProgress
+ 
+2022-02-16T21:21:34.764Z: post: checkProgress
+ 
+2022-02-16T21:21:38.764Z: post: checkProgress
+ 
+2022-02-16T21:21:42.755Z: post: checkProgress
+ 
+2022-02-16T21:21:46.765Z: post: checkProgress
+ 
+2022-02-16T21:21:50.761Z: post: checkProgress
+ 
+2022-02-16T21:21:54.754Z: post: checkProgress
+ 
+2022-02-16T21:21:56.619Z: started Server
+ 
+2022-02-16T21:21:56.620Z: listening on *:3001
+ 
+2022-02-16T21:21:58.774Z: post: checkProgress
+ 
+2022-02-16T21:22:02.763Z: post: checkProgress
+ 
+2022-02-16T21:22:06.758Z: post: checkProgress
+ 
+2022-02-16T21:22:10.757Z: post: checkProgress
+ 
+2022-02-16T21:22:14.754Z: post: checkProgress
+ 
+2022-02-16T21:22:18.755Z: post: checkProgress
+ 
+2022-02-16T21:22:20.513Z: post: checkProgress
+ 
+2022-02-16T21:22:22.763Z: post: checkProgress
+ 
+2022-02-16T21:22:26.762Z: post: checkProgress
+ 
+2022-02-16T21:22:30.762Z: post: checkProgress
+ 
+2022-02-16T21:22:34.769Z: post: checkProgress
+ 
+2022-02-16T21:22:38.755Z: post: checkProgress
+ 
+2022-02-16T21:22:42.758Z: post: checkProgress
+ 
+2022-02-16T21:22:46.755Z: post: checkProgress
+ 
+2022-02-16T21:22:50.761Z: post: checkProgress
+ 
+2022-02-16T21:22:54.766Z: post: checkProgress
+ 
+2022-02-16T21:22:58.761Z: post: checkProgress
+ 
+2022-02-16T21:23:02.760Z: post: checkProgress
+ 
+2022-02-16T21:23:06.767Z: post: checkProgress
+ 
+2022-02-16T21:23:10.763Z: post: checkProgress
+ 
+2022-02-16T21:23:14.760Z: post: checkProgress
+ 
+2022-02-16T21:23:18.756Z: post: checkProgress
+ 
+2022-02-16T21:23:20.510Z: post: checkProgress
+ 
+2022-02-16T21:23:22.758Z: post: checkProgress
+ 
+2022-02-16T21:23:26.762Z: post: checkProgress
+ 
+2022-02-16T21:23:30.762Z: post: checkProgress
+ 
+2022-02-16T21:23:34.762Z: post: checkProgress
+ 
+2022-02-16T21:23:38.765Z: post: checkProgress
+ 
+2022-02-16T21:23:42.763Z: post: checkProgress
+ 
+2022-02-16T21:23:46.766Z: post: checkProgress
+ 
+2022-02-16T21:23:50.764Z: post: checkProgress
+ 
+2022-02-16T21:23:54.758Z: post: checkProgress
+ 
+2022-02-16T21:23:58.757Z: post: checkProgress
+ 
+2022-02-16T21:24:02.769Z: post: checkProgress
+ 
+2022-02-16T21:24:06.772Z: post: checkProgress
+ 
+2022-02-16T21:24:10.763Z: post: checkProgress
+ 
+2022-02-16T21:24:14.770Z: post: checkProgress
+ 
+2022-02-16T21:24:18.756Z: post: checkProgress
+ 
+2022-02-16T21:24:20.514Z: post: checkProgress
+ 
+2022-02-16T21:24:22.765Z: post: checkProgress
+ 
+2022-02-16T21:24:26.769Z: post: checkProgress
+ 
+2022-02-16T21:24:30.763Z: post: checkProgress
+ 
+2022-02-16T21:24:34.769Z: post: checkProgress
+ 
+2022-02-16T21:24:38.754Z: post: checkProgress
+ 
+2022-02-16T21:24:41.234Z: listening on *:3001
+ 
+2022-02-16T21:24:41.233Z: started Server
+ 
+2022-02-16T21:24:43.521Z: post: checkProgress
+ 
+2022-02-16T21:24:47.502Z: post: checkProgress
+ 
+2022-02-16T21:24:51.504Z: post: checkProgress
+ 
+2022-02-16T21:24:55.501Z: post: checkProgress
+ 
+2022-02-16T21:24:59.508Z: post: checkProgress
+ 
+2022-02-16T21:25:03.510Z: post: checkProgress
+ 
+2022-02-16T21:25:07.513Z: post: checkProgress
+ 
+2022-02-16T21:25:11.498Z: post: checkProgress
+ 
+2022-02-16T21:25:15.508Z: post: checkProgress
+ 
+2022-02-16T21:25:19.508Z: post: checkProgress
+ 
+2022-02-16T21:25:20.503Z: post: checkProgress
+ 
+2022-02-16T21:25:23.507Z: post: checkProgress
+ 
+2022-02-16T21:25:27.503Z: post: checkProgress
+ 
+2022-02-16T21:25:31.512Z: post: checkProgress
+ 
+2022-02-16T21:25:35.513Z: post: checkProgress
+ 
+2022-02-16T21:25:39.507Z: post: checkProgress
+ 
+2022-02-16T21:25:43.507Z: post: checkProgress
+ 
+2022-02-16T21:25:47.509Z: post: checkProgress
+ 
+2022-02-16T21:25:51.502Z: post: checkProgress
+ 
+2022-02-16T21:25:55.508Z: post: checkProgress
+ 
+2022-02-16T21:25:59.757Z: started Server
+ 
+2022-02-16T21:25:59.757Z: listening on *:3001
+ 
+2022-02-16T21:25:59.780Z: post: checkProgress
+ 
+2022-02-16T21:26:03.506Z: post: checkProgress
+ 
+2022-02-16T21:26:07.512Z: post: checkProgress
+ 
+2022-02-16T21:26:11.516Z: post: checkProgress
+ 
+2022-02-16T21:26:15.507Z: post: checkProgress
+ 
+2022-02-16T21:26:19.503Z: post: checkProgress
+ 
+2022-02-16T21:26:20.516Z: post: checkProgress
+ 
+2022-02-16T21:26:23.514Z: post: checkProgress
+ 
+2022-02-16T21:26:27.503Z: post: checkProgress
+ 
+2022-02-16T21:26:31.501Z: post: checkProgress
+ 
+2022-02-16T21:26:35.505Z: post: checkProgress
+ 
+2022-02-16T21:26:39.502Z: post: checkProgress
+ 
+2022-02-16T21:26:43.513Z: post: checkProgress
+ 
+2022-02-16T21:26:47.499Z: post: checkProgress
+ 
+2022-02-16T21:26:51.503Z: post: checkProgress
+ 
+2022-02-16T21:26:55.506Z: post: checkProgress
+ 
+2022-02-16T21:26:59.509Z: post: checkProgress
+ 
+2022-02-16T21:27:03.506Z: post: checkProgress
+ 
+2022-02-16T21:27:07.504Z: post: checkProgress
+ 
+2022-02-16T21:27:11.513Z: post: checkProgress
+ 
+2022-02-16T21:27:15.512Z: post: checkProgress
+ 
+2022-02-16T21:27:19.506Z: post: checkProgress
+ 
+2022-02-16T21:27:20.521Z: post: checkProgress
+ 
+2022-02-16T21:27:23.516Z: post: checkProgress
+ 
+2022-02-16T21:27:27.513Z: post: checkProgress
+ 
+2022-02-16T21:27:31.514Z: post: checkProgress
+ 
+2022-02-16T21:27:35.507Z: post: checkProgress
+ 
+2022-02-16T21:27:39.502Z: post: checkProgress
+ 
+2022-02-16T21:27:43.513Z: post: checkProgress
+ 
+2022-02-16T21:27:47.504Z: post: checkProgress
+ 
+2022-02-16T21:27:51.503Z: post: checkProgress
+ 
+2022-02-16T21:27:55.509Z: post: checkProgress
+ 
+2022-02-16T21:27:59.517Z: post: checkProgress
+ 
+2022-02-16T21:28:03.510Z: post: checkProgress
+ 
+2022-02-16T21:28:07.512Z: post: checkProgress
+ 
+2022-02-16T21:28:11.508Z: post: checkProgress
+ 
+2022-02-16T21:28:15.512Z: post: checkProgress
+ 
+2022-02-16T21:28:19.507Z: post: checkProgress
+ 
+2022-02-16T21:28:20.519Z: post: checkProgress
+ 
+2022-02-16T21:28:23.508Z: post: checkProgress
+ 
+2022-02-16T21:28:27.509Z: post: checkProgress
+ 
+2022-02-16T21:28:31.507Z: post: checkProgress
+ 
+2022-02-16T21:28:35.504Z: post: checkProgress
+ 
+2022-02-16T21:28:39.516Z: post: checkProgress
+ 
+2022-02-16T21:28:43.510Z: post: checkProgress
+ 
+2022-02-16T21:28:47.515Z: post: checkProgress
+ 
+2022-02-16T21:28:51.515Z: post: checkProgress
+ 
+2022-02-16T21:28:55.503Z: post: checkProgress
+ 
+2022-02-16T21:28:59.510Z: post: checkProgress
+ 
+2022-02-16T21:29:03.509Z: post: checkProgress
+ 
+2022-02-16T21:29:07.514Z: post: checkProgress
+ 
+2022-02-16T21:29:09.973Z: started Server
+ 
+2022-02-16T21:29:09.973Z: listening on *:3001
+ 
+2022-02-16T21:29:11.532Z: post: checkProgress
+ 
+2022-02-16T21:29:15.516Z: post: checkProgress
+ 
+2022-02-16T21:29:19.509Z: post: checkProgress
+ 
+2022-02-16T21:29:20.523Z: post: checkProgress
+ 
+2022-02-16T21:29:23.512Z: post: checkProgress
+ 
+2022-02-16T21:29:27.515Z: post: checkProgress
+ 
+2022-02-16T21:29:31.505Z: post: checkProgress
+ 
+2022-02-16T21:29:35.508Z: post: checkProgress
+ 
+2022-02-16T21:29:39.511Z: post: checkProgress
+ 
+2022-02-16T21:29:42.036Z: started Server
+ 
+2022-02-16T21:29:42.037Z: listening on *:3001
+ 
+2022-02-16T21:29:56.111Z: post: checkProgress
+ 
+2022-02-16T21:29:58.766Z: post: checkProgress
+ 
+2022-02-16T21:30:02.771Z: post: checkProgress
+ 
+2022-02-16T21:30:07.147Z: listening on *:3001
+ 
+2022-02-16T21:30:07.146Z: started Server
+ 
+2022-02-16T21:30:07.278Z: post: checkProgress
+ 
+2022-02-16T21:30:10.769Z: post: checkProgress
+ 
+2022-02-16T21:30:14.761Z: post: checkProgress
+ 
+2022-02-16T21:30:18.774Z: post: checkProgress
+ 
+2022-02-16T21:30:20.515Z: post: checkProgress
+ 
+2022-02-16T21:30:22.768Z: post: checkProgress
+ 
+2022-02-16T21:30:26.764Z: post: checkProgress
+ 
+2022-02-16T21:30:30.776Z: post: checkProgress
+ 
+2022-02-16T21:30:34.773Z: post: checkProgress
+ 
+2022-02-16T21:30:38.771Z: post: checkProgress
+ 
+2022-02-16T21:30:42.774Z: post: checkProgress
+ 
+2022-02-16T21:30:46.764Z: post: checkProgress
+ 
+2022-02-16T21:30:50.773Z: post: checkProgress
+ 
+2022-02-16T21:30:54.768Z: post: checkProgress
+ 
+2022-02-16T21:30:58.772Z: post: checkProgress
+ 
+2022-02-16T21:31:02.771Z: post: checkProgress
+ 
+2022-02-16T21:31:06.775Z: post: checkProgress
+ 
+2022-02-16T21:31:10.772Z: post: checkProgress
+ 
+2022-02-16T21:31:14.764Z: post: checkProgress
+ 
+2022-02-16T21:31:18.767Z: post: checkProgress
+ 
+2022-02-16T21:31:20.517Z: post: checkProgress
+ 
+2022-02-16T21:31:22.770Z: post: checkProgress
+ 
+2022-02-16T21:31:26.774Z: post: checkProgress
+ 
+2022-02-16T21:31:30.776Z: post: checkProgress
+ 
+2022-02-16T21:31:34.772Z: post: checkProgress
+ 
+2022-02-16T21:31:38.776Z: post: checkProgress
+ 
+2022-02-16T21:31:42.779Z: post: checkProgress
+ 
+2022-02-16T21:31:46.764Z: post: checkProgress
+ 
+2022-02-16T21:31:50.777Z: post: checkProgress
+ 
+2022-02-16T21:31:54.773Z: post: checkProgress
+ 
+2022-02-16T21:31:58.763Z: post: checkProgress
+ 
+2022-02-16T21:32:02.769Z: post: checkProgress
+ 
+2022-02-16T21:32:06.769Z: post: checkProgress
+ 
+2022-02-16T21:32:10.766Z: post: checkProgress
+ 
+2022-02-16T21:32:14.775Z: post: checkProgress
+ 
+2022-02-16T21:32:18.770Z: post: checkProgress
+ 
+2022-02-16T21:32:20.513Z: post: checkProgress
+ 
+2022-02-16T21:32:22.778Z: post: checkProgress
+ 
+2022-02-16T21:32:25.862Z: started Server
+ 
+2022-02-16T21:32:25.863Z: listening on *:3001
+ 
+2022-02-16T21:32:26.791Z: post: checkProgress
+ 
+2022-02-16T21:32:30.766Z: post: checkProgress
+ 
+2022-02-16T21:32:32.916Z: started Server
+ 
+2022-02-16T21:32:32.916Z: listening on *:3001
+ 
+2022-02-16T21:32:34.786Z: post: checkProgress
+ 
+2022-02-16T21:32:38.774Z: post: checkProgress
+ 
+2022-02-16T21:32:42.775Z: post: checkProgress
+ 
+2022-02-16T21:32:46.776Z: post: checkProgress
+ 
+2022-02-16T21:32:50.778Z: post: checkProgress
+ 
+2022-02-16T21:32:54.769Z: post: checkProgress
+ 
+2022-02-16T21:32:58.773Z: post: checkProgress
+ 
+2022-02-16T21:33:02.763Z: post: checkProgress
+ 
+2022-02-16T21:33:06.774Z: post: checkProgress
+ 
+2022-02-16T21:33:10.768Z: post: checkProgress
+ 
+2022-02-16T21:33:14.776Z: post: checkProgress
+ 
+2022-02-16T21:33:18.769Z: post: checkProgress
+ 
+2022-02-16T21:33:20.517Z: post: checkProgress
+ 
+2022-02-16T21:33:22.777Z: post: checkProgress
+ 
+2022-02-16T21:33:26.768Z: post: checkProgress
+ 
+2022-02-16T21:33:30.775Z: post: checkProgress
+ 
+2022-02-16T21:33:34.780Z: post: checkProgress
+ 
+2022-02-16T21:33:38.767Z: post: checkProgress
+ 
+2022-02-16T21:33:42.776Z: post: checkProgress
+ 
+2022-02-16T21:33:46.765Z: post: checkProgress
+ 
+2022-02-16T21:33:50.770Z: post: checkProgress
+ 
+2022-02-16T21:33:54.768Z: post: checkProgress
+ 
+2022-02-16T21:33:58.773Z: post: checkProgress
+ 
+2022-02-16T21:34:02.772Z: post: checkProgress
+ 
+2022-02-16T21:34:06.779Z: post: checkProgress
+ 
+2022-02-16T21:34:10.768Z: post: checkProgress
+ 
+2022-02-16T21:34:14.777Z: post: checkProgress
+ 
+2022-02-16T21:34:18.779Z: post: checkProgress
+ 
+2022-02-16T21:34:20.519Z: post: checkProgress
+ 
+2022-02-16T21:34:22.767Z: post: checkProgress
+ 
+2022-02-16T21:34:26.773Z: post: checkProgress
+ 
+2022-02-16T21:34:30.768Z: post: checkProgress
+ 
+2022-02-16T21:34:34.778Z: post: checkProgress
+ 
+2022-02-16T21:34:38.779Z: post: checkProgress
+ 
+2022-02-16T21:34:42.767Z: post: checkProgress
+ 
+2022-02-16T21:34:46.772Z: post: checkProgress
+ 
+2022-02-16T21:34:50.770Z: post: checkProgress
+ 
+2022-02-16T21:34:54.775Z: post: checkProgress
+ 
+2022-02-16T21:34:58.770Z: post: checkProgress
+ 
+2022-02-16T21:35:02.777Z: post: checkProgress
+ 
+2022-02-16T21:35:06.779Z: post: checkProgress
+ 
+2022-02-16T21:35:10.774Z: post: checkProgress
+ 
+2022-02-16T21:35:14.770Z: post: checkProgress
+ 
+2022-02-16T21:35:18.535Z: started Server
+ 
+2022-02-16T21:35:18.535Z: listening on *:3001
+ 
+2022-02-16T21:35:18.785Z: post: checkProgress
+ 
+2022-02-16T21:35:20.527Z: post: checkProgress
+ 
+2022-02-16T21:35:22.776Z: post: checkProgress
+ 
+2022-02-16T21:35:26.777Z: post: checkProgress
+ 
+2022-02-16T21:35:30.770Z: post: checkProgress
+ 
+2022-02-16T21:35:34.779Z: post: checkProgress
+ 
+2022-02-16T21:35:38.768Z: post: checkProgress
+ 
+2022-02-16T21:35:42.768Z: post: checkProgress
+ 
+2022-02-16T21:35:46.768Z: post: checkProgress
+ 
+2022-02-16T21:35:50.779Z: post: checkProgress
+ 
+2022-02-16T21:35:54.779Z: post: checkProgress
+ 
+2022-02-16T21:35:58.777Z: post: checkProgress
+ 
+2022-02-16T21:36:02.766Z: post: checkProgress
+ 
+2022-02-16T21:36:06.779Z: post: checkProgress
+ 
+2022-02-16T21:36:10.778Z: post: checkProgress
+ 
+2022-02-16T21:36:14.770Z: post: checkProgress
+ 
+2022-02-16T21:36:18.782Z: post: checkProgress
+ 
+2022-02-16T21:36:20.523Z: post: checkProgress
+ 
+2022-02-16T21:36:22.776Z: post: checkProgress
+ 
+2022-02-16T21:36:26.773Z: post: checkProgress
+ 
+2022-02-16T21:36:30.776Z: post: checkProgress
+ 
+2022-02-16T21:36:34.779Z: post: checkProgress
+ 
+2022-02-16T21:36:38.768Z: post: checkProgress
+ 
+2022-02-16T21:36:42.775Z: post: checkProgress
+ 
+2022-02-16T21:36:46.772Z: post: checkProgress
+ 
+2022-02-16T21:36:50.774Z: post: checkProgress
+ 
+2022-02-16T21:36:55.527Z: post: checkProgress
+ 
+2022-02-16T21:36:59.529Z: post: checkProgress
+ 
+2022-02-16T21:37:03.525Z: post: checkProgress
+ 
+2022-02-16T21:37:07.522Z: post: checkProgress
+ 
+2022-02-16T21:37:11.508Z: post: checkProgress
+ 
+2022-02-16T21:37:14.773Z: post: checkProgress
+ 
+2022-02-16T21:37:18.770Z: post: checkProgress
+ 
+2022-02-16T21:37:20.527Z: post: checkProgress
+ 
+2022-02-16T21:37:22.774Z: post: checkProgress
+ 
+2022-02-16T21:37:26.775Z: post: checkProgress
+ 
+2022-02-16T21:37:30.770Z: post: checkProgress
+ 
+2022-02-16T21:37:34.776Z: post: checkProgress
+ 
+2022-02-16T21:37:38.780Z: post: checkProgress
+ 
+2022-02-16T21:37:42.779Z: post: checkProgress
+ 
+2022-02-16T21:37:46.776Z: post: checkProgress
+ 
+2022-02-16T21:37:50.780Z: post: checkProgress
+ 
+2022-02-16T21:37:54.782Z: post: checkProgress
+ 
+2022-02-16T21:37:58.773Z: post: checkProgress
+ 
+2022-02-16T21:38:02.770Z: post: checkProgress
+ 
+2022-02-16T21:38:06.775Z: post: checkProgress
+ 
+2022-02-16T21:38:10.782Z: post: checkProgress
+ 
+2022-02-16T21:38:14.779Z: post: checkProgress
+ 
+2022-02-16T21:38:18.773Z: post: checkProgress
+ 
+2022-02-16T21:38:20.520Z: post: checkProgress
+ 
+2022-02-16T21:38:22.778Z: post: checkProgress
+ 
+2022-02-16T21:38:26.772Z: post: checkProgress
+ 
+2022-02-16T21:38:30.772Z: post: checkProgress
+ 
+2022-02-16T21:38:34.786Z: post: checkProgress
+ 
+2022-02-16T21:38:38.781Z: post: checkProgress
+ 
+2022-02-16T21:38:42.774Z: post: checkProgress
+ 
+2022-02-16T21:38:45.298Z: started Server
+ 
+2022-02-16T21:38:45.298Z: listening on *:3001
+ 
+2022-02-16T21:38:46.795Z: post: checkProgress
+ 
+2022-02-16T21:38:50.776Z: post: checkProgress
+ 
+2022-02-16T21:38:54.773Z: post: checkProgress
+ 
+2022-02-16T21:38:58.777Z: post: checkProgress
+ 
+2022-02-16T21:39:02.776Z: post: checkProgress
+ 
+2022-02-16T21:39:06.782Z: post: checkProgress
+ 
+2022-02-16T21:39:10.781Z: post: checkProgress
+ 
+2022-02-16T21:39:14.787Z: post: checkProgress
+ 
+2022-02-16T21:39:18.772Z: post: checkProgress
+ 
+2022-02-16T21:39:20.530Z: post: checkProgress
+ 
+2022-02-16T21:39:22.775Z: post: checkProgress
+ 
+2022-02-16T21:39:26.773Z: post: checkProgress
+ 
+2022-02-16T21:39:30.774Z: post: checkProgress
+ 
+2022-02-16T21:39:34.786Z: post: checkProgress
+ 
+2022-02-16T21:39:38.770Z: post: checkProgress
+ 
+2022-02-16T21:39:42.780Z: post: checkProgress
+ 
+2022-02-16T21:39:46.782Z: post: checkProgress
+ 
+2022-02-16T21:39:50.787Z: post: checkProgress
+ 
+2022-02-16T21:39:54.776Z: post: checkProgress
+ 
+2022-02-16T21:39:58.784Z: post: checkProgress
+ 
+2022-02-16T21:40:02.780Z: post: checkProgress
+ 
+2022-02-16T21:40:06.785Z: post: checkProgress
+ 
+2022-02-16T21:40:10.780Z: post: checkProgress
+ 
+2022-02-16T21:40:14.777Z: post: checkProgress
+ 
+2022-02-16T21:40:18.785Z: post: checkProgress
+ 
+2022-02-16T21:40:20.521Z: post: checkProgress
+ 
+2022-02-16T21:40:22.779Z: post: checkProgress
+ 
+2022-02-16T21:40:26.773Z: post: checkProgress
+ 
+2022-02-16T21:40:28.390Z: started Server
+ 
+2022-02-16T21:40:28.390Z: listening on *:3001
+ 
+2022-02-16T21:40:30.792Z: post: checkProgress
+ 
+2022-02-16T21:40:34.789Z: post: checkProgress
+ 
+2022-02-16T21:40:38.774Z: post: checkProgress
+ 
+2022-02-16T21:40:42.780Z: post: checkProgress
+ 
+2022-02-16T21:40:46.777Z: post: checkProgress
+ 
+2022-02-16T21:40:50.784Z: post: checkProgress
+ 
+2022-02-16T21:40:53.935Z: started Server
+ 
+2022-02-16T21:40:53.936Z: listening on *:3001
+ 
+2022-02-16T21:40:54.790Z: post: checkProgress
+ 
+2022-02-16T21:40:58.783Z: post: checkProgress
+ 
+2022-02-16T21:41:02.788Z: post: checkProgress
+ 
+2022-02-16T21:41:06.787Z: post: checkProgress
+ 
+2022-02-16T21:41:10.776Z: post: checkProgress
+ 
+2022-02-16T21:41:14.778Z: post: checkProgress
+ 
+2022-02-16T21:41:18.779Z: post: checkProgress
+ 
+2022-02-16T21:41:20.519Z: post: checkProgress
+ 
+2022-02-16T21:41:22.784Z: post: checkProgress
+ 
+2022-02-16T21:41:26.781Z: post: checkProgress
+ 
+2022-02-16T21:41:30.776Z: post: checkProgress
+ 
+2022-02-16T21:41:34.779Z: post: checkProgress
+ 
+2022-02-16T21:41:38.776Z: post: checkProgress
+ 
+2022-02-16T21:41:42.788Z: post: checkProgress
+ 
+2022-02-16T21:41:46.788Z: post: checkProgress
+ 
+2022-02-16T21:41:48.973Z: started Server
+ 
+2022-02-16T21:41:48.974Z: listening on *:3001
+ 
+2022-02-16T21:41:50.801Z: post: checkProgress
+ 
+2022-02-16T21:41:54.778Z: post: checkProgress
+ 
+2022-02-16T21:41:58.785Z: post: checkProgress
+ 
+2022-02-16T21:42:02.780Z: post: checkProgress
+ 
+2022-02-16T21:42:06.777Z: post: checkProgress
+ 
+2022-02-16T21:42:10.778Z: post: checkProgress
+ 
+2022-02-16T21:42:14.782Z: post: checkProgress
+ 
+2022-02-16T21:42:18.787Z: post: checkProgress
+ 
+2022-02-16T21:42:20.533Z: post: checkProgress
+ 
+2022-02-16T21:42:22.788Z: post: checkProgress
+ 
+2022-02-16T21:42:26.778Z: post: checkProgress
+ 
+2022-02-16T21:42:30.781Z: post: checkProgress
+ 
+2022-02-16T21:42:34.777Z: post: checkProgress
+ 
+2022-02-16T21:42:38.782Z: post: checkProgress
+ 
+2022-02-16T21:42:42.790Z: post: checkProgress
+ 
+2022-02-16T21:42:46.778Z: post: checkProgress
+ 
+2022-02-16T21:42:50.776Z: post: checkProgress
+ 
+2022-02-16T21:42:54.785Z: post: checkProgress
+ 
+2022-02-16T21:42:58.780Z: post: checkProgress
+ 
+2022-02-16T21:43:02.777Z: post: checkProgress
+ 
+2022-02-16T21:43:06.779Z: post: checkProgress
+ 
+2022-02-16T21:43:10.781Z: post: checkProgress
+ 
+2022-02-16T21:43:14.781Z: post: checkProgress
+ 
+2022-02-16T21:43:18.783Z: post: checkProgress
+ 
+2022-02-16T21:43:20.524Z: post: checkProgress
+ 
+2022-02-16T21:43:22.784Z: post: checkProgress
+ 
+2022-02-16T21:43:26.786Z: post: checkProgress
+ 
+2022-02-16T21:43:30.776Z: post: checkProgress
+ 
+2022-02-16T21:43:34.789Z: post: checkProgress
+ 
+2022-02-16T21:43:38.789Z: post: checkProgress
+ 
+2022-02-16T21:43:42.785Z: post: checkProgress
+ 
+2022-02-16T21:43:46.773Z: post: checkProgress
+ 
+2022-02-16T21:43:50.784Z: post: checkProgress
+ 
+2022-02-16T21:43:54.775Z: post: checkProgress
+ 
+2022-02-16T21:43:58.780Z: post: checkProgress
+ 
+2022-02-16T21:44:02.784Z: post: checkProgress
+ 
+2022-02-16T21:44:06.790Z: post: checkProgress
+ 
+2022-02-16T21:44:10.774Z: post: checkProgress
+ 
+2022-02-16T21:44:14.780Z: post: checkProgress
+ 
+2022-02-16T21:44:18.787Z: post: checkProgress
+ 
+2022-02-16T21:44:20.526Z: post: checkProgress
+ 
+2022-02-16T21:44:22.787Z: post: checkProgress
+ 
+2022-02-16T21:44:26.781Z: post: checkProgress
+ 
+2022-02-16T21:44:30.778Z: post: checkProgress
+ 
+2022-02-16T21:44:34.779Z: post: checkProgress
+ 
+2022-02-16T21:44:38.780Z: post: checkProgress
+ 
+2022-02-16T21:44:42.786Z: post: checkProgress
+ 
+2022-02-16T21:44:46.776Z: post: checkProgress
+ 
+2022-02-16T21:44:50.791Z: post: checkProgress
+ 
+2022-02-16T21:44:54.789Z: post: checkProgress
+ 
+2022-02-16T21:44:58.777Z: post: checkProgress
+ 
+2022-02-16T21:45:02.780Z: post: checkProgress
+ 
+2022-02-16T21:45:06.784Z: post: checkProgress
+ 
+2022-02-16T21:45:10.774Z: post: checkProgress
+ 
+2022-02-16T21:45:14.789Z: post: checkProgress
+ 
+2022-02-16T21:45:18.775Z: post: checkProgress
+ 
+2022-02-16T21:45:20.529Z: post: checkProgress
+ 
+2022-02-16T21:45:22.776Z: post: checkProgress
+ 
+2022-02-16T21:45:26.786Z: post: checkProgress
+ 
+2022-02-16T21:45:30.788Z: post: checkProgress
+ 
+2022-02-16T21:45:34.777Z: post: checkProgress
+ 
+2022-02-16T21:45:38.781Z: post: checkProgress
+ 
+2022-02-16T21:45:42.780Z: post: checkProgress
+ 
+2022-02-16T21:45:46.783Z: post: checkProgress
+ 
+2022-02-16T21:45:50.792Z: post: checkProgress
+ 
+2022-02-16T21:45:54.789Z: post: checkProgress
+ 
+2022-02-16T21:45:58.791Z: post: checkProgress
+ 
+2022-02-16T21:46:02.787Z: post: checkProgress
+ 
+2022-02-16T21:46:06.779Z: post: checkProgress
+ 
+2022-02-16T21:46:10.779Z: post: checkProgress
+ 
+2022-02-16T21:46:14.790Z: post: checkProgress
+ 
+2022-02-16T21:46:18.789Z: post: checkProgress
+ 
+2022-02-16T21:46:20.534Z: post: checkProgress
+ 
+2022-02-16T21:46:22.786Z: post: checkProgress
+ 
+2022-02-16T21:46:26.782Z: post: checkProgress
+ 
+2022-02-16T21:46:30.781Z: post: checkProgress
+ 
+2022-02-16T21:46:34.787Z: post: checkProgress
+ 
+2022-02-16T21:46:38.787Z: post: checkProgress
+ 
+2022-02-16T21:46:42.789Z: post: checkProgress
+ 
+2022-02-16T21:46:46.778Z: post: checkProgress
+ 
+2022-02-16T21:46:50.781Z: post: checkProgress
+ 
+2022-02-16T21:46:54.786Z: post: checkProgress
+ 
+2022-02-16T21:46:58.792Z: post: checkProgress
+ 
+2022-02-16T21:47:02.782Z: post: checkProgress
+ 
+2022-02-16T21:47:06.787Z: post: checkProgress
+ 
+2022-02-16T21:47:10.777Z: post: checkProgress
+ 
+2022-02-16T21:47:15.072Z: started Server
+ 
+2022-02-16T21:47:15.073Z: listening on *:3001
+ 
+2022-02-16T21:47:15.122Z: post: checkProgress
+ 
+2022-02-16T21:47:18.787Z: post: checkProgress
+ 
+2022-02-16T21:47:20.526Z: post: checkProgress
+ 
+2022-02-16T21:47:22.788Z: post: checkProgress
+ 
+2022-02-16T21:47:26.788Z: post: checkProgress
+ 
+2022-02-16T21:47:30.778Z: post: checkProgress
+ 
+2022-02-16T21:47:34.778Z: post: checkProgress
+ 
+2022-02-16T21:47:38.789Z: post: checkProgress
+ 
+2022-02-16T21:47:42.781Z: post: checkProgress
+ 
+2022-02-16T21:47:46.779Z: post: checkProgress
+ 
+2022-02-16T21:47:50.783Z: post: checkProgress
+ 
+2022-02-16T21:47:54.788Z: post: checkProgress
+ 
+2022-02-16T21:47:58.789Z: post: checkProgress
+ 
+2022-02-16T21:48:02.791Z: post: checkProgress
+ 
+2022-02-16T21:48:06.780Z: post: checkProgress
+ 
+2022-02-16T21:48:10.780Z: post: checkProgress
+ 
+2022-02-16T21:48:14.793Z: post: checkProgress
+ 
+2022-02-16T21:48:18.790Z: post: checkProgress
+ 
+2022-02-16T21:48:20.529Z: post: checkProgress
+ 
+2022-02-16T21:48:22.785Z: post: checkProgress
+ 
+2022-02-16T21:48:26.778Z: post: checkProgress
+ 
+2022-02-16T21:48:30.780Z: post: checkProgress
+ 
+2022-02-16T21:48:34.783Z: post: checkProgress
+ 
+2022-02-16T21:48:38.790Z: post: checkProgress
+ 
+2022-02-16T21:48:42.783Z: post: checkProgress
+ 
+2022-02-16T21:48:46.781Z: post: checkProgress
+ 
+2022-02-16T21:48:50.787Z: post: checkProgress
+ 
+2022-02-16T21:48:54.782Z: post: checkProgress
+ 
+2022-02-16T21:48:58.792Z: post: checkProgress
+ 
+2022-02-16T21:49:02.786Z: post: checkProgress
+ 
+2022-02-16T21:49:06.781Z: post: checkProgress
+ 
+2022-02-16T21:49:10.785Z: post: checkProgress
+ 
+2022-02-16T21:49:14.780Z: post: checkProgress
+ 
+2022-02-16T21:49:18.790Z: post: checkProgress
+ 
+2022-02-16T21:49:20.536Z: post: checkProgress
+ 
+2022-02-16T21:49:22.792Z: post: checkProgress
+ 
+2022-02-16T21:49:26.786Z: post: checkProgress
+ 
+2022-02-16T21:49:30.786Z: post: checkProgress
+ 
+2022-02-16T21:49:34.783Z: post: checkProgress
+ 
+2022-02-16T21:49:38.781Z: post: checkProgress
+ 
+2022-02-16T21:49:42.792Z: post: checkProgress
+ 
+2022-02-16T21:49:46.788Z: post: checkProgress
+ 
+2022-02-16T21:49:50.783Z: post: checkProgress
+ 
+2022-02-16T21:49:54.782Z: post: checkProgress
+ 
+2022-02-16T21:49:58.786Z: post: checkProgress
+ 
+2022-02-16T21:50:02.790Z: post: checkProgress
+ 
+2022-02-16T21:50:06.780Z: post: checkProgress
+ 
+2022-02-16T21:50:10.783Z: post: checkProgress
+ 
+2022-02-16T21:50:14.788Z: post: checkProgress
+ 
+2022-02-16T21:50:18.787Z: post: checkProgress
+ 
+2022-02-16T21:50:20.540Z: post: checkProgress
+ 
+2022-02-16T21:50:22.784Z: post: checkProgress
+ 
+2022-02-16T21:50:24.317Z: started Server
+ 
+2022-02-16T21:50:24.317Z: listening on *:3001
+ 
+2022-02-16T21:50:26.794Z: post: checkProgress
+ 
+2022-02-16T21:50:30.780Z: post: checkProgress
+ 
+2022-02-16T21:50:34.042Z: started Server
+ 
+2022-02-16T21:50:34.042Z: listening on *:3001
+ 
+2022-02-16T21:50:34.799Z: post: checkProgress
+ 
+2022-02-16T21:50:38.779Z: post: checkProgress
+ 
+2022-02-16T21:50:42.784Z: post: checkProgress
+ 
+2022-02-16T21:50:46.789Z: post: checkProgress
+ 
+2022-02-16T21:50:50.791Z: post: checkProgress
+ 
+2022-02-16T21:50:54.782Z: post: checkProgress
+ 
+2022-02-16T21:50:58.792Z: post: checkProgress
+ 
+2022-02-16T21:51:02.777Z: post: checkProgress
+ 
+2022-02-16T21:51:06.780Z: post: checkProgress
+ 
+2022-02-16T21:51:10.777Z: post: checkProgress
+ 
+2022-02-16T21:51:14.791Z: post: checkProgress
+ 
+2022-02-16T21:51:18.789Z: post: checkProgress
+ 
+2022-02-16T21:51:20.538Z: post: checkProgress
+ 
+2022-02-16T21:51:22.785Z: post: checkProgress
+ 
+2022-02-16T21:51:27.921Z: started Server
+ 
+2022-02-16T21:51:27.922Z: listening on *:3001
+ 
+2022-02-16T21:51:28.067Z: post: checkProgress
+ 
+2022-02-16T21:51:30.786Z: post: checkProgress
+ 
+2022-02-16T21:51:34.794Z: post: checkProgress
+ 
+2022-02-16T21:51:38.792Z: post: checkProgress
+ 
+2022-02-16T21:51:42.786Z: post: checkProgress
+ 
+2022-02-16T21:51:46.790Z: post: checkProgress
+ 
+2022-02-16T21:51:50.782Z: post: checkProgress
+ 
+2022-02-16T21:51:54.780Z: post: checkProgress
+ 
+2022-02-16T21:51:58.783Z: post: checkProgress
+ 
+2022-02-16T21:52:02.779Z: post: checkProgress
+ 
+2022-02-16T21:52:06.794Z: post: checkProgress
+ 
+2022-02-16T21:52:10.783Z: post: checkProgress
+ 
+2022-02-16T21:52:14.789Z: post: checkProgress
+ 
+2022-02-16T21:52:18.784Z: post: checkProgress
+ 
+2022-02-16T21:52:20.535Z: post: checkProgress
+ 
+2022-02-16T21:52:22.783Z: post: checkProgress
+ 
+2022-02-16T21:52:26.786Z: post: checkProgress
+ 
+2022-02-16T21:52:30.784Z: post: checkProgress
+ 
+2022-02-16T21:52:34.794Z: post: checkProgress
+ 
+2022-02-16T21:52:38.565Z: post: checkProgress
+ 
+2022-02-16T21:52:38.583Z: post: checkProgress
+ 
+2022-02-16T21:52:38.584Z: post: checkProgress
+ 
+2022-02-16T21:52:38.601Z: post: checkProgress
+ 
+2022-02-16T21:52:42.591Z: post: checkProgress
+ 
+2022-02-16T21:52:43.531Z: post: checkProgress
+ 
+2022-02-16T21:52:46.598Z: post: checkProgress
+ 
+2022-02-16T21:52:47.533Z: post: checkProgress
+ 
+2022-02-16T21:52:50.594Z: post: checkProgress
+ 
+2022-02-16T21:52:51.532Z: post: checkProgress
+ 
+2022-02-16T21:52:54.592Z: post: checkProgress
+ 
+2022-02-16T21:52:55.526Z: post: checkProgress
+ 
+2022-02-16T21:52:58.599Z: post: checkProgress
+ 
+2022-02-16T21:53:02.586Z: post: checkProgress
+ 
+2022-02-16T21:53:06.598Z: post: checkProgress
+ 
+2022-02-16T21:53:10.589Z: post: checkProgress
+ 
+2022-02-16T21:53:14.597Z: post: checkProgress
+ 
+2022-02-16T21:53:17.440Z: started Server
+ 
+2022-02-16T21:53:17.441Z: listening on *:3001
+ 
+2022-02-16T21:53:18.602Z: post: checkProgress
+ 
+2022-02-16T21:53:20.532Z: post: checkProgress
+ 
+2022-02-16T21:53:22.597Z: post: checkProgress
+ 
+2022-02-16T21:53:26.595Z: post: checkProgress
+ 
+2022-02-16T21:53:30.588Z: post: checkProgress
+ 
+2022-02-16T21:53:34.591Z: post: checkProgress
+ 
+2022-02-16T21:53:36.637Z: post: checkProgress
+ 
+2022-02-16T21:53:36.657Z: post: checkProgress
+ 
+2022-02-16T21:53:36.689Z: post: checkProgress
+ 
+2022-02-16T21:53:36.719Z: post: checkProgress
+ 
+2022-02-16T21:53:40.646Z: post: checkProgress
+ 
+2022-02-16T21:53:41.530Z: post: checkProgress
+ 
+2022-02-16T21:53:44.640Z: post: checkProgress
+ 
+2022-02-16T21:53:45.529Z: post: checkProgress
+ 
+2022-02-16T21:53:48.641Z: post: checkProgress
+ 
+2022-02-16T21:53:49.527Z: post: checkProgress
+ 
+2022-02-16T21:53:52.643Z: post: checkProgress
+ 
+2022-02-16T21:53:53.523Z: post: checkProgress
+ 
+2022-02-16T21:53:56.642Z: post: checkProgress
+ 
+2022-02-16T21:54:00.637Z: post: checkProgress
+ 
+2022-02-16T21:54:01.236Z: post: checkProgress
+ 
+2022-02-16T21:54:01.257Z: post: checkProgress
+ 
+2022-02-16T21:54:01.313Z: post: checkProgress
+ 
+2022-02-16T21:54:01.349Z: post: checkProgress
+ 
+2022-02-16T21:54:05.246Z: post: checkProgress
+ 
+2022-02-16T21:54:05.536Z: post: checkProgress
+ 
+2022-02-16T21:54:09.250Z: post: checkProgress
+ 
+2022-02-16T21:54:09.531Z: post: checkProgress
+ 
+2022-02-16T21:54:13.243Z: post: checkProgress
+ 
+2022-02-16T21:54:13.535Z: post: checkProgress
+ 
+2022-02-16T21:54:17.238Z: post: checkProgress
+ 
+2022-02-16T21:54:17.534Z: post: checkProgress
+ 
+2022-02-16T21:54:21.248Z: post: checkProgress
+ 
+2022-02-16T21:54:25.251Z: post: checkProgress
+ 
+2022-02-16T21:54:29.252Z: post: checkProgress
+ 
+2022-02-16T21:54:33.242Z: post: checkProgress
+ 
+2022-02-16T21:54:37.251Z: post: checkProgress
+ 
+2022-02-16T21:54:41.246Z: post: checkProgress
+ 
+2022-02-16T21:54:45.252Z: post: checkProgress
+ 
+2022-02-16T21:54:49.245Z: post: checkProgress
+ 
+2022-02-16T21:54:53.251Z: post: checkProgress
+ 
+2022-02-16T21:54:56.652Z: post: checkProgress
+ 
+2022-02-16T21:54:56.669Z: post: checkProgress
+ 
+2022-02-16T21:54:56.714Z: post: checkProgress
+ 
+2022-02-16T21:54:56.746Z: post: checkProgress
+ 
+2022-02-16T21:55:00.655Z: post: checkProgress
+ 
+2022-02-16T21:55:01.537Z: post: checkProgress
+ 
+2022-02-16T21:55:03.635Z: post: checkProgress
+ 
+2022-02-16T21:55:03.643Z: post: checkProgress
+ 
+2022-02-16T21:55:03.716Z: post: checkProgress
+ 
+2022-02-16T21:55:03.719Z: post: checkProgress
+ 
+2022-02-16T21:55:07.648Z: post: checkProgress
+ 
+2022-02-16T21:55:08.532Z: post: checkProgress
+ 
+2022-02-16T21:55:11.640Z: post: checkProgress
+ 
+2022-02-16T21:55:12.526Z: post: checkProgress
+ 
+2022-02-16T21:55:15.649Z: post: checkProgress
+ 
+2022-02-16T21:55:16.534Z: post: checkProgress
+ 
+2022-02-16T21:55:19.641Z: post: checkProgress
+ 
+2022-02-16T21:55:20.538Z: post: checkProgress
+ 
+2022-02-16T21:55:23.645Z: post: checkProgress
+ 
+2022-02-16T21:55:27.645Z: post: checkProgress
+ 
+2022-02-16T21:55:28.600Z: post: checkProgress
+ 
+2022-02-16T21:55:28.618Z: post: checkProgress
+ 
+2022-02-16T21:55:28.626Z: post: checkProgress
+ 
+2022-02-16T21:55:28.670Z: post: checkProgress
+ 
+2022-02-16T21:55:30.673Z: post: checkProgress
+ 
+2022-02-16T21:55:30.689Z: post: checkProgress
+ 
+2022-02-16T21:55:30.694Z: post: checkProgress
+ 
+2022-02-16T21:55:30.730Z: post: checkProgress
+ 
+2022-02-16T21:55:34.676Z: post: checkProgress
+ 
+2022-02-16T21:55:35.535Z: post: checkProgress
+ 
+2022-02-16T21:55:38.675Z: post: checkProgress
+ 
+2022-02-16T21:55:39.530Z: post: checkProgress
+ 
+2022-02-16T21:55:42.682Z: post: checkProgress
+ 
+2022-02-16T21:55:43.537Z: post: checkProgress
+ 
+2022-02-16T21:55:46.683Z: post: checkProgress
+ 
+2022-02-16T21:55:47.524Z: post: checkProgress
+ 
+2022-02-16T21:55:50.677Z: post: checkProgress
+ 
+2022-02-16T21:55:54.679Z: post: checkProgress
+ 
+2022-02-16T21:55:58.688Z: post: checkProgress
+ 
+2022-02-16T21:56:02.677Z: post: checkProgress
+ 
+2022-02-16T21:56:06.684Z: post: checkProgress
+ 
+2022-02-16T21:56:10.679Z: post: checkProgress
+ 
+2022-02-16T21:56:14.679Z: post: checkProgress
+ 
+2022-02-16T21:56:18.680Z: post: checkProgress
+ 
+2022-02-16T21:56:20.527Z: post: checkProgress
+ 
+2022-02-16T21:56:22.678Z: post: checkProgress
+ 
+2022-02-16T21:56:26.679Z: post: checkProgress
+ 
+2022-02-16T21:56:27.726Z: post: checkProgress
+ 
+2022-02-16T21:56:27.746Z: post: checkProgress
+ 
+2022-02-16T21:56:27.813Z: post: checkProgress
+ 
+2022-02-16T21:56:27.836Z: post: checkProgress
+ 
+2022-02-16T21:56:31.732Z: post: checkProgress
+ 
+2022-02-16T21:56:32.538Z: post: checkProgress
+ 
+2022-02-16T21:56:35.741Z: post: checkProgress
+ 
+2022-02-16T21:56:36.540Z: post: checkProgress
+ 
+2022-02-16T21:56:39.733Z: post: checkProgress
+ 
+2022-02-16T21:56:40.532Z: post: checkProgress
+ 
+2022-02-16T21:56:43.741Z: post: checkProgress
+ 
+2022-02-16T21:56:44.606Z: post: checkProgress
+ 
+2022-02-16T21:56:44.626Z: post: checkProgress
+ 
+2022-02-16T21:56:44.639Z: post: checkProgress
+ 
+2022-02-16T21:56:44.672Z: post: checkProgress
+ 
+2022-02-16T21:56:48.612Z: post: checkProgress
+ 
+2022-02-16T21:56:49.525Z: post: checkProgress
+ 
+2022-02-16T21:56:52.612Z: post: checkProgress
+ 
+2022-02-16T21:56:53.533Z: post: checkProgress
+ 
+2022-02-16T21:56:56.617Z: post: checkProgress
+ 
+2022-02-16T21:56:57.529Z: post: checkProgress
+ 
+2022-02-16T21:57:00.610Z: post: checkProgress
+ 
+2022-02-16T21:57:01.527Z: post: checkProgress
+ 
+2022-02-16T21:57:04.621Z: post: checkProgress
+ 
+2022-02-16T21:57:08.611Z: post: checkProgress
+ 
+2022-02-16T21:57:12.608Z: post: checkProgress
+ 
+2022-02-16T21:57:16.610Z: post: checkProgress
+ 
+2022-02-16T21:57:20.535Z: post: checkProgress
+ 
+2022-02-16T21:57:20.609Z: post: checkProgress
+ 
+2022-02-16T21:57:24.620Z: post: checkProgress
+ 
+2022-02-16T21:57:28.613Z: post: checkProgress
+ 
+2022-02-16T21:57:32.615Z: post: checkProgress
+ 
+2022-02-16T21:57:36.612Z: post: checkProgress
+ 
+2022-02-16T21:57:38.674Z: post: checkProgress
+ 
+2022-02-16T21:57:38.692Z: post: checkProgress
+ 
+2022-02-16T21:57:38.719Z: post: checkProgress
+ 
+2022-02-16T21:57:38.748Z: post: checkProgress
+ 
+2022-02-16T21:57:42.689Z: post: checkProgress
+ 
+2022-02-16T21:57:43.526Z: post: checkProgress
+ 
+2022-02-16T21:57:46.687Z: post: checkProgress
+ 
+2022-02-16T21:57:47.536Z: post: checkProgress
+ 
+2022-02-16T21:57:50.684Z: post: checkProgress
+ 
+2022-02-16T21:57:51.538Z: post: checkProgress
+ 
+2022-02-16T21:57:54.681Z: post: checkProgress
+ 
+2022-02-16T21:57:55.726Z: post: checkProgress
+ 
+2022-02-16T21:57:55.749Z: post: checkProgress
+ 
+2022-02-16T21:57:55.821Z: post: checkProgress
+ 
+2022-02-16T21:57:55.854Z: post: checkProgress
+ 
+2022-02-16T21:57:59.727Z: post: checkProgress
+ 
+2022-02-16T21:58:00.530Z: post: checkProgress
+ 
+2022-02-16T21:58:03.728Z: post: checkProgress
+ 
+2022-02-16T21:58:04.526Z: post: checkProgress
+ 
+2022-02-16T21:58:07.732Z: post: checkProgress
+ 
+2022-02-16T21:58:08.527Z: post: checkProgress
+ 
+2022-02-16T21:58:11.736Z: post: checkProgress
+ 
+2022-02-16T21:58:12.527Z: post: checkProgress
+ 
+2022-02-16T21:58:15.726Z: post: checkProgress
+ 
+2022-02-16T21:58:19.733Z: post: checkProgress
+ 
+2022-02-16T21:58:20.540Z: post: checkProgress
+ 
+2022-02-16T21:58:23.739Z: post: checkProgress
+ 
+2022-02-16T21:58:27.741Z: post: checkProgress
+ 
+2022-02-16T21:58:31.738Z: post: checkProgress
+ 
+2022-02-16T21:58:35.730Z: post: checkProgress
+ 
+2022-02-16T21:58:39.737Z: post: checkProgress
+ 
+2022-02-16T21:58:43.742Z: post: checkProgress
+ 
+2022-02-16T21:58:47.739Z: post: checkProgress
+ 
+2022-02-16T21:58:51.732Z: post: checkProgress
+ 
+2022-02-16T21:58:55.732Z: post: checkProgress
+ 
+2022-02-16T21:58:59.730Z: post: checkProgress
+ 
+2022-02-16T21:59:03.738Z: post: checkProgress
+ 
+2022-02-16T21:59:07.735Z: post: checkProgress
+ 
+2022-02-16T21:59:10.119Z: post: checkProgress
+ 
+2022-02-16T21:59:10.141Z: post: checkProgress
+ 
+2022-02-16T21:59:10.188Z: post: checkProgress
+ 
+2022-02-16T21:59:10.235Z: post: checkProgress
+ 
+2022-02-16T21:59:14.123Z: post: checkProgress
+ 
+2022-02-16T21:59:14.537Z: post: checkProgress
+ 
+2022-02-16T21:59:18.127Z: post: checkProgress
+ 
+2022-02-16T21:59:18.532Z: post: checkProgress
+ 
+2022-02-16T21:59:22.123Z: post: checkProgress
+ 
+2022-02-16T21:59:22.527Z: post: checkProgress
+ 
+2022-02-16T21:59:26.144Z: post: checkProgress
+ 
+2022-02-16T21:59:26.165Z: post: checkProgress
+ 
+2022-02-16T21:59:26.531Z: post: checkProgress
+ 
+2022-02-16T21:59:30.157Z: post: checkProgress
+ 
+2022-02-16T21:59:34.143Z: post: checkProgress
+ 
+2022-02-16T21:59:38.160Z: post: checkProgress
+ 
+2022-02-16T21:59:42.153Z: post: checkProgress
+ 
+2022-02-16T21:59:44.718Z: post: checkProgress
+ 
+2022-02-16T21:59:44.737Z: post: checkProgress
+ 
+2022-02-16T21:59:44.745Z: post: checkProgress
+ 
+2022-02-16T21:59:44.773Z: post: checkProgress
+ 
+2022-02-16T21:59:48.740Z: post: checkProgress
+ 
+2022-02-16T21:59:49.528Z: post: checkProgress
+ 
+2022-02-16T21:59:52.752Z: post: checkProgress
+ 
+2022-02-16T21:59:53.526Z: post: checkProgress
+ 
+2022-02-16T21:59:54.613Z: post: checkProgress
+ 
+2022-02-16T21:59:54.636Z: post: checkProgress
+ 
+2022-02-16T21:59:54.640Z: post: checkProgress
+ 
+2022-02-16T21:59:54.671Z: post: checkProgress
+ 
+2022-02-16T21:59:59.531Z: post: checkProgress
+ 
+2022-02-16T22:00:03.536Z: post: checkProgress
+ 
+2022-02-16T22:00:07.540Z: post: checkProgress
+ 
+2022-02-16T22:00:11.538Z: post: checkProgress
+ 
+2022-02-16T22:00:20.536Z: post: checkProgress
+ 
+2022-02-16T22:00:59.981Z: post: checkProgress
+ 
+2022-02-16T22:01:00.005Z: post: checkProgress
+ 
+2022-02-16T22:01:00.069Z: post: checkProgress
+ 
+2022-02-16T22:01:00.075Z: post: checkProgress
+ 
+2022-02-16T22:01:03.993Z: post: checkProgress
+ 
+2022-02-16T22:01:04.541Z: post: checkProgress
+ 
+2022-02-16T22:01:07.987Z: post: checkProgress
+ 
+2022-02-16T22:01:08.526Z: post: checkProgress
+ 
+2022-02-16T22:01:12.530Z: post: checkProgress
+ 
+2022-02-16T22:01:16.531Z: post: checkProgress
+ 
+2022-02-16T22:01:20.532Z: post: checkProgress
+ 
+2022-02-16T22:01:52.913Z: post: checkProgress
+ 
+2022-02-16T22:01:52.939Z: post: checkProgress
+ 
+2022-02-16T22:01:52.962Z: post: checkProgress
+ 
+2022-02-16T22:01:53.040Z: post: checkProgress
+ 
+2022-02-16T22:01:57.536Z: post: checkProgress
+ 
+2022-02-16T22:02:01.529Z: post: checkProgress
+ 
+2022-02-16T22:02:05.536Z: post: checkProgress
+ 
+2022-02-16T22:02:06.702Z: post: checkProgress
+ 
+2022-02-16T22:02:06.734Z: post: checkProgress
+ 
+2022-02-16T22:02:09.531Z: post: checkProgress
+ 
+2022-02-16T22:02:10.723Z: post: checkProgress
+ 
+2022-02-16T22:02:14.700Z: post: checkProgress
+ 
+2022-02-16T22:02:18.712Z: post: checkProgress
+ 
+2022-02-16T22:02:20.528Z: post: checkProgress
+ 
+2022-02-16T22:02:22.701Z: post: checkProgress
+ 
+2022-02-16T22:02:26.704Z: post: checkProgress
+ 
+2022-02-16T22:02:28.839Z: post: checkProgress
+ 
+2022-02-16T22:02:28.861Z: post: checkProgress
+ 
+2022-02-16T22:02:28.896Z: post: checkProgress
+ 
+2022-02-16T22:02:28.940Z: post: checkProgress
+ 
+2022-02-16T22:02:32.852Z: post: checkProgress
+ 
+2022-02-16T22:02:33.533Z: post: checkProgress
+ 
+2022-02-16T22:02:36.854Z: post: checkProgress
+ 
+2022-02-16T22:02:37.533Z: post: checkProgress
+ 
+2022-02-16T22:02:40.846Z: post: checkProgress
+ 
+2022-02-16T22:02:41.527Z: post: checkProgress
+ 
+2022-02-16T22:02:44.853Z: post: checkProgress
+ 
+2022-02-16T22:02:45.533Z: post: checkProgress
+ 
+2022-02-16T22:02:48.850Z: post: checkProgress
+ 
+2022-02-16T22:02:52.847Z: post: checkProgress
+ 
+2022-02-16T22:02:56.850Z: post: checkProgress
+ 
+2022-02-16T22:03:00.845Z: post: checkProgress
+ 
+2022-02-16T22:03:04.849Z: post: checkProgress
+ 
+2022-02-16T22:03:08.847Z: post: checkProgress
+ 
+2022-02-16T22:03:12.854Z: post: checkProgress
+ 
+2022-02-16T22:03:15.260Z: post: checkProgress
+ 
+2022-02-16T22:03:15.280Z: post: checkProgress
+ 
+2022-02-16T22:03:15.392Z: post: checkProgress
+ 
+2022-02-16T22:03:15.412Z: post: checkProgress
+ 
+2022-02-16T22:03:19.266Z: post: checkProgress
+ 
+2022-02-16T22:03:19.528Z: post: checkProgress
+ 
+2022-02-16T22:03:23.264Z: post: checkProgress
+ 
+2022-02-16T22:03:23.528Z: post: checkProgress
+ 
+2022-02-16T22:03:27.263Z: post: checkProgress
+ 
+2022-02-16T22:03:27.540Z: post: checkProgress
+ 
+2022-02-16T22:03:31.276Z: post: checkProgress
+ 
+2022-02-16T22:03:31.540Z: post: checkProgress
+ 
+2022-02-16T22:03:34.632Z: post: checkProgress
+ 
+2022-02-16T22:03:34.655Z: post: checkProgress
+ 
+2022-02-16T22:03:34.687Z: post: checkProgress
+ 
+2022-02-16T22:03:34.711Z: post: checkProgress
+ 
+2022-02-16T22:03:38.647Z: post: checkProgress
+ 
+2022-02-16T22:03:39.534Z: post: checkProgress
+ 
+2022-02-16T22:03:42.643Z: post: checkProgress
+ 
+2022-02-16T22:03:43.539Z: post: checkProgress
+ 
+2022-02-16T22:03:46.570Z: post: checkProgress
+ 
+2022-02-16T22:03:46.592Z: post: checkProgress
+ 
+2022-02-16T22:03:46.598Z: post: checkProgress
+ 
+2022-02-16T22:03:46.644Z: post: checkProgress
+ 
+2022-02-16T22:03:48.926Z: post: checkProgress
+ 
+2022-02-16T22:03:48.930Z: post: checkProgress
+ 
+2022-02-16T22:03:48.996Z: post: checkProgress
+ 
+2022-02-16T22:03:49.018Z: post: checkProgress
+ 
+2022-02-16T22:03:52.916Z: post: checkProgress
+ 
+2022-02-16T22:03:53.537Z: post: checkProgress
+ 
+2022-02-16T22:03:56.919Z: post: checkProgress
+ 
+2022-02-16T22:03:57.528Z: post: checkProgress
+ 
+2022-02-16T22:04:00.919Z: post: checkProgress
+ 
+2022-02-16T22:04:01.540Z: post: checkProgress
+ 
+2022-02-16T22:04:04.910Z: post: checkProgress
+ 
+2022-02-16T22:04:05.528Z: post: checkProgress
+ 
+2022-02-16T22:04:08.911Z: post: checkProgress
+ 
+2022-02-16T22:04:12.914Z: post: checkProgress
+ 
+2022-02-16T22:04:16.917Z: post: checkProgress
+ 
+2022-02-16T22:04:20.535Z: post: checkProgress
+ 
+2022-02-16T22:04:20.915Z: post: checkProgress
+ 
+2022-02-16T22:04:24.911Z: post: checkProgress
+ 
+2022-02-16T22:04:25.945Z: post: checkProgress
+ 
+2022-02-16T22:04:25.970Z: post: checkProgress
+ 
+2022-02-16T22:04:26.048Z: post: checkProgress
+ 
+2022-02-16T22:04:26.079Z: post: checkProgress
+ 
+2022-02-16T22:04:29.950Z: post: checkProgress
+ 
+2022-02-16T22:04:30.538Z: post: checkProgress
+ 
+2022-02-16T22:04:33.956Z: post: checkProgress
+ 
+2022-02-16T22:04:34.532Z: post: checkProgress
+ 
+2022-02-16T22:04:37.955Z: post: checkProgress
+ 
+2022-02-16T22:04:38.533Z: post: checkProgress
+ 
+2022-02-16T22:04:41.932Z: post: checkProgress
+ 
+2022-02-16T22:04:41.950Z: post: checkProgress
+ 
+2022-02-16T22:04:42.016Z: post: checkProgress
+ 
+2022-02-16T22:04:42.044Z: post: checkProgress
+ 
+2022-02-16T22:04:45.934Z: post: checkProgress
+ 
+2022-02-16T22:04:46.533Z: post: checkProgress
+ 
+2022-02-16T22:04:49.941Z: post: checkProgress
+ 
+2022-02-16T22:04:50.529Z: post: checkProgress
+ 
+2022-02-16T22:04:53.945Z: post: checkProgress
+ 
+2022-02-16T22:04:54.536Z: post: checkProgress
+ 
+2022-02-16T22:04:57.934Z: post: checkProgress
+ 
+2022-02-16T22:04:58.537Z: post: checkProgress
+ 
+2022-02-16T22:05:01.941Z: post: checkProgress
+ 
+2022-02-16T22:05:05.935Z: post: checkProgress
+ 
+2022-02-16T22:05:06.876Z: post: checkProgress
+ 
+2022-02-16T22:05:06.897Z: post: checkProgress
+ 
+2022-02-16T22:05:06.921Z: post: checkProgress
+ 
+2022-02-16T22:05:06.951Z: post: checkProgress
+ 
+2022-02-16T22:05:10.884Z: post: checkProgress
+ 
+2022-02-16T22:05:11.535Z: post: checkProgress
+ 
+2022-02-16T22:05:14.887Z: post: checkProgress
+ 
+2022-02-16T22:05:15.535Z: post: checkProgress
+ 
+2022-02-16T22:05:18.878Z: post: checkProgress
+ 
+2022-02-16T22:05:19.530Z: post: checkProgress
+ 
+2022-02-16T22:05:22.884Z: post: checkProgress
+ 
+2022-02-16T22:05:23.542Z: post: checkProgress
+ 
+2022-02-16T22:05:26.888Z: post: checkProgress
+ 
+2022-02-16T22:05:30.879Z: post: checkProgress
+ 
+2022-02-16T22:05:34.882Z: post: checkProgress
+ 
+2022-02-16T22:05:38.885Z: post: checkProgress
+ 
+2022-02-16T22:05:41.710Z: post: checkProgress
+ 
+2022-02-16T22:05:41.729Z: post: checkProgress
+ 
+2022-02-16T22:05:41.777Z: post: checkProgress
+ 
+2022-02-16T22:05:41.805Z: post: checkProgress
+ 
+2022-02-16T22:05:45.713Z: post: checkProgress
+ 
+2022-02-16T22:05:46.535Z: post: checkProgress
+ 
+2022-02-16T22:05:49.724Z: post: checkProgress
+ 
+2022-02-16T22:05:50.530Z: post: checkProgress
+ 
+2022-02-16T22:05:51.616Z: post: checkProgress
+ 
+2022-02-16T22:05:51.642Z: post: checkProgress
+ 
+2022-02-16T22:05:51.652Z: post: checkProgress
+ 
+2022-02-16T22:05:51.689Z: post: checkProgress
+ 
+2022-02-16T22:05:55.618Z: post: checkProgress
+ 
+2022-02-16T22:05:56.542Z: post: checkProgress
+ 
+2022-02-16T22:05:59.630Z: post: checkProgress
+ 
+2022-02-16T22:06:00.540Z: post: checkProgress
+ 
+2022-02-16T22:06:03.619Z: post: checkProgress
+ 
+2022-02-16T22:06:04.534Z: post: checkProgress
+ 
+2022-02-16T22:06:07.628Z: post: checkProgress
+ 
+2022-02-16T22:06:08.532Z: post: checkProgress
+ 
+2022-02-16T22:06:11.631Z: post: checkProgress
+ 
+2022-02-16T22:06:15.629Z: post: checkProgress
+ 
+2022-02-16T22:06:19.629Z: post: checkProgress
+ 
+2022-02-16T22:06:20.535Z: post: checkProgress
+ 
+2022-02-16T22:06:23.628Z: post: checkProgress
+ 
+2022-02-16T22:06:27.631Z: post: checkProgress
+ 

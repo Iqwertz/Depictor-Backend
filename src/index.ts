@@ -81,11 +81,11 @@ expected request:
   }
   
 returns: 
-  unsuccessfull: 
+  unsuccessful: 
     {
       err: string [errMessage]
     }
-  successfull:
+  successful:
     {}
 */
 app.post("/newPicture", (req: Request, res: Response) => {
@@ -168,12 +168,12 @@ expected request:
   {}
   
 returns: 
-  unsuccessfull: 
+  unsuccessful: 
     {
       state: AppStates, 
       err: string [errMessage]
     }
-  successfull:
+  successful:
     {
       state: AppStates, 
       isDrawing: boolean, 
@@ -211,12 +211,12 @@ expected request:
   {}
   
 returns: 
-  unsuccessfull: 
+  unsuccessful: 
     {
       state: AppStates, 
       err: string [errMessage]
     }
-   successfull:
+   successful:
     {
       state: AppStates, 
       isDrawing: boolean, 
@@ -244,11 +244,11 @@ expected request:
   {}
   
 returns: 
-  unsuccessfull: 
+  unsuccessful: 
     {
       err: string [errMessage]
     }
-   successfull:
+   successful:
     {
       data: number [amount of gcode lines]
     }
@@ -274,12 +274,12 @@ expected request:
   }
   
 returns: 
-  unsuccessfull: 
+  unsuccessful: 
     {
       appState: appState
       err: string [errMessage]
     }
-   successfull:
+   successful:
     {
       appState: appState
     }
@@ -381,9 +381,9 @@ expected request:
   }
   
 returns: 
-  unsuccessfull: 
+  unsuccessful: 
     undefined
-   successfull:
+   successful:
     {
       data: GcodeEntry[]
     }
@@ -427,11 +427,11 @@ expected request:
   }
   
 returns: 
-  unsuccessfull: 
+  unsuccessful: 
     {
       err: string [errMessage]
     }
-   successfull:
+   successful:
     {
       data: string
     }
@@ -480,6 +480,88 @@ app.post("/setBGRemoveAPIKey", (req: Request, res: Response) => {
     }
   );
 
+  res.json({});
+});
+
+/*
+post: /shutdown
+
+description: shutsdown the system by executing "sudo shutdown now" - only executed when not drawing
+
+expected request: 
+  {}
+  
+returns: 
+  unsuccessful 
+    {err: string}
+
+    successful
+    {}
+*/
+app.post("/shutdown", (req: Request, res: Response) => {
+  log("post: shutdown");
+
+  if (isDrawing) {
+    log("shutdown aborted! Machine is drawing");
+    res.json({ err: "drawing" });
+    return;
+  }
+  res.json({});
+  exec("sudo shutdown now");
+});
+
+/*
+post: /home
+
+description: homes the maschine (when not currently drawing)
+
+expected request: 
+  {}
+  
+returns: 
+    unsuccessful 
+      {err: string}
+
+    successful
+    {}
+*/
+app.post("/home", (req: Request, res: Response) => {
+  log("post: home");
+
+  if (isDrawing) {
+    log("cant home! Machine is drawing");
+    res.json({ err: "drawing" });
+    return;
+  }
+  exec("./scripts/home.sh", function (err: any, data: any) {
+    log(err);
+  });
+});
+
+/*
+post: /executeGcode
+
+description: executes gcode on the maschine (when not currently drawing)
+
+expected request: 
+  {gcode: string}
+  
+returns: 
+    unsuccessful 
+      {err: string}
+
+    successful
+    {}
+*/
+app.post("/executeGcode", (req: Request, res: Response) => {
+  log("post: executeGcode");
+
+  if (isDrawing) {
+    log("cant execute Gcode! Machine is drawing");
+    res.json({ err: "drawing" });
+    return;
+  }
+  executeGcode(req.body.gcode);
   res.json({});
 });
 
@@ -576,7 +658,7 @@ function drawGcode(gcode: string) {
 
 /**
  *removeBg()
- * uses the removeBg api (https://www.remove.bg/de/tools-api) to remove the background of a picture and start to convert the picture to gcode when succesfull
+ * uses the removeBg api (https://www.remove.bg/de/tools-api) to remove the background of a picture and start to convert the picture to gcode when succesful
  * todo: handle error when image bg couldnt be converted
  *
  * @param {string} base64img
@@ -719,6 +801,32 @@ function checkBGremoveAPIkey() {
   } else {
     isBGRemoveAPIKey = true;
   }
+}
+
+/**
+ *sends a given gcode to grbl by creating a temp file and running it with gcode-cli
+ *
+ * @param {string} gcode
+ */
+function executeGcode(gcode: string) {
+  if (isDrawing) {
+    return;
+  }
+
+  fse.outputFileSync("./data/gcodes/temp.gcode", gcode, "utf8");
+
+  exec(
+    "gcode-cli -b 1 -s 3000 ./data/gcodes/temp.gcode /dev/ttyACM0,b115200",
+    function (err: any, data: any) {
+      fs.unlink("./data/gcodes/temp.gcode", (err: any) => {
+        //delete preview image
+        if (err) {
+          log("Error " + err);
+          return;
+        }
+      });
+    }
+  );
 }
 
 /**
