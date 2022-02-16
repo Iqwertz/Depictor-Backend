@@ -1,3 +1,5 @@
+#!/bin/bash
+
 sudo chmod +x scripts/home.sh
 sudo chmod +x scripts/launchGcodeCli.sh
 sudo chmod +x scripts/launchimage2gcode.sh
