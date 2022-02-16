@@ -57,10 +57,10 @@ sudo ./chmodScripts.sh
 echo -e "\x1B[96m installing PM2 \x1B[0m"
 sudo npm install pm2 -g
 echo -e "\x1B[96m configuring PM2 startup \x1B[0m"
-pm2 startup | awk '$1 ~ /^sudo/' | bash
+sudo pm2 startup | awk '$1 ~ /^sudo/' | bash
 echo -e "\x1B[96m starting node server \x1B[0m"
-pm2 start "sudo npm run start"
-pm2 save
+sudo pm2 start "sudo npm run start"
+sudo pm2 save
 
 shred -u install.sh
 

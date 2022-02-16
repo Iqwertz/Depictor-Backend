@@ -819,24 +819,22 @@ function executeGcode(gcode: string) {
     return;
   }
 
+  log(gcode);
   fse.outputFileSync("./data/gcodes/temp.gcode", gcode, "utf8");
-  spawn(
-    "gcode-cli -b 1 -s 3000 ./data/gcodes/temp.gcode /dev/ttyACM0,b115200",
-    function (err: any, data: any) {
-      fs.unlink("./data/gcodes/temp.gcode", (err: any) => {
-        //delete preview image
-        if (err) {
-          log("Error " + err);
-          return;
-        }
-      });
-
+  execFile("./scripts/execTemp.sh", function (err: any, data: any) {
+    fs.unlink("./data/gcodes/temp.gcode", (err: any) => {
+      //delete preview image
       if (err) {
         log("Error " + err);
         return;
       }
+    });
+
+    if (err) {
+      log("Error " + err);
+      return;
     }
-  );
+  });
 }
 
 /**

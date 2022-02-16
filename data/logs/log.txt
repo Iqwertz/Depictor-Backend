@@ -50656,3 +50656,390 @@ Grbl 1.1h ['$' for help]
  
 2022-02-16T22:40:40.505Z: listening on *:3001
  
+2022-02-16T22:55:02.966Z: post: checkProgress
+ 
+2022-02-16T22:55:02.998Z: post: checkProgress
+ 
+2022-02-16T22:55:06.387Z: post: executeGcode
+ 
+2022-02-16T22:55:06.950Z: post: checkProgress
+ 
+2022-02-16T22:55:10.966Z: post: checkProgress
+ 
+2022-02-16T22:55:14.965Z: post: checkProgress
+ 
+2022-02-16T22:55:18.975Z: post: checkProgress
+ 
+2022-02-16T22:55:22.975Z: post: checkProgress
+ 
+2022-02-16T22:55:26.975Z: post: checkProgress
+ 
+2022-02-16T22:55:31.555Z: post: checkProgress
+ 
+2022-02-16T22:55:35.556Z: post: checkProgress
+ 
+2022-02-16T22:55:39.563Z: post: checkProgress
+ 
+2022-02-16T22:55:43.566Z: post: checkProgress
+ 
+2022-02-16T22:55:47.550Z: post: checkProgress
+ 
+2022-02-16T22:55:51.549Z: post: checkProgress
+ 
+2022-02-16T22:55:55.562Z: post: checkProgress
+ 
+2022-02-16T22:55:59.569Z: post: checkProgress
+ 
+2022-02-16T22:56:03.558Z: post: checkProgress
+ 
+2022-02-16T22:56:07.561Z: post: checkProgress
+ 
+2022-02-16T22:56:11.554Z: post: checkProgress
+ 
+2022-02-16T22:56:15.563Z: post: checkProgress
+ 
+2022-02-16T22:56:19.552Z: post: checkProgress
+ 
+2022-02-16T22:56:23.568Z: post: checkProgress
+ 
+2022-02-16T22:56:27.559Z: post: checkProgress
+ 
+2022-02-16T22:56:31.553Z: post: checkProgress
+ 
+2022-02-16T22:56:35.554Z: post: checkProgress
+ 
+2022-02-16T22:56:39.558Z: post: checkProgress
+ 
+2022-02-16T22:56:43.555Z: post: checkProgress
+ 
+2022-02-16T22:56:47.568Z: post: checkProgress
+ 
+2022-02-16T22:56:51.553Z: post: checkProgress
+ 
+2022-02-16T22:56:55.560Z: post: checkProgress
+ 
+2022-02-16T22:56:59.565Z: post: checkProgress
+ 
+2022-02-16T22:57:01.211Z: started Server
+ 
+2022-02-16T22:57:01.211Z: listening on *:3001
+ 
+2022-02-16T22:57:03.576Z: post: checkProgress
+ 
+2022-02-16T22:57:07.554Z: post: checkProgress
+ 
+2022-02-16T22:57:11.568Z: post: checkProgress
+ 
+2022-02-16T22:57:15.562Z: post: checkProgress
+ 
+2022-02-16T22:57:19.568Z: post: checkProgress
+ 
+2022-02-16T22:57:23.552Z: post: checkProgress
+ 
+2022-02-16T22:57:27.567Z: post: checkProgress
+ 
+2022-02-16T22:57:31.558Z: post: checkProgress
+ 
+2022-02-16T22:57:35.566Z: post: checkProgress
+ 
+2022-02-16T22:57:39.566Z: post: checkProgress
+ 
+2022-02-16T22:57:43.567Z: post: checkProgress
+ 
+2022-02-16T22:57:47.558Z: post: checkProgress
+ 
+2022-02-16T22:57:51.565Z: post: checkProgress
+ 
+2022-02-16T22:57:55.453Z: started Server
+ 
+2022-02-16T22:57:55.453Z: listening on *:3001
+ 
+2022-02-16T22:57:55.579Z: post: checkProgress
+ 
+2022-02-16T22:57:59.565Z: post: checkProgress
+ 
+2022-02-16T22:58:03.560Z: post: checkProgress
+ 
+2022-02-16T22:58:07.559Z: post: checkProgress
+ 
+2022-02-16T22:58:11.553Z: post: checkProgress
+ 
+2022-02-16T22:58:15.555Z: post: checkProgress
+ 
+2022-02-16T22:58:19.560Z: post: checkProgress
+ 
+2022-02-16T22:58:23.559Z: post: checkProgress
+ 
+2022-02-16T22:58:27.555Z: post: checkProgress
+ 
+2022-02-16T22:58:31.561Z: post: checkProgress
+ 
+2022-02-16T22:58:35.561Z: post: checkProgress
+ 
+2022-02-16T22:58:39.557Z: post: checkProgress
+ 
+2022-02-16T22:58:43.565Z: post: checkProgress
+ 
+2022-02-16T22:58:47.562Z: post: checkProgress
+ 
+2022-02-16T22:58:51.555Z: post: checkProgress
+ 
+2022-02-16T22:58:55.559Z: post: checkProgress
+ 
+2022-02-16T22:58:59.562Z: post: checkProgress
+ 
+2022-02-16T22:59:03.568Z: post: checkProgress
+ 
+2022-02-16T22:59:07.556Z: post: checkProgress
+ 
+2022-02-16T22:59:11.556Z: post: checkProgress
+ 
+2022-02-16T22:59:15.566Z: post: checkProgress
+ 
+2022-02-16T22:59:19.567Z: post: checkProgress
+ 
+2022-02-16T22:59:24.371Z: started Server
+ 
+2022-02-16T22:59:24.372Z: listening on *:3001
+ 
+2022-02-16T22:59:24.394Z: post: checkProgress
+ 
+2022-02-16T22:59:27.568Z: post: checkProgress
+ 
+2022-02-16T22:59:31.567Z: post: checkProgress
+ 
+2022-02-16T22:59:35.557Z: post: checkProgress
+ 
+2022-02-16T22:59:39.565Z: post: checkProgress
+ 
+2022-02-16T22:59:43.560Z: post: checkProgress
+ 
+2022-02-16T22:59:47.564Z: post: checkProgress
+ 
+2022-02-16T22:59:51.562Z: post: checkProgress
+ 
+2022-02-16T22:59:55.560Z: post: checkProgress
+ 
+2022-02-16T22:59:59.566Z: post: checkProgress
+ 
+2022-02-16T23:00:03.553Z: post: checkProgress
+ 
+2022-02-16T23:00:07.560Z: post: checkProgress
+ 
+2022-02-16T23:00:11.554Z: post: checkProgress
+ 
+2022-02-16T23:00:15.555Z: post: checkProgress
+ 
+2022-02-16T23:00:19.566Z: post: checkProgress
+ 
+2022-02-16T23:00:23.568Z: post: checkProgress
+ 
+2022-02-16T23:00:27.563Z: post: checkProgress
+ 
+2022-02-16T23:01:20.561Z: post: checkProgress
+ 
+2022-02-16T23:02:20.562Z: post: checkProgress
+ 
+2022-02-16T23:03:20.564Z: post: checkProgress
+ 
+2022-02-16T23:04:20.570Z: post: checkProgress
+ 
+2022-02-16T23:05:20.562Z: post: checkProgress
+ 
+2022-02-16T23:06:20.568Z: post: checkProgress
+ 
+2022-02-16T23:07:20.563Z: post: checkProgress
+ 
+2022-02-16T23:07:58.866Z: post: checkProgress
+ 
+2022-02-16T23:07:58.885Z: post: checkProgress
+ 
+2022-02-16T23:08:02.872Z: post: checkProgress
+ 
+2022-02-16T23:08:06.883Z: post: checkProgress
+ 
+2022-02-16T23:08:10.865Z: post: checkProgress
+ 
+2022-02-16T23:08:12.803Z: post: executeGcode
+ 
+2022-02-16T23:08:12.816Z: Error Error: Command failed: gcode-cli -b 1 -s 3000 ./data/gcodes/temp.gcode /dev/ttyACM0,b115200
+Der Befehl "gcode-cli" ist entweder falsch geschrieben oder
+konnte nicht gefunden werden.
+
+ 
+2022-02-16T23:08:14.867Z: post: checkProgress
+ 
+2022-02-16T23:08:18.864Z: post: checkProgress
+ 
+2022-02-16T23:08:20.568Z: post: checkProgress
+ 
+2022-02-16T23:08:22.865Z: post: checkProgress
+ 
+2022-02-16T23:08:26.871Z: post: checkProgress
+ 
+2022-02-16T23:08:30.875Z: post: checkProgress
+ 
+2022-02-16T23:08:34.874Z: post: checkProgress
+ 
+2022-02-16T23:08:38.873Z: post: checkProgress
+ 
+2022-02-16T23:08:42.876Z: post: checkProgress
+ 
+2022-02-16T23:08:46.868Z: post: checkProgress
+ 
+2022-02-16T23:08:50.873Z: post: checkProgress
+ 
+2022-02-16T23:08:54.878Z: post: checkProgress
+ 
+2022-02-16T23:08:58.878Z: post: checkProgress
+ 
+2022-02-16T23:09:02.867Z: post: checkProgress
+ 
+2022-02-16T23:09:06.870Z: post: checkProgress
+ 
+2022-02-16T23:09:10.873Z: post: checkProgress
+ 
+2022-02-16T23:09:14.877Z: post: checkProgress
+ 
+2022-02-16T23:09:18.873Z: post: checkProgress
+ 
+2022-02-16T23:09:20.559Z: post: checkProgress
+ 
+2022-02-16T23:09:22.867Z: post: checkProgress
+ 
+2022-02-16T23:09:26.878Z: post: checkProgress
+ 
+2022-02-16T23:09:30.869Z: post: checkProgress
+ 
+2022-02-16T23:09:33.052Z: post: checkProgress
+ 
+2022-02-16T23:09:34.952Z: post: checkProgress
+ 
+2022-02-16T23:09:35.555Z: post: checkProgress
+ 
+2022-02-16T23:09:38.881Z: post: checkProgress
+ 
+2022-02-16T23:09:39.556Z: post: checkProgress
+ 
+2022-02-16T23:09:42.875Z: post: checkProgress
+ 
+2022-02-16T23:09:43.566Z: post: checkProgress
+ 
+2022-02-16T23:09:47.567Z: post: checkProgress
+ 
+2022-02-16T23:09:51.559Z: post: checkProgress
+ 
+2022-02-16T23:09:55.565Z: post: checkProgress
+ 
+2022-02-16T23:09:59.568Z: post: checkProgress
+ 
+2022-02-16T23:10:03.571Z: post: checkProgress
+ 
+2022-02-16T23:10:07.560Z: post: checkProgress
+ 
+2022-02-16T23:10:11.567Z: post: checkProgress
+ 
+2022-02-16T23:10:15.564Z: post: checkProgress
+ 
+2022-02-16T23:10:19.564Z: post: checkProgress
+ 
+2022-02-16T23:10:23.561Z: post: checkProgress
+ 
+2022-02-16T23:10:27.556Z: post: checkProgress
+ 
+2022-02-16T23:10:31.568Z: post: checkProgress
+ 
+2022-02-16T23:10:35.560Z: post: checkProgress
+ 
+2022-02-16T23:10:39.566Z: post: checkProgress
+ 
+2022-02-16T23:10:43.570Z: post: checkProgress
+ 
+2022-02-16T23:10:47.568Z: post: checkProgress
+ 
+2022-02-16T23:10:51.566Z: post: checkProgress
+ 
+2022-02-16T23:10:55.562Z: post: checkProgress
+ 
+2022-02-16T23:10:59.568Z: post: checkProgress
+ 
+2022-02-16T23:11:03.555Z: post: checkProgress
+ 
+2022-02-16T23:11:07.569Z: post: checkProgress
+ 
+2022-02-16T23:11:11.565Z: post: checkProgress
+ 
+2022-02-16T23:11:15.556Z: post: checkProgress
+ 
+2022-02-16T23:11:19.561Z: post: checkProgress
+ 
+2022-02-16T23:11:23.559Z: post: checkProgress
+ 
+2022-02-16T23:11:27.561Z: post: checkProgress
+ 
+2022-02-16T23:11:31.568Z: post: checkProgress
+ 
+2022-02-16T23:11:35.554Z: post: checkProgress
+ 
+2022-02-16T23:11:39.566Z: post: checkProgress
+ 
+2022-02-16T23:11:43.552Z: post: checkProgress
+ 
+2022-02-16T23:11:47.559Z: post: checkProgress
+ 
+2022-02-16T23:11:51.564Z: post: checkProgress
+ 
+2022-02-16T23:11:55.570Z: post: checkProgress
+ 
+2022-02-16T23:11:59.563Z: post: checkProgress
+ 
+2022-02-16T23:12:03.558Z: post: checkProgress
+ 
+2022-02-16T23:12:07.561Z: post: checkProgress
+ 
+2022-02-16T23:12:11.568Z: post: checkProgress
+ 
+2022-02-16T23:12:15.564Z: post: checkProgress
+ 
+2022-02-16T23:12:19.572Z: post: checkProgress
+ 
+2022-02-16T23:12:23.556Z: post: checkProgress
+ 
+2022-02-16T23:12:27.561Z: post: checkProgress
+ 
+2022-02-16T23:12:31.565Z: post: checkProgress
+ 
+2022-02-16T23:12:35.572Z: post: checkProgress
+ 
+2022-02-16T23:12:39.560Z: post: checkProgress
+ 
+2022-02-16T23:12:43.561Z: post: checkProgress
+ 
+2022-02-16T23:12:47.557Z: post: checkProgress
+ 
+2022-02-16T23:12:51.568Z: post: checkProgress
+ 
+2022-02-16T23:12:55.570Z: post: checkProgress
+ 
+2022-02-16T23:12:59.570Z: post: checkProgress
+ 
+2022-02-16T23:13:03.557Z: post: checkProgress
+ 
+2022-02-16T23:13:07.557Z: post: checkProgress
+ 
+2022-02-16T23:13:11.560Z: post: checkProgress
+ 
+2022-02-16T23:13:15.567Z: post: checkProgress
+ 
+2022-02-16T23:13:19.558Z: post: checkProgress
+ 
+2022-02-16T23:13:23.560Z: post: checkProgress
+ 
+2022-02-16T23:25:16.331Z: started Server
+ 
+2022-02-16T23:25:16.332Z: listening on *:3001
+ 
+2022-02-16T23:32:39.094Z: started Server
+ 
+2022-02-16T23:32:39.095Z: listening on *:3001
+ 
