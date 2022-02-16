@@ -22,7 +22,9 @@ import { Request, Response } from "express";
 import { enviroment } from "./enviroment";
 
 const kill = require("tree-kill");
-var exec = require("child_process").execFile;
+let execFile = require("child_process").execFile;
+let exec = require("child_process").exec;
+const { spawn } = require("child_process");
 let Tail = require("tail").Tail;
 
 var cors = require("cors");
@@ -331,7 +333,7 @@ app.post("/stop", (req: Request, res: Response) => {
   kill(currentDrawingProcessPID); //kill the drawing process
   setTimeout(() => {
     //Home after some timeout because kill() needs some time
-    exec("./scripts/home.sh", function (err: any, data: any) {
+    execFile("./scripts/home.sh", function (err: any, data: any) {
       log(err);
       console.log(data);
     });
@@ -537,7 +539,7 @@ app.post("/home", (req: Request, res: Response) => {
     res.json({ err: "drawing" });
     return;
   }
-  exec("./scripts/home.sh", function (err: any, data: any) {
+  execFile("./scripts/home.sh", function (err: any, data: any) {
     log(err);
   });
 });
@@ -619,7 +621,7 @@ function drawGcode(gcode: string) {
           isDrawing = false;
         });
 
-        const launchProcess = exec(
+        const launchProcess = execFile(
           //execute launchcommand
           launchcommand,
           function (err: any, data: any) {
@@ -749,7 +751,7 @@ function convertBase64ToGcode(base64: string) {
       if (!skipGenerateGcode) {
         //skip generate process (used during dev to skip long processing time)
         log("lauching i2g");
-        exec(
+        execFile(
           launchcommand,
 
           function (err: any, data: any) {
@@ -818,8 +820,7 @@ function executeGcode(gcode: string) {
   }
 
   fse.outputFileSync("./data/gcodes/temp.gcode", gcode, "utf8");
-  console.log(gcode);
-  exec(
+  spawn(
     "gcode-cli -b 1 -s 3000 ./data/gcodes/temp.gcode /dev/ttyACM0,b115200",
     function (err: any, data: any) {
       fs.unlink("./data/gcodes/temp.gcode", (err: any) => {
