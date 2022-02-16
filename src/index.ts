@@ -507,7 +507,11 @@ app.post("/shutdown", (req: Request, res: Response) => {
     return;
   }
   res.json({});
-  exec("sudo shutdown now");
+  exec("sudo shutdown now", function (error: any, stdout: any, stderr: any) {
+    log(error);
+    log(stdout);
+    log(stderr);
+  });
 });
 
 /*
@@ -814,7 +818,7 @@ function executeGcode(gcode: string) {
   }
 
   fse.outputFileSync("./data/gcodes/temp.gcode", gcode, "utf8");
-
+  console.log(gcode);
   exec(
     "gcode-cli -b 1 -s 3000 ./data/gcodes/temp.gcode /dev/ttyACM0,b115200",
     function (err: any, data: any) {
@@ -825,6 +829,11 @@ function executeGcode(gcode: string) {
           return;
         }
       });
+
+      if (err) {
+        log("Error " + err);
+        return;
+      }
     }
   );
 }
