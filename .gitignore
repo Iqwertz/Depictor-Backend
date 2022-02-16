@@ -9,3 +9,5 @@ node_modules/
 *.nc
 .vscode/symbols.json
 removeBGAPIKey.txt
+removeBGAPIKey.txt
+Depictor-Backend.zip
