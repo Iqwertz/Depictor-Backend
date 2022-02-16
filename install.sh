@@ -19,6 +19,14 @@ sudo apt-get install xvfb libxrender1 libxtst6 libxi6 -y
 echo -e "\x1B[96m installing Java \x1B[0m"
 sudo apt-get install default-jre -y
 
+echo -e "\x1B[96m starting Depictor Backend install \x1B[0m"
+
+echo -e "\x1B[96m installing node \x1B[0m"
+curl -sL https://deb.nodesource.com/setup_16.x | sudo bash -
+sudo apt-get install -y nodejs
+echo -e "\x1B[96m installing git \x1B[0m"
+sudo apt install git -y
+
 echo -e "\x1B[96m installing gcode-cli \x1B[0m"
 echo -e "\x1B[96m cloning gcode-cli \x1B[0m"
 git clone https://github.com/hzeller/gcode-cli.git
@@ -27,14 +35,6 @@ cd gcode-cli
 make
 sudo cp gcode-cli /usr/bin/
 cd
-
-echo -e "\x1B[96m starting Depictor Backend install \x1B[0m"
-
-echo -e "\x1B[96m installing node \x1B[0m"
-curl -sL https://deb.nodesource.com/setup_16.x | sudo bash -
-sudo apt-get install -y nodejs
-echo -e "\x1B[96m installing git \x1B[0m"
-sudo apt install git -y
 
 echo -e "\x1B[96m downloading latest Depictor Backend releases \x1B[0m"
 LOCATION=$(curl -s https://api.github.com/repos/Iqwertz/Depictor-Backend/releases/latest \
@@ -62,6 +62,6 @@ echo -e "\x1B[96m starting node server \x1B[0m"
 pm2 start "sudo npm run start"
 pm2 save
 
-rm install.sh
+shred -u
 
 echo -e "\x1B[96m finished install \x1B[0m"
