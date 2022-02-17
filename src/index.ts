@@ -545,7 +545,7 @@ app.post("/update", (req: Request, res: Response) => {
   axios
     .get("https://api.github.com/repos/iqwertz/depictor/tags")
     .then((response: any) => {
-      if (response.data[0].name != req.body.version && !req.body.production) {
+      if (response.data[0].name != req.body.version && req.body.production) {
         log("Starting Frontend Update");
         //when new version detected
         execFile("./scripts/updateFrontend.sh", function (err: any, data: any) {

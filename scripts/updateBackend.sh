@@ -14,7 +14,7 @@ cd Depictor-Backend-*
 mv * ../
 cd ../
 rm -r Depictor-Backend-*
-npm i
+sudo npm i
 sudo chmod +x chmodScripts.sh
 sudo ./chmodScripts.sh
 

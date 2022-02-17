@@ -3,7 +3,6 @@ assets/image2gcode/gcode/
 rawimages
 bgremoved
 savedGcodes
-data/
 node_modules/
 
 *.nc
