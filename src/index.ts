@@ -548,19 +548,16 @@ app.post("/update", (req: Request, res: Response) => {
       if (response.data[0].name != req.body.version && !req.body.production) {
         log("Starting Frontend Update");
         //when new version detected
-        execFile(
-          "sudo ./scripts/updateFrontend.sh",
-          function (err: any, data: any) {
-            //update frontend
-            if (err) {
-              log("Error " + err);
-              return;
-            } else {
-              log("Updated Frontend");
-              checkAndUpdateBackend();
-            }
+        execFile("./scripts/updateFrontend.sh", function (err: any, data: any) {
+          //update frontend
+          if (err) {
+            log("Error " + err);
+            return;
+          } else {
+            log("Updated Frontend");
+            checkAndUpdateBackend();
           }
-        );
+        });
       } else {
         log("No Frontend Update found - Searching for Backend Update");
         checkAndUpdateBackend(); //try to update backend
@@ -578,15 +575,12 @@ function checkAndUpdateBackend() {
     .then((response: any) => {
       if (response.data[0].name != enviroment.version.tag) {
         log("found Backend Update - Starting Update");
-        execFile(
-          "sudo ./scripts/updateBackend.sh",
-          function (err: any, data: any) {
-            if (err) {
-              log("Error " + err);
-              return;
-            }
+        execFile("./scripts/updateBackend.sh", function (err: any, data: any) {
+          if (err) {
+            log("Error " + err);
+            return;
           }
-        );
+        });
       } else {
         log("no updates found");
       }

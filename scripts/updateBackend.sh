@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo start Backend Update
+
 shopt -s extglob
 rm -r ./!("data")
 LOCATION=$(curl -s https://api.github.com/repos/Iqwertz/Depictor-Backend/releases/latest \
