@@ -9,6 +9,10 @@
 //
 ///////////////////////////////////////////////////
 
+const version = {
+  tag: "v0.2.0", //this string has to match the release tag name when released
+  production: false, //set to true in release version
+};
 //imports
 const express = require("express");
 const fs = require("fs");
@@ -26,6 +30,7 @@ let execFile = require("child_process").execFile;
 let exec = require("child_process").exec;
 const { spawn } = require("child_process");
 let Tail = require("tail").Tail;
+const axios = require("axios");
 
 var cors = require("cors");
 const app = express();
@@ -520,24 +525,84 @@ app.post("/shutdown", (req: Request, res: Response) => {
 post: /update
 
 description: updates the system
+
+expected request: 
+  {
+    version: string,
+    production: boolean;
+  }
+  
+returns: 
+  unsuccessful 
+    {err: string}
+
+    successful
+    {}
 */
 app.post("/update", (req: Request, res: Response) => {
   log("post: update");
-  execFile("./scripts/updateBackend.sh", function (err: any, data: any) {
-    if (err) {
-      log("Error " + err);
-      return;
-    }
-  });
+  log("checking for new versions");
 
-  execFile("./scripts/updateFrontend.sh", function (err: any, data: any) {
-    if (err) {
-      log("Error " + err);
-      return;
-    }
-  });
+  let updateFrontend = false;
+  let updateBackend = false;
 
+  axios
+    .get("https://api.github.com/repos/iqwertz/depictor/tags")
+    .then((response: any) => {
+      if (response.data[0].name != req.body.version && !req.body.production) {
+        log("Starting Frontend Update");
+        //when new version detected
+        execFile("./scripts/updateFrontend.sh", function (err: any, data: any) {
+          //update frontend
+          if (err) {
+            log("Error " + err);
+            return;
+          } else {
+            log("Updated Frontend");
+            checkAndUpdateBackend();
+          }
+        });
+      } else {
+        checkAndUpdateBackend(); //try to update backend
+      }
+    });
   res.json({});
+});
+
+/**
+ * checks if a new backenversion is available and executes the update script if so
+ */
+function checkAndUpdateBackend() {
+  axios
+    .get("https://api.github.com/repos/iqwertz/Depictor-Backend/tags")
+    .then((response: any) => {
+      if (response.data[0].name != version.tag) {
+        execFile("./scripts/updateBackend.sh", function (err: any, data: any) {
+          if (err) {
+            log("Error " + err);
+            return;
+          }
+        });
+      }
+    });
+}
+
+/*
+post: /getVersion
+
+description: returns the version information of the backend
+expected request: 
+  {}
+  
+returns: 
+    {
+      tag: string
+      production: boolean
+    }
+*/
+app.post("/getVersion", (req: Request, res: Response) => {
+  log("post: getVersion");
+  res.json(version);
 });
 
 /*
