@@ -1,15 +1,13 @@
-data/image2gcode/java/
-data/image2gcode/gcode/
+assets/image2gcode/java/
+assets/image2gcode/gcode/
 rawimages
 bgremoved
 savedGcodes
-data/logs
+data/
 node_modules/
 
 *.nc
 .vscode/symbols.json
 removeBGAPIKey.txt
-removeBGAPIKey.txt
 Depictor-Backend.zip
-removeBGAPIKey.txt
 data/logs/log.txt

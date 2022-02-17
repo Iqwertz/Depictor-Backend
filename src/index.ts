@@ -187,9 +187,9 @@ app.post("/getGeneratedGcode", (req: Request, res: Response) => {
   if (appState == "rawGcodeReady") {
     //check if gcode is ready
     /////get the correct path depending on os
-    let img2gcodePath: string = "./data/image2gcode/windows/";
+    let img2gcodePath: string = "./assets/image2gcode/windows/";
     if (isLinux) {
-      img2gcodePath = "./data/image2gcode/linux/";
+      img2gcodePath = "./assets/image2gcode/linux/";
     }
 
     /////read gcode
@@ -229,7 +229,7 @@ app.post("/getDrawenGcode", (req: Request, res: Response) => {
   log("post: getDrawenGcode");
   if (isDrawing) {
     //check if maschine is drawing
-    let rawGcode = fs.readFileSync("data/gcodes/gcode.nc", "utf8"); //read gcode
+    let rawGcode = fs.readFileSync("assets/gcodes/gcode.nc", "utf8"); //read gcode
 
     res.json({ state: appState, isDrawing: isDrawing, data: rawGcode }); //return gcode and appstate information
   } else {
@@ -356,14 +356,14 @@ returns:
 app.post("/delete", (req: Request, res: Response) => {
   log("post: delete");
 
-  fs.unlink("data/savedGcodes/" + req.body.id + ".nc", (err: any) => {
+  fs.unlink("assets/savedGcodes/" + req.body.id + ".nc", (err: any) => {
     //delete gcode
     if (err) {
       log("Error " + err);
       return;
     }
   });
-  fs.unlink("data/savedGcodes/" + req.body.id + ".png", (err: any) => {
+  fs.unlink("assets/savedGcodes/" + req.body.id + ".png", (err: any) => {
     //delete preview image
     if (err) {
       log("Error " + err);
@@ -517,6 +517,30 @@ app.post("/shutdown", (req: Request, res: Response) => {
 });
 
 /*
+post: /update
+
+description: updates the system
+*/
+app.post("/update", (req: Request, res: Response) => {
+  log("post: update");
+  execFile("./scripts/updateBackend.sh", function (err: any, data: any) {
+    if (err) {
+      log("Error " + err);
+      return;
+    }
+  });
+
+  execFile("./scripts/updateFrontend.sh", function (err: any, data: any) {
+    if (err) {
+      log("Error " + err);
+      return;
+    }
+  });
+
+  res.json({});
+});
+
+/*
 post: /home
 
 description: homes the maschine (when not currently drawing)
@@ -589,7 +613,7 @@ function drawGcode(gcode: string) {
   log("start drawing");
   fse.outputFile(
     //save the gcode file //this file will be used by the gcodesender
-    "data/gcodes/gcode.nc",
+    "assets/gcodes/gcode.nc",
     gcode,
     "utf8",
     function (err: any, data: any) {
@@ -725,9 +749,9 @@ function convertBase64ToGcode(base64: string) {
   appState = "processingImage"; //update appState
 
   /////set basepath based on os
-  let img2gcodePath: string = "./data/image2gcode/windows/";
+  let img2gcodePath: string = "./assets/image2gcode/windows/";
   if (isLinux) {
-    img2gcodePath = "data/image2gcode/linux/";
+    img2gcodePath = "assets/image2gcode/linux/";
   }
 
   fse.outputFile(
@@ -820,9 +844,9 @@ function executeGcode(gcode: string) {
   }
 
   log(gcode);
-  fse.outputFileSync("./data/gcodes/temp.gcode", gcode, "utf8");
+  fse.outputFileSync("./assets/gcodes/temp.gcode", gcode, "utf8");
   execFile("./scripts/execTemp.sh", function (err: any, data: any) {
-    fs.unlink("./data/gcodes/temp.gcode", (err: any) => {
+    fs.unlink("./assets/gcodes/temp.gcode", (err: any) => {
       //delete preview image
       if (err) {
         log("Error " + err);
