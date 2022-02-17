@@ -59,8 +59,8 @@ sudo npm install pm2 -g
 echo -e "\x1B[96m configuring PM2 startup \x1B[0m"
 sudo pm2 startup | awk '$1 ~ /^sudo/' | bash
 echo -e "\x1B[96m starting node server \x1B[0m"
-sudo pm2 start "sudo npm run start"
-sudo pm2 save
+pm2 start "npm run start"
+pm2 save
 
 shred -u install.sh
 
