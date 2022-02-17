@@ -11,3 +11,4 @@ node_modules/
 removeBGAPIKey.txt
 Depictor-Backend.zip
 data/logs/log.txt
+.vscode/symbols.json
