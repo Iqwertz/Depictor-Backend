@@ -9,10 +9,6 @@
 //
 ///////////////////////////////////////////////////
 
-const version = {
-  tag: "v0.2.0", //this string has to match the release tag name when released
-  production: false, //set to true in release version
-};
 //imports
 const express = require("express");
 const fs = require("fs");
@@ -576,7 +572,7 @@ function checkAndUpdateBackend() {
   axios
     .get("https://api.github.com/repos/iqwertz/Depictor-Backend/tags")
     .then((response: any) => {
-      if (response.data[0].name != version.tag) {
+      if (response.data[0].name != enviroment.version.tag) {
         execFile("./scripts/updateBackend.sh", function (err: any, data: any) {
           if (err) {
             log("Error " + err);
@@ -602,7 +598,7 @@ returns:
 */
 app.post("/getVersion", (req: Request, res: Response) => {
   log("post: getVersion");
-  res.json(version);
+  res.json(enviroment.version);
 });
 
 /*
