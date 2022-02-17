@@ -562,6 +562,7 @@ app.post("/update", (req: Request, res: Response) => {
           }
         );
       } else {
+        log("No Frontend Update found - Searching for Backend Update");
         checkAndUpdateBackend(); //try to update backend
       }
     });
@@ -576,6 +577,7 @@ function checkAndUpdateBackend() {
     .get("https://api.github.com/repos/iqwertz/Depictor-Backend/tags")
     .then((response: any) => {
       if (response.data[0].name != enviroment.version.tag) {
+        log("found Backend Update - Starting Update");
         execFile(
           "sudo ./scripts/updateBackend.sh",
           function (err: any, data: any) {
@@ -585,6 +587,8 @@ function checkAndUpdateBackend() {
             }
           }
         );
+      } else {
+        log("no updates found");
       }
     });
 }
