@@ -548,16 +548,19 @@ app.post("/update", (req: Request, res: Response) => {
       if (response.data[0].name != req.body.version && !req.body.production) {
         log("Starting Frontend Update");
         //when new version detected
-        execFile("./scripts/updateFrontend.sh", function (err: any, data: any) {
-          //update frontend
-          if (err) {
-            log("Error " + err);
-            return;
-          } else {
-            log("Updated Frontend");
-            checkAndUpdateBackend();
+        execFile(
+          "sudo ./scripts/updateFrontend.sh",
+          function (err: any, data: any) {
+            //update frontend
+            if (err) {
+              log("Error " + err);
+              return;
+            } else {
+              log("Updated Frontend");
+              checkAndUpdateBackend();
+            }
           }
-        });
+        );
       } else {
         checkAndUpdateBackend(); //try to update backend
       }
@@ -573,12 +576,15 @@ function checkAndUpdateBackend() {
     .get("https://api.github.com/repos/iqwertz/Depictor-Backend/tags")
     .then((response: any) => {
       if (response.data[0].name != enviroment.version.tag) {
-        execFile("./scripts/updateBackend.sh", function (err: any, data: any) {
-          if (err) {
-            log("Error " + err);
-            return;
+        execFile(
+          "sudo ./scripts/updateBackend.sh",
+          function (err: any, data: any) {
+            if (err) {
+              log("Error " + err);
+              return;
+            }
           }
-        });
+        );
       }
     });
 }
