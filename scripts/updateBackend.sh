@@ -1,5 +1,7 @@
 #!/bin/bash
-rm -r *(!"data")
+
+shopt -s extglob
+rm -r ./!("data")
 LOCATION=$(curl -s https://api.github.com/repos/Iqwertz/Depictor-Backend/releases/latest \
 | grep "tag_name" \
 | awk '{print "https://github.com/Iqwertz/Depictor-Backend/archive/" substr($2, 2, length($2)-3) ".zip"}') \
