@@ -695,6 +695,8 @@ function drawGcode(gcode: string) {
 
         isDrawing = true; //update maschine drawing state
 
+        fse.outputFileSync("data/logs/gcodeCliOutput.txt", " ", "utf8");
+
         let tail = new Tail("data/logs/gcodeCliOutput.txt", "\n", {}, true); //setup tail to listen to gcode sender output
 
         tail.on("line", function (data: any) {
