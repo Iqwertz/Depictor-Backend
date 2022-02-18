@@ -606,6 +606,52 @@ app.post("/getVersion", (req: Request, res: Response) => {
 });
 
 /*
+post: /changeSettings
+
+description: returns content of data/settings.json and sets new settings if provided
+
+expected request: 
+  {settings?: object}
+  
+returns: 
+    unsuccessful 
+      {}
+
+    successful
+    {settings: object}
+*/
+app.post("/changeSettings", (req: Request, res: Response) => {
+  log("post: changeSettings");
+
+  if (req.body.settings) {
+    log(req.body.settings);
+    fse.outputFileSync(
+      "data/settings.json",
+      JSON.stringify(req.body.settings),
+      "utf8",
+      function (err: any, data: any) {
+        if (err) {
+          log(err);
+          res.json({});
+          return;
+        } else {
+          log("successfully saved settings");
+        }
+      }
+    );
+  }
+
+  if (fs.existsSync("data/settings.json")) {
+    let settings = fs.readFileSync("data/settings.json", "utf8");
+    res.json({ settings: JSON.parse(settings) });
+    log("found settings");
+  } else {
+    log("no settings found");
+    res.json({});
+  }
+});
+
+/*
 post: /home
 
 description: homes the maschine (when not currently drawing)
