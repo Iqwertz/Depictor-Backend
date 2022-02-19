@@ -1,2 +1,2 @@
-cd %~dp0..\data\image2gcode\windows\
+cd %~dp0..\assets\image2gcode\windows\
 Drawbot_stripped.exe
