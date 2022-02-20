@@ -9,7 +9,7 @@ sudo apt-get upgrade -y
 echo -e "\x1B[96m installing Apache server  \x1B[0m"
 sudo apt-get install apache2 -y
 echo -e "\x1B[96m downloading latest Depictor Frontend Build \x1B[0m"
-sudo rm -r /var/www/html/!["dev"]
+sudo rm -r /var/www/html/index.html
 sudo wget "https://github.com/Iqwertz/Depictor/releases/latest/download/Depictor-Build.zip" -O "/var/www/html/latest.zip"
 sudo unzip /var/www/html/latest.zip -d /var/www/html/
 sudo rm /var/www/html/latest.zip
@@ -62,6 +62,34 @@ echo -e "\x1B[96m starting node server \x1B[0m"
 pm2 start "npm run start"
 pm2 save
 
-shred -u install.sh
+echo %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+echo
+echo  /$$$$$$$                      /$$             /$$                        
+echo | $$__  $$                    |__/            | $$                        
+echo | $$  \ $$  /$$$$$$   /$$$$$$  /$$  /$$$$$$$ /$$$$$$    /$$$$$$   /$$$$$$ 
+echo | $$  | $$ /$$__  $$ /$$__  $$| $$ /$$_____/|_  $$_/   /$$__  $$ /$$__  $$
+echo | $$  | $$| $$$$$$$$| $$  \ $$| $$| $$        | $$    | $$  \ $$| $$  \__/
+echo | $$  | $$| $$_____/| $$  | $$| $$| $$        | $$ /$$| $$  | $$| $$      
+echo | $$$$$$$/|  $$$$$$$| $$$$$$$/| $$|  $$$$$$$  |  $$$$/|  $$$$$$/| $$      
+echo |_______/  \_______/| $$____/ |__/ \_______/   \___/   \______/ |__/      
+echo                     | $$                                                  
+echo                     | $$                                                  
+echo                     |__/       
+echo 
+echo %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%      
 
-echo -e "\x1B[96m finished install \x1B[0m"
+
+echo -e "\x1B[96m successfully finished install \x1B[0m"
+
+#!/bin/rm
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          
+                                                                          

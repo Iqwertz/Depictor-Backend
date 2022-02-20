@@ -8,6 +8,6 @@ export const enviroment = {
   removeBGSettings: {
     enableApi: true,
     type: "person",
-    scale: "100%",
+    scale: "original",
   },
 };
