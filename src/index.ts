@@ -739,6 +739,7 @@ function drawGcode(gcode: string) {
         let startTime = new Date().getTime(); //save start time
         let launchcommand: string = "./scripts/launchGcodeCli.sh"; //command to launch the programm
 
+        appState = "idle";
         isDrawing = true; //update maschine drawing state
 
         fse.outputFileSync("data/logs/gcodeCliOutput.txt", " ", "utf8");
